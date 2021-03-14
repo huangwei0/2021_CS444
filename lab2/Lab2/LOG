@@ -1,0 +1,2875 @@
+beavalloc first fit tests starting
+  running only test 1
+Initial base address of heap: 0x1b28000
+*** Begin 1
+      Basic reset
+  ptr : 0x1b28000
+  ptr : 0x1b28000
+*** End 1
+
+
+WoooooooHooooooo!!! You survived test 1. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 2
+Initial base address of heap: 0x2348000
+*** Begin 2
+      zero bytes
+*** End 2
+
+
+WoooooooHooooooo!!! You survived test 2. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 3
+Initial base address of heap: 0x1fe6000
+*** Begin 3
+      10 bytes
+  ptr1 : 0x1fe6028
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1fe6000	    (nil)	    (nil)	0x1fe6028	1024		984		10		974		in use	 
+  Total bytes used								1024		984		10		974
+  Used blocks:    1  Free blocks:    0  Min heap: 0x1fe6000    Max heap: 0x1fe6400   Block size: 40 bytes
+*** End 3
+
+
+WoooooooHooooooo!!! You survived test 3. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 4
+Initial base address of heap: 0x98f000
+*** Begin 4
+      2000 bytes
+  ptr1 : 0x98f028
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x98f000	    (nil)	    (nil)	 0x98f028	2048		2008		2000		8		in use	 
+  Total bytes used								2048		2008		2000		8
+  Used blocks:    1  Free blocks:    0  Min heap:  0x98f000    Max heap:  0x98f800   Block size: 40 bytes
+*** End 4
+
+
+WoooooooHooooooo!!! You survived test 4. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 5
+Initial base address of heap: 0x982000
+*** Begin 5
+      10000 bytes
+  ptr1 : 0x982028
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x982000	    (nil)	    (nil)	 0x982028	10240		10200		10000		200		in use	 
+  Total bytes used								10240		10200		10000		200
+  Used blocks:    1  Free blocks:    0  Min heap:  0x982000    Max heap:  0x984800   Block size: 40 bytes
+*** End 5
+
+
+WoooooooHooooooo!!! You survived test 5. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 6
+Initial base address of heap: 0x62d000
+*** Begin 6
+      5 allocs
+  ptr1 : 0x62d028
+  ptr2 : 0x62d428
+  ptr3 : 0x62d828
+  ptr4 : 0x62dc28
+  ptr5 : 0x62e428
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d400	    (nil)	 0x62d028	1024		984		500		484		in use	 
+  1		 0x62d400	 0x62d800	 0x62d000	 0x62d428	1024		984		530		454		in use	 
+  2		 0x62d800	 0x62dc00	 0x62d400	 0x62d828	1024		984		550		434		in use	 
+  3		 0x62dc00	 0x62e400	 0x62d800	 0x62dc28	2048		2008		1024		984		in use	 
+  4		 0x62e400	    (nil)	 0x62dc00	 0x62e428	3072		3032		2048		984		in use	 
+  Total bytes used								8192		7992		4652		3340
+  Used blocks:    5  Free blocks:    0  Min heap:  0x62d000    Max heap:  0x62f000   Block size: 40 bytes
+*** End 6
+
+
+WoooooooHooooooo!!! You survived test 6. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 7
+Initial base address of heap: 0x1cc0000
+*** Begin 7
+      5 allocs 2 frees
+  ptr1 : 0x1cc0028
+  ptr2 : 0x1cc0428
+  ptr3 : 0x1cc0828
+  ptr4 : 0x1cc0c28
+  ptr5 : 0x1cc1028
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1cc0000	0x1cc0400	    (nil)	0x1cc0028	1024		984		510		474		in use	 
+  1		0x1cc0400	0x1cc0800	0x1cc0000	0x1cc0428	1024		984		530		454		in use	 
+  2		0x1cc0800	0x1cc0c00	0x1cc0400	0x1cc0828	1024		984		550		434		in use	 
+  3		0x1cc0c00	0x1cc1000	0x1cc0800	0x1cc0c28	1024		984		570		414		in use	 
+  4		0x1cc1000	    (nil)	0x1cc0c00	0x1cc1028	1024		984		590		394		in use	 
+  Total bytes used								5120		4920		2750		2170
+  Used blocks:    5  Free blocks:    0  Min heap: 0x1cc0000    Max heap: 0x1cc1400   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1cc0000	0x1cc0400	    (nil)	0x1cc0028	1024		984		510		474		in use	 
+  1		0x1cc0400	0x1cc0800	0x1cc0000	0x1cc0428	1024		984		0		984		free  	*
+  2		0x1cc0800	0x1cc0c00	0x1cc0400	0x1cc0828	1024		984		550		434		in use	 
+  3		0x1cc0c00	0x1cc1000	0x1cc0800	0x1cc0c28	1024		984		0		984		free  	*
+  4		0x1cc1000	    (nil)	0x1cc0c00	0x1cc1028	1024		984		590		394		in use	 
+  Total bytes used								5120		4920		1650		3270
+  Used blocks:    3  Free blocks:    2  Min heap: 0x1cc0000    Max heap: 0x1cc1400   Block size: 40 bytes
+*** End 7
+
+
+WoooooooHooooooo!!! You survived test 7. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 8
+Initial base address of heap: 0x2567000
+*** Begin 8
+      5 allocs 3 frees
+  ptr1 : 0x2567028
+  ptr2 : 0x2567428
+  ptr3 : 0x2567828
+  ptr4 : 0x2567c28
+  ptr5 : 0x2568028
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x2567000	0x2567400	    (nil)	0x2567028	1024		984		510		474		in use	 
+  1		0x2567400	0x2567800	0x2567000	0x2567428	1024		984		530		454		in use	 
+  2		0x2567800	0x2567c00	0x2567400	0x2567828	1024		984		550		434		in use	 
+  3		0x2567c00	0x2568000	0x2567800	0x2567c28	1024		984		570		414		in use	 
+  4		0x2568000	    (nil)	0x2567c00	0x2568028	1024		984		590		394		in use	 
+  Total bytes used								5120		4920		2750		2170
+  Used blocks:    5  Free blocks:    0  Min heap: 0x2567000    Max heap: 0x2568400   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x2567000	0x2567400	    (nil)	0x2567028	1024		984		0		984		free  	*
+  1		0x2567400	0x2567800	0x2567000	0x2567428	1024		984		530		454		in use	 
+  2		0x2567800	0x2567c00	0x2567400	0x2567828	1024		984		0		984		free  	*
+  3		0x2567c00	0x2568000	0x2567800	0x2567c28	1024		984		570		414		in use	 
+  4		0x2568000	    (nil)	0x2567c00	0x2568028	1024		984		0		984		free  	*
+  Total bytes used								5120		4920		1100		3820
+  Used blocks:    2  Free blocks:    3  Min heap: 0x2567000    Max heap: 0x2568400   Block size: 40 bytes
+*** End 8
+
+
+WoooooooHooooooo!!! You survived test 8. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 9
+Initial base address of heap: 0xbd6000
+*** Begin 9
+      begin coalesce
+  ptr1 : 0xbd6028
+  ptr2 : 0xbd6428
+  ptr3 : 0xbd6828
+  ptr4 : 0xbd6c28
+  ptr5 : 0xbd7028
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0xbd6000	 0xbd6400	    (nil)	 0xbd6028	1024		984		510		474		in use	 
+  1		 0xbd6400	 0xbd6800	 0xbd6000	 0xbd6428	1024		984		530		454		in use	 
+  2		 0xbd6800	 0xbd6c00	 0xbd6400	 0xbd6828	1024		984		550		434		in use	 
+  3		 0xbd6c00	 0xbd7000	 0xbd6800	 0xbd6c28	1024		984		570		414		in use	 
+  4		 0xbd7000	    (nil)	 0xbd6c00	 0xbd7028	1024		984		590		394		in use	 
+  Total bytes used								5120		4920		2750		2170
+  Used blocks:    5  Free blocks:    0  Min heap:  0xbd6000    Max heap:  0xbd7400   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0xbd6000	 0xbd6400	    (nil)	 0xbd6028	1024		984		510		474		in use	 
+  1		 0xbd6400	 0xbd6800	 0xbd6000	 0xbd6428	1024		984		0		984		free  	*
+  2		 0xbd6800	 0xbd6c00	 0xbd6400	 0xbd6828	1024		984		550		434		in use	 
+  3		 0xbd6c00	 0xbd7000	 0xbd6800	 0xbd6c28	1024		984		0		984		free  	*
+  4		 0xbd7000	    (nil)	 0xbd6c00	 0xbd7028	1024		984		590		394		in use	 
+  Total bytes used								5120		4920		1650		3270
+  Used blocks:    3  Free blocks:    2  Min heap:  0xbd6000    Max heap:  0xbd7400   Block size: 40 bytes
+-- coalesce right
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0xbd6000	 0xbd6800	    (nil)	 0xbd6028	2048		2008		0		2008		free  	*
+  1		 0xbd6800	 0xbd6c00	 0xbd6000	 0xbd6828	1024		984		550		434		in use	 
+  2		 0xbd6c00	 0xbd7000	 0xbd6800	 0xbd6c28	1024		984		0		984		free  	*
+  3		 0xbd7000	    (nil)	 0xbd6c00	 0xbd7028	1024		984		590		394		in use	 
+  Total bytes used								5120		4960		1140		3820
+  Used blocks:    2  Free blocks:    2  Min heap:  0xbd6000    Max heap:  0xbd7400   Block size: 40 bytes
+-- coalesce left
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0xbd6000	 0xbd6800	    (nil)	 0xbd6028	2048		2008		0		2008		free  	*
+  1		 0xbd6800	 0xbd6c00	 0xbd6000	 0xbd6828	1024		984		550		434		in use	 
+  2		 0xbd6c00	    (nil)	 0xbd6800	 0xbd6c28	2048		2008		0		2008		free  	*
+  Total bytes used								5120		5000		550		4450
+  Used blocks:    1  Free blocks:    2  Min heap:  0xbd6000    Max heap:  0xbd7400   Block size: 40 bytes
+-- coalesce right and left
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0xbd6000	    (nil)	    (nil)	 0xbd6028	5120		5080		0		5080		free  	*
+  Total bytes used								5120		5080		0		5080
+  Used blocks:    0  Free blocks:    1  Min heap:  0xbd6000    Max heap:  0xbd7400   Block size: 40 bytes
+*** End 9
+
+
+WoooooooHooooooo!!! You survived test 9. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 10
+Initial base address of heap: 0x19c6000
+*** Begin 10
+      split and coalesce
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x19c6000	    (nil)	    (nil)	0x19c6028	10240		10200		10000		200		in use	 
+  Total bytes used								10240		10200		10000		200
+  Used blocks:    1  Free blocks:    0  Min heap: 0x19c6000    Max heap: 0x19c8800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x19c6000	    (nil)	    (nil)	0x19c6028	10240		10200		0		10200		free  	*
+  Total bytes used								10240		10200		0		10200
+  Used blocks:    0  Free blocks:    1  Min heap: 0x19c6000    Max heap: 0x19c8800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x19c6000	    (nil)	    (nil)	0x19c6028	10240		10200		100		10100		in use	 
+  Total bytes used								10240		10200		100		10100
+  Used blocks:    1  Free blocks:    0  Min heap: 0x19c6000    Max heap: 0x19c8800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x19c6000	0x19c608c	    (nil)	0x19c6028	140		100		100		0		in use	 
+  1		0x19c608c	    (nil)	0x19c6000	0x19c60b4	10100		10060		200		9860		in use	 
+  Total bytes used								10240		10160		300		9860
+  Used blocks:    2  Free blocks:    0  Min heap: 0x19c6000    Max heap: 0x19c8800   Block size: 40 bytes
+  ptr1 : 0x19c6028
+  ptr2 : 0x19c60b4
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x19c6000	0x19c608c	    (nil)	0x19c6028	140		100		100		0		in use	 
+  1		0x19c608c	    (nil)	0x19c6000	0x19c60b4	10100		10060		0		10060		free  	*
+  Total bytes used								10240		10160		100		10060
+  Used blocks:    1  Free blocks:    1  Min heap: 0x19c6000    Max heap: 0x19c8800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x19c6000	    (nil)	    (nil)	0x19c6028	10240		10200		0		10200		free  	*
+  Total bytes used								10240		10200		0		10200
+  Used blocks:    0  Free blocks:    1  Min heap: 0x19c6000    Max heap: 0x19c8800   Block size: 40 bytes
+*** End 10
+
+
+WoooooooHooooooo!!! You survived test 10. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 11
+Initial base address of heap: 0x111f000
+*** Begin 11
+      Free the free
+Verbose enabled
+>>  382: beavfree entry: ptr = 0x111f028 curr 0x111f000
+<<  388: Block is already free: ptr = 0x111f028
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x111f000	    (nil)	    (nil)	0x111f028	1024		984		0		984		free  	*
+  Total bytes used								1024		984		0		984
+  Used blocks:    0  Free blocks:    1  Min heap: 0x111f000    Max heap: 0x111f400   Block size: 40 bytes
+*** End 11
+
+
+WoooooooHooooooo!!! You survived test 11. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 12
+Initial base address of heap: 0x1c9d000
+*** Begin 12
+      memset 1
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1c9d000	0x1c9d400	    (nil)	0x1c9d028	1024		984		900		84		in use	 
+  1		0x1c9d400	0x1c9e000	0x1c9d000	0x1c9d428	3072		3032		3000		32		in use	 
+  2		0x1c9e000	0x1c9f400	0x1c9d400	0x1c9e028	5120		5080		5000		80		in use	 
+  3		0x1c9f400	0x1ca1000	0x1c9e000	0x1c9f428	7168		7128		7000		128		in use	 
+  4		0x1ca1000	    (nil)	0x1c9f400	0x1ca1028	10240		10200		10000		200		in use	 
+  Total bytes used								26624		26424		25900		524
+  Used blocks:    5  Free blocks:    0  Min heap: 0x1c9d000    Max heap: 0x1ca3800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1c9d000	0x1c9d400	    (nil)	0x1c9d028	1024		984		900		84		in use	 
+  1		0x1c9d400	0x1c9e000	0x1c9d000	0x1c9d428	3072		3032		3000		32		in use	 
+  2		0x1c9e000	0x1c9f400	0x1c9d400	0x1c9e028	5120		5080		5000		80		in use	 
+  3		0x1c9f400	0x1ca1000	0x1c9e000	0x1c9f428	7168		7128		7000		128		in use	 
+  4		0x1ca1000	    (nil)	0x1c9f400	0x1ca1028	10240		10200		10000		200		in use	 
+  Total bytes used								26624		26424		25900		524
+  Used blocks:    5  Free blocks:    0  Min heap: 0x1c9d000    Max heap: 0x1ca3800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1c9d000	    (nil)	    (nil)	0x1c9d028	26624		26584		0		26584		free  	*
+  Total bytes used								26624		26584		0		26584
+  Used blocks:    0  Free blocks:    1  Min heap: 0x1c9d000    Max heap: 0x1ca3800   Block size: 40 bytes
+*** End 12
+
+
+WoooooooHooooooo!!! You survived test 12. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 13
+Initial base address of heap: 0x64d000
+*** Begin 13
+      memset 2
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x64d000	 0x64d800	    (nil)	 0x64d028	2048		2008		2000		8		in use	 
+  1		 0x64d800	 0x64e800	 0x64d000	 0x64d828	4096		4056		4000		56		in use	 
+  2		 0x64e800	 0x650000	 0x64d800	 0x64e828	6144		6104		6000		104		in use	 
+  3		 0x650000	 0x652000	 0x64e800	 0x650028	8192		8152		8000		152		in use	 
+  4		 0x652000	    (nil)	 0x650000	 0x652028	12288		12248		12000		248		in use	 
+  Total bytes used								32768		32568		32000		568
+  Used blocks:    5  Free blocks:    0  Min heap:  0x64d000    Max heap:  0x655000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x64d000	 0x64d800	    (nil)	 0x64d028	2048		2008		2000		8		in use	 
+  1		 0x64d800	 0x64e800	 0x64d000	 0x64d828	4096		4056		4000		56		in use	 
+  2		 0x64e800	 0x650000	 0x64d800	 0x64e828	6144		6104		6000		104		in use	 
+  3		 0x650000	 0x652000	 0x64e800	 0x650028	8192		8152		8000		152		in use	 
+  4		 0x652000	    (nil)	 0x650000	 0x652028	12288		12248		12000		248		in use	 
+  Total bytes used								32768		32568		32000		568
+  Used blocks:    5  Free blocks:    0  Min heap:  0x64d000    Max heap:  0x655000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x64d000	 0x64d800	    (nil)	 0x64d028	2048		2008		0		2008		free  	*
+  1		 0x64d800	 0x64e800	 0x64d000	 0x64d828	4096		4056		4000		56		in use	 
+  2		 0x64e800	 0x650000	 0x64d800	 0x64e828	6144		6104		0		6104		free  	*
+  3		 0x650000	 0x652000	 0x64e800	 0x650028	8192		8152		8000		152		in use	 
+  4		 0x652000	    (nil)	 0x650000	 0x652028	12288		12248		0		12248		free  	*
+  Total bytes used								32768		32568		12000		20568
+  Used blocks:    2  Free blocks:    3  Min heap:  0x64d000    Max heap:  0x655000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x64d000	    (nil)	    (nil)	 0x64d028	32768		32728		0		32728		free  	*
+  Total bytes used								32768		32728		0		32728
+  Used blocks:    0  Free blocks:    1  Min heap:  0x64d000    Max heap:  0x655000   Block size: 40 bytes
+*** End 13
+
+
+WoooooooHooooooo!!! You survived test 13. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 14
+Initial base address of heap: 0x24d7000
+*** Begin 14
+      memset 3
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x24d7000	0x24d7400	    (nil)	0x24d7028	1024		984		500		484		in use	 
+  1		0x24d7400	0x24d7800	0x24d7000	0x24d7428	1024		984		700		284		in use	 
+  2		0x24d7800	0x24d7c00	0x24d7400	0x24d7828	1024		984		900		84		in use	 
+  3		0x24d7c00	0x24d8400	0x24d7800	0x24d7c28	2048		2008		1100		908		in use	 
+  4		0x24d8400	    (nil)	0x24d7c00	0x24d8428	2048		2008		1300		708		in use	 
+  Total bytes used								7168		6968		4500		2468
+  Used blocks:    5  Free blocks:    0  Min heap: 0x24d7000    Max heap: 0x24d8c00   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x24d7000	0x24d7400	    (nil)	0x24d7028	1024		984		500		484		in use	 
+  1		0x24d7400	0x24d7800	0x24d7000	0x24d7428	1024		984		700		284		in use	 
+  2		0x24d7800	0x24d7c00	0x24d7400	0x24d7828	1024		984		900		84		in use	 
+  3		0x24d7c00	0x24d8400	0x24d7800	0x24d7c28	2048		2008		1100		908		in use	 
+  4		0x24d8400	    (nil)	0x24d7c00	0x24d8428	2048		2008		1300		708		in use	 
+  Total bytes used								7168		6968		4500		2468
+  Used blocks:    5  Free blocks:    0  Min heap: 0x24d7000    Max heap: 0x24d8c00   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x24d7000	0x24d7800	    (nil)	0x24d7028	2048		2008		0		2008		free  	*
+  1		0x24d7800	0x24d7c00	0x24d7000	0x24d7828	1024		984		900		84		in use	 
+  2		0x24d7c00	    (nil)	0x24d7800	0x24d7c28	4096		4056		0		4056		free  	*
+  Total bytes used								7168		7048		900		6148
+  Used blocks:    1  Free blocks:    2  Min heap: 0x24d7000    Max heap: 0x24d8c00   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x24d7000	    (nil)	    (nil)	0x24d7028	7168		7128		0		7128		free  	*
+  Total bytes used								7168		7128		0		7128
+  Used blocks:    0  Free blocks:    1  Min heap: 0x24d7000    Max heap: 0x24d8c00   Block size: 40 bytes
+*** End 14
+
+
+WoooooooHooooooo!!! You survived test 14. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 15
+Initial base address of heap: 0x1fcf000
+*** Begin 15
+      memset 4
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1fcf000	0x1fcf800	    (nil)	0x1fcf028	2048		2008		1024		984		in use	 
+  1		0x1fcf800	0x1fd0400	0x1fcf000	0x1fcf828	3072		3032		2048		984		in use	 
+  2		0x1fd0400	0x1fd1400	0x1fcf800	0x1fd0428	4096		4056		3072		984		in use	 
+  3		0x1fd1400	0x1fd2800	0x1fd0400	0x1fd1428	5120		5080		4096		984		in use	 
+  4		0x1fd2800	    (nil)	0x1fd1400	0x1fd2828	6144		6104		5120		984		in use	 
+  Total bytes used								20480		20280		15360		4920
+  Used blocks:    5  Free blocks:    0  Min heap: 0x1fcf000    Max heap: 0x1fd4000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1fcf000	0x1fcf800	    (nil)	0x1fcf028	2048		2008		1024		984		in use	 
+  1		0x1fcf800	0x1fd0400	0x1fcf000	0x1fcf828	3072		3032		2048		984		in use	 
+  2		0x1fd0400	0x1fd1400	0x1fcf800	0x1fd0428	4096		4056		3072		984		in use	 
+  3		0x1fd1400	0x1fd2800	0x1fd0400	0x1fd1428	5120		5080		4096		984		in use	 
+  4		0x1fd2800	    (nil)	0x1fd1400	0x1fd2828	6144		6104		5120		984		in use	 
+  Total bytes used								20480		20280		15360		4920
+  Used blocks:    5  Free blocks:    0  Min heap: 0x1fcf000    Max heap: 0x1fd4000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1fcf000	0x1fcf800	    (nil)	0x1fcf028	2048		2008		1024		984		in use	 
+  1		0x1fcf800	0x1fd0400	0x1fcf000	0x1fcf828	3072		3032		0		3032		free  	*
+  2		0x1fd0400	0x1fd1400	0x1fcf800	0x1fd0428	4096		4056		3072		984		in use	 
+  3		0x1fd1400	0x1fd2800	0x1fd0400	0x1fd1428	5120		5080		0		5080		free  	*
+  4		0x1fd2800	    (nil)	0x1fd1400	0x1fd2828	6144		6104		5120		984		in use	 
+  Total bytes used								20480		20280		9216		11064
+  Used blocks:    3  Free blocks:    2  Min heap: 0x1fcf000    Max heap: 0x1fd4000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1fcf000	    (nil)	    (nil)	0x1fcf028	20480		20440		0		20440		free  	*
+  Total bytes used								20480		20440		0		20440
+  Used blocks:    0  Free blocks:    1  Min heap: 0x1fcf000    Max heap: 0x1fd4000   Block size: 40 bytes
+*** End 15
+
+
+WoooooooHooooooo!!! You survived test 15. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 16
+Initial base address of heap: 0x15bc000
+*** Begin 16
+      beavcalloc 1
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x15bc000	    (nil)	    (nil)	0x15bc028	17408		17368		17000		368		in use	 
+  Total bytes used								17408		17368		17000		368
+  Used blocks:    1  Free blocks:    0  Min heap: 0x15bc000    Max heap: 0x15c0400   Block size: 40 bytes
+*** End 16
+
+
+WoooooooHooooooo!!! You survived test 16. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 17
+Initial base address of heap: 0x1bf8000
+*** Begin 17
+      beavcalloc 2
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  Total bytes used								0		0		0		0
+  Used blocks:    0  Free blocks:    0  Min heap:     (nil)    Max heap:     (nil)   Block size: 40 bytes
+*** End 17
+
+
+WoooooooHooooooo!!! You survived test 17. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 18
+Initial base address of heap: 0x1d0d000
+*** Begin 18
+      beavcalloc 3
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  Total bytes used								0		0		0		0
+  Used blocks:    0  Free blocks:    0  Min heap:     (nil)    Max heap:     (nil)   Block size: 40 bytes
+*** End 18
+
+
+WoooooooHooooooo!!! You survived test 18. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 19
+Initial base address of heap: 0xb3a000
+*** Begin 19
+      beavrealloc 1
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0xb3a000	    (nil)	    (nil)	 0xb3a028	1024		984		100		884		in use	 
+  Total bytes used								1024		984		100		884
+  Used blocks:    1  Free blocks:    0  Min heap:  0xb3a000    Max heap:  0xb3a400   Block size: 40 bytes
+*** End 19
+
+
+WoooooooHooooooo!!! You survived test 19. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 20
+Initial base address of heap: 0x9d8000
+*** Begin 20
+      beavrealloc 2
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x9d8000	 0x9d8800	    (nil)	 0x9d8028	2048		2008		0		2008		free  	*
+  1		 0x9d8800	    (nil)	 0x9d8000	 0x9d8828	5120		5080		5000		80		in use	 
+  Total bytes used								7168		7088		5000		2088
+  Used blocks:    1  Free blocks:    1  Min heap:  0x9d8000    Max heap:  0x9d9c00   Block size: 40 bytes
+*** End 20
+
+
+WoooooooHooooooo!!! You survived test 20. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 21
+Initial base address of heap: 0x948000
+*** Begin 21
+      beavrealloc 3
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x948000	    (nil)	    (nil)	 0x948028	5120		5080		1000		4080		in use	 
+  Total bytes used								5120		5080		1000		4080
+  Used blocks:    1  Free blocks:    0  Min heap:  0x948000    Max heap:  0x949400   Block size: 40 bytes
+*** End 21
+
+
+WoooooooHooooooo!!! You survived test 21. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 22
+Initial base address of heap: 0x178e000
+*** Begin 22
+      beavrealloc 4
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x178e000	0x178e05a	    (nil)	0x178e028	90		50		50		0		in use	 
+  1		0x178e05a	0x178e0be	0x178e000	0x178e082	100		60		60		0		in use	 
+  2		0x178e0be	0x178e12c	0x178e05a	0x178e0e6	110		70		70		0		in use	 
+  3		0x178e12c	0x178e1a4	0x178e0be	0x178e154	120		80		80		0		in use	 
+  4		0x178e1a4	0x178e226	0x178e12c	0x178e1cc	130		90		90		0		in use	 
+  5		0x178e226	0x178e2b2	0x178e1a4	0x178e24e	140		100		100		0		in use	 
+  6		0x178e2b2	0x178e348	0x178e226	0x178e2da	150		110		110		0		in use	 
+  7		0x178e348	0x178e400	0x178e2b2	0x178e370	184		144		120		24		in use	 
+  8		0x178e400	0x178e4aa	0x178e348	0x178e428	170		130		130		0		in use	 
+  9		0x178e4aa	0x178e55e	0x178e400	0x178e4d2	180		140		140		0		in use	 
+  10		0x178e55e	    (nil)	0x178e4aa	0x178e586	674		634		40		594		in use	 
+  Total bytes used								2048		1608		990		618
+  Used blocks:   11  Free blocks:    0  Min heap: 0x178e000    Max heap: 0x178e800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x178e000	0x178e05a	    (nil)	0x178e028	90		50		50		0		in use	 
+  1		0x178e05a	0x178e0be	0x178e000	0x178e082	100		60		60		0		in use	 
+  2		0x178e0be	0x178e12c	0x178e05a	0x178e0e6	110		70		70		0		in use	 
+  3		0x178e12c	0x178e1a4	0x178e0be	0x178e154	120		80		80		0		in use	 
+  4		0x178e1a4	0x178e226	0x178e12c	0x178e1cc	130		90		90		0		in use	 
+  5		0x178e226	0x178e2b2	0x178e1a4	0x178e24e	140		100		100		0		in use	 
+  6		0x178e2b2	0x178e348	0x178e226	0x178e2da	150		110		110		0		in use	 
+  7		0x178e348	0x178e400	0x178e2b2	0x178e370	184		144		120		24		in use	 
+  8		0x178e400	0x178e4aa	0x178e348	0x178e428	170		130		130		0		in use	 
+  9		0x178e4aa	0x178e55e	0x178e400	0x178e4d2	180		140		140		0		in use	 
+  10		0x178e55e	0x178e800	0x178e4aa	0x178e586	674		634		0		634		free  	*
+  11		0x178e800	    (nil)	0x178e55e	0x178e828	16384		16344		16000		344		in use	 
+  Total bytes used								18432		17952		16950		1002
+  Used blocks:   11  Free blocks:    1  Min heap: 0x178e000    Max heap: 0x1792800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x178e000	0x178e05a	    (nil)	0x178e028	90		50		50		0		in use	 
+  1		0x178e05a	0x178e0be	0x178e000	0x178e082	100		60		60		0		in use	 
+  2		0x178e0be	0x178e12c	0x178e05a	0x178e0e6	110		70		70		0		in use	 
+  3		0x178e12c	0x178e1a4	0x178e0be	0x178e154	120		80		80		0		in use	 
+  4		0x178e1a4	0x178e226	0x178e12c	0x178e1cc	130		90		90		0		in use	 
+  5		0x178e226	0x178e2b2	0x178e1a4	0x178e24e	140		100		100		0		in use	 
+  6		0x178e2b2	0x178e348	0x178e226	0x178e2da	150		110		110		0		in use	 
+  7		0x178e348	0x178e400	0x178e2b2	0x178e370	184		144		120		24		in use	 
+  8		0x178e400	0x178e4aa	0x178e348	0x178e428	170		130		130		0		in use	 
+  9		0x178e4aa	0x178e55e	0x178e400	0x178e4d2	180		140		140		0		in use	 
+  10		0x178e55e	0x178e800	0x178e4aa	0x178e586	674		634		0		634		free  	*
+  11		0x178e800	    (nil)	0x178e55e	0x178e828	16384		16344		16		16328		in use	 
+  Total bytes used								18432		17952		966		16986
+  Used blocks:   11  Free blocks:    1  Min heap: 0x178e000    Max heap: 0x1792800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x178e000	    (nil)	    (nil)	0x178e028	18432		18392		0		18392		free  	*
+  Total bytes used								18432		18392		0		18392
+  Used blocks:    0  Free blocks:    1  Min heap: 0x178e000    Max heap: 0x1792800   Block size: 40 bytes
+*** End 22
+
+
+WoooooooHooooooo!!! You survived test 22. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 23
+Initial base address of heap: 0x1bff000
+*** Begin 23
+      beavrealloc 5
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1bff000	0x1bff400	    (nil)	0x1bff028	1024		984		40		944		in use	 
+  1		0x1bff400	0x1bffc00	0x1bff000	0x1bff428	2048		2008		2000		8		in use	 
+  2		0x1bffc00	0x1c00800	0x1bff400	0x1bffc28	3072		3032		3000		32		in use	 
+  3		0x1c00800	0x1c01800	0x1bffc00	0x1c00828	4096		4056		4000		56		in use	 
+  4		0x1c01800	0x1c02c00	0x1c00800	0x1c01828	5120		5080		5000		80		in use	 
+  5		0x1c02c00	0x1c04400	0x1c01800	0x1c02c28	6144		6104		6000		104		in use	 
+  6		0x1c04400	0x1c06000	0x1c02c00	0x1c04428	7168		7128		7000		128		in use	 
+  7		0x1c06000	0x1c08000	0x1c04400	0x1c06028	8192		8152		8000		152		in use	 
+  8		0x1c08000	0x1c0a400	0x1c06000	0x1c08028	9216		9176		9000		176		in use	 
+  9		0x1c0a400	0x1c0cc00	0x1c08000	0x1c0a428	10240		10200		10000		200		in use	 
+  10		0x1c0cc00	    (nil)	0x1c0a400	0x1c0cc28	11264		11224		11000		224		in use	 
+  Total bytes used								67584		67144		65040		2104
+  Used blocks:   11  Free blocks:    0  Min heap: 0x1bff000    Max heap: 0x1c0f800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1bff000	0x1bff400	    (nil)	0x1bff028	1024		984		0		984		free  	*
+  1		0x1bff400	0x1bffc00	0x1bff000	0x1bff428	2048		2008		2000		8		in use	 
+  2		0x1bffc00	0x1c00800	0x1bff400	0x1bffc28	3072		3032		3000		32		in use	 
+  3		0x1c00800	0x1c01800	0x1bffc00	0x1c00828	4096		4056		4000		56		in use	 
+  4		0x1c01800	0x1c02c00	0x1c00800	0x1c01828	5120		5080		5000		80		in use	 
+  5		0x1c02c00	0x1c04400	0x1c01800	0x1c02c28	6144		6104		6000		104		in use	 
+  6		0x1c04400	0x1c06000	0x1c02c00	0x1c04428	7168		7128		7000		128		in use	 
+  7		0x1c06000	0x1c08000	0x1c04400	0x1c06028	8192		8152		8000		152		in use	 
+  8		0x1c08000	0x1c0a400	0x1c06000	0x1c08028	9216		9176		9000		176		in use	 
+  9		0x1c0a400	0x1c0cc00	0x1c08000	0x1c0a428	10240		10200		10000		200		in use	 
+  10		0x1c0cc00	0x1c0f800	0x1c0a400	0x1c0cc28	11264		11224		11000		224		in use	 
+  11		0x1c0f800	    (nil)	0x1c0cc00	0x1c0f828	16384		16344		16000		344		in use	 
+  Total bytes used								83968		83488		81000		2488
+  Used blocks:   11  Free blocks:    1  Min heap: 0x1bff000    Max heap: 0x1c13800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1bff000	0x1bff400	    (nil)	0x1bff028	1024		984		0		984		free  	*
+  1		0x1bff400	0x1bffc00	0x1bff000	0x1bff428	2048		2008		2000		8		in use	 
+  2		0x1bffc00	0x1c00800	0x1bff400	0x1bffc28	3072		3032		3000		32		in use	 
+  3		0x1c00800	0x1c01800	0x1bffc00	0x1c00828	4096		4056		4000		56		in use	 
+  4		0x1c01800	0x1c02c00	0x1c00800	0x1c01828	5120		5080		5000		80		in use	 
+  5		0x1c02c00	0x1c04400	0x1c01800	0x1c02c28	6144		6104		6000		104		in use	 
+  6		0x1c04400	0x1c06000	0x1c02c00	0x1c04428	7168		7128		7000		128		in use	 
+  7		0x1c06000	0x1c08000	0x1c04400	0x1c06028	8192		8152		8000		152		in use	 
+  8		0x1c08000	0x1c0a400	0x1c06000	0x1c08028	9216		9176		9000		176		in use	 
+  9		0x1c0a400	0x1c0cc00	0x1c08000	0x1c0a428	10240		10200		10000		200		in use	 
+  10		0x1c0cc00	0x1c0f800	0x1c0a400	0x1c0cc28	11264		11224		11000		224		in use	 
+  11		0x1c0f800	    (nil)	0x1c0cc00	0x1c0f828	16384		16344		16		16328		in use	 
+  Total bytes used								83968		83488		65016		18472
+  Used blocks:   11  Free blocks:    1  Min heap: 0x1bff000    Max heap: 0x1c13800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1bff000	    (nil)	    (nil)	0x1bff028	83968		83928		0		83928		free  	*
+  Total bytes used								83968		83928		0		83928
+  Used blocks:    0  Free blocks:    1  Min heap: 0x1bff000    Max heap: 0x1c13800   Block size: 40 bytes
+*** End 23
+
+
+WoooooooHooooooo!!! You survived test 23. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 24
+Initial base address of heap: 0x1648000
+*** Begin 24
+      stress 1  100
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1648000	0x164808c	    (nil)	0x1648028	140		100		100		0		in use	 
+  1		0x164808c	0x1648119	0x1648000	0x16480b4	141		101		101		0		in use	 
+  2		0x1648119	0x16481a7	0x164808c	0x1648141	142		102		102		0		in use	 
+  3		0x16481a7	0x1648236	0x1648119	0x16481cf	143		103		103		0		in use	 
+  4		0x1648236	0x16482c6	0x16481a7	0x164825e	144		104		104		0		in use	 
+  5		0x16482c6	0x1648357	0x1648236	0x16482ee	145		105		105		0		in use	 
+  6		0x1648357	0x1648400	0x16482c6	0x164837f	169		129		106		23		in use	 
+  7		0x1648400	0x1648493	0x1648357	0x1648428	147		107		107		0		in use	 
+  8		0x1648493	0x1648527	0x1648400	0x16484bb	148		108		108		0		in use	 
+  9		0x1648527	0x16485bc	0x1648493	0x164854f	149		109		109		0		in use	 
+  10		0x16485bc	0x1648652	0x1648527	0x16485e4	150		110		110		0		in use	 
+  11		0x1648652	0x16486e9	0x16485bc	0x164867a	151		111		111		0		in use	 
+  12		0x16486e9	0x1648800	0x1648652	0x1648711	279		239		112		127		in use	 
+  13		0x1648800	0x1648899	0x16486e9	0x1648828	153		113		113		0		in use	 
+  14		0x1648899	0x1648933	0x1648800	0x16488c1	154		114		114		0		in use	 
+  15		0x1648933	0x16489ce	0x1648899	0x164895b	155		115		115		0		in use	 
+  16		0x16489ce	0x1648a6a	0x1648933	0x16489f6	156		116		116		0		in use	 
+  17		0x1648a6a	0x1648b07	0x16489ce	0x1648a92	157		117		117		0		in use	 
+  18		0x1648b07	0x1648c00	0x1648a6a	0x1648b2f	249		209		118		91		in use	 
+  19		0x1648c00	0x1648c9f	0x1648b07	0x1648c28	159		119		119		0		in use	 
+  20		0x1648c9f	0x1648d3f	0x1648c00	0x1648cc7	160		120		120		0		in use	 
+  21		0x1648d3f	0x1648de0	0x1648c9f	0x1648d67	161		121		121		0		in use	 
+  22		0x1648de0	0x1648e82	0x1648d3f	0x1648e08	162		122		122		0		in use	 
+  23		0x1648e82	0x1648f25	0x1648de0	0x1648eaa	163		123		123		0		in use	 
+  24		0x1648f25	0x1649000	0x1648e82	0x1648f4d	219		179		124		55		in use	 
+  25		0x1649000	0x16490a5	0x1648f25	0x1649028	165		125		125		0		in use	 
+  26		0x16490a5	0x164914b	0x1649000	0x16490cd	166		126		126		0		in use	 
+  27		0x164914b	0x16491f2	0x16490a5	0x1649173	167		127		127		0		in use	 
+  28		0x16491f2	0x164929a	0x164914b	0x164921a	168		128		128		0		in use	 
+  29		0x164929a	0x1649343	0x16491f2	0x16492c2	169		129		129		0		in use	 
+  30		0x1649343	0x1649400	0x164929a	0x164936b	189		149		130		19		in use	 
+  31		0x1649400	0x16494ab	0x1649343	0x1649428	171		131		131		0		in use	 
+  32		0x16494ab	0x1649557	0x1649400	0x16494d3	172		132		132		0		in use	 
+  33		0x1649557	0x1649604	0x16494ab	0x164957f	173		133		133		0		in use	 
+  34		0x1649604	0x16496b2	0x1649557	0x164962c	174		134		134		0		in use	 
+  35		0x16496b2	0x1649800	0x1649604	0x16496da	334		294		135		159		in use	 
+  36		0x1649800	0x16498b0	0x16496b2	0x1649828	176		136		136		0		in use	 
+  37		0x16498b0	0x1649961	0x1649800	0x16498d8	177		137		137		0		in use	 
+  38		0x1649961	0x1649a13	0x16498b0	0x1649989	178		138		138		0		in use	 
+  39		0x1649a13	0x1649ac6	0x1649961	0x1649a3b	179		139		139		0		in use	 
+  40		0x1649ac6	0x1649c00	0x1649a13	0x1649aee	314		274		140		134		in use	 
+  41		0x1649c00	0x1649cb5	0x1649ac6	0x1649c28	181		141		141		0		in use	 
+  42		0x1649cb5	0x1649d6b	0x1649c00	0x1649cdd	182		142		142		0		in use	 
+  43		0x1649d6b	0x1649e22	0x1649cb5	0x1649d93	183		143		143		0		in use	 
+  44		0x1649e22	0x1649eda	0x1649d6b	0x1649e4a	184		144		144		0		in use	 
+  45		0x1649eda	0x164a000	0x1649e22	0x1649f02	294		254		145		109		in use	 
+  46		0x164a000	0x164a0ba	0x1649eda	0x164a028	186		146		146		0		in use	 
+  47		0x164a0ba	0x164a175	0x164a000	0x164a0e2	187		147		147		0		in use	 
+  48		0x164a175	0x164a231	0x164a0ba	0x164a19d	188		148		148		0		in use	 
+  49		0x164a231	0x164a2ee	0x164a175	0x164a259	189		149		149		0		in use	 
+  50		0x164a2ee	0x164a400	0x164a231	0x164a316	274		234		150		84		in use	 
+  51		0x164a400	0x164a4bf	0x164a2ee	0x164a428	191		151		151		0		in use	 
+  52		0x164a4bf	0x164a57f	0x164a400	0x164a4e7	192		152		152		0		in use	 
+  53		0x164a57f	0x164a640	0x164a4bf	0x164a5a7	193		153		153		0		in use	 
+  54		0x164a640	0x164a702	0x164a57f	0x164a668	194		154		154		0		in use	 
+  55		0x164a702	0x164a800	0x164a640	0x164a72a	254		214		155		59		in use	 
+  56		0x164a800	0x164a8c4	0x164a702	0x164a828	196		156		156		0		in use	 
+  57		0x164a8c4	0x164a989	0x164a800	0x164a8ec	197		157		157		0		in use	 
+  58		0x164a989	0x164aa4f	0x164a8c4	0x164a9b1	198		158		158		0		in use	 
+  59		0x164aa4f	0x164ab16	0x164a989	0x164aa77	199		159		159		0		in use	 
+  60		0x164ab16	0x164ac00	0x164aa4f	0x164ab3e	234		194		160		34		in use	 
+  61		0x164ac00	0x164acc9	0x164ab16	0x164ac28	201		161		161		0		in use	 
+  62		0x164acc9	0x164ad93	0x164ac00	0x164acf1	202		162		162		0		in use	 
+  63		0x164ad93	0x164ae5e	0x164acc9	0x164adbb	203		163		163		0		in use	 
+  64		0x164ae5e	0x164af2a	0x164ad93	0x164ae86	204		164		164		0		in use	 
+  65		0x164af2a	0x164b000	0x164ae5e	0x164af52	214		174		165		9		in use	 
+  66		0x164b000	0x164b0ce	0x164af2a	0x164b028	206		166		166		0		in use	 
+  67		0x164b0ce	0x164b19d	0x164b000	0x164b0f6	207		167		167		0		in use	 
+  68		0x164b19d	0x164b26d	0x164b0ce	0x164b1c5	208		168		168		0		in use	 
+  69		0x164b26d	0x164b400	0x164b19d	0x164b295	403		363		169		194		in use	 
+  70		0x164b400	0x164b4d2	0x164b26d	0x164b428	210		170		170		0		in use	 
+  71		0x164b4d2	0x164b5a5	0x164b400	0x164b4fa	211		171		171		0		in use	 
+  72		0x164b5a5	0x164b679	0x164b4d2	0x164b5cd	212		172		172		0		in use	 
+  73		0x164b679	0x164b800	0x164b5a5	0x164b6a1	391		351		173		178		in use	 
+  74		0x164b800	0x164b8d6	0x164b679	0x164b828	214		174		174		0		in use	 
+  75		0x164b8d6	0x164b9ad	0x164b800	0x164b8fe	215		175		175		0		in use	 
+  76		0x164b9ad	0x164ba85	0x164b8d6	0x164b9d5	216		176		176		0		in use	 
+  77		0x164ba85	0x164bc00	0x164b9ad	0x164baad	379		339		177		162		in use	 
+  78		0x164bc00	0x164bcda	0x164ba85	0x164bc28	218		178		178		0		in use	 
+  79		0x164bcda	0x164bdb5	0x164bc00	0x164bd02	219		179		179		0		in use	 
+  80		0x164bdb5	0x164be91	0x164bcda	0x164bddd	220		180		180		0		in use	 
+  81		0x164be91	0x164c000	0x164bdb5	0x164beb9	367		327		181		146		in use	 
+  82		0x164c000	0x164c0de	0x164be91	0x164c028	222		182		182		0		in use	 
+  83		0x164c0de	0x164c1bd	0x164c000	0x164c106	223		183		183		0		in use	 
+  84		0x164c1bd	0x164c29d	0x164c0de	0x164c1e5	224		184		184		0		in use	 
+  85		0x164c29d	0x164c400	0x164c1bd	0x164c2c5	355		315		185		130		in use	 
+  86		0x164c400	0x164c4e2	0x164c29d	0x164c428	226		186		186		0		in use	 
+  87		0x164c4e2	0x164c5c5	0x164c400	0x164c50a	227		187		187		0		in use	 
+  88		0x164c5c5	0x164c6a9	0x164c4e2	0x164c5ed	228		188		188		0		in use	 
+  89		0x164c6a9	0x164c800	0x164c5c5	0x164c6d1	343		303		189		114		in use	 
+  90		0x164c800	0x164c8e6	0x164c6a9	0x164c828	230		190		190		0		in use	 
+  91		0x164c8e6	0x164c9cd	0x164c800	0x164c90e	231		191		191		0		in use	 
+  92		0x164c9cd	0x164cab5	0x164c8e6	0x164c9f5	232		192		192		0		in use	 
+  93		0x164cab5	0x164cc00	0x164c9cd	0x164cadd	331		291		193		98		in use	 
+  94		0x164cc00	0x164ccea	0x164cab5	0x164cc28	234		194		194		0		in use	 
+  95		0x164ccea	0x164cdd5	0x164cc00	0x164cd12	235		195		195		0		in use	 
+  96		0x164cdd5	0x164cec1	0x164ccea	0x164cdfd	236		196		196		0		in use	 
+  97		0x164cec1	0x164d000	0x164cdd5	0x164cee9	319		279		197		82		in use	 
+  98		0x164d000	0x164d0ee	0x164cec1	0x164d028	238		198		198		0		in use	 
+  99		0x164d0ee	    (nil)	0x164d000	0x164d116	786		746		199		547		in use	 
+  Total bytes used								21504		17504		14950		2554
+  Used blocks:  100  Free blocks:    0  Min heap: 0x1648000    Max heap: 0x164d400   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1648000	    (nil)	    (nil)	0x1648028	21504		21464		0		21464		free  	*
+  Total bytes used								21504		21464		0		21464
+  Used blocks:    0  Free blocks:    1  Min heap: 0x1648000    Max heap: 0x164d400   Block size: 40 bytes
+*** End 24
+
+
+WoooooooHooooooo!!! You survived test 24. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 25
+Initial base address of heap: 0x62d000
+*** Begin 25
+      stress 2  100
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d400	    (nil)	 0x62d028	1024		984		900		84		in use	 
+  1		 0x62d400	 0x62d800	 0x62d000	 0x62d428	1024		984		915		69		in use	 
+  2		 0x62d800	 0x62dc00	 0x62d400	 0x62d828	1024		984		930		54		in use	 
+  3		 0x62dc00	 0x62e000	 0x62d800	 0x62dc28	1024		984		945		39		in use	 
+  4		 0x62e000	 0x62e400	 0x62dc00	 0x62e028	1024		984		960		24		in use	 
+  5		 0x62e400	 0x62e800	 0x62e000	 0x62e428	1024		984		975		9		in use	 
+  6		 0x62e800	 0x62f000	 0x62e400	 0x62e828	2048		2008		990		1018		in use	 
+  7		 0x62f000	 0x62f800	 0x62e800	 0x62f028	2048		2008		1005		1003		in use	 
+  8		 0x62f800	 0x630000	 0x62f000	 0x62f828	2048		2008		1020		988		in use	 
+  9		 0x630000	 0x630800	 0x62f800	 0x630028	2048		2008		1035		973		in use	 
+  10		 0x630800	 0x631000	 0x630000	 0x630828	2048		2008		1050		958		in use	 
+  11		 0x631000	 0x631800	 0x630800	 0x631028	2048		2008		1065		943		in use	 
+  12		 0x631800	 0x632000	 0x631000	 0x631828	2048		2008		1080		928		in use	 
+  13		 0x632000	 0x632800	 0x631800	 0x632028	2048		2008		1095		913		in use	 
+  14		 0x632800	 0x633000	 0x632000	 0x632828	2048		2008		1110		898		in use	 
+  15		 0x633000	 0x633800	 0x632800	 0x633028	2048		2008		1125		883		in use	 
+  16		 0x633800	 0x634000	 0x633000	 0x633828	2048		2008		1140		868		in use	 
+  17		 0x634000	 0x634800	 0x633800	 0x634028	2048		2008		1155		853		in use	 
+  18		 0x634800	 0x635000	 0x634000	 0x634828	2048		2008		1170		838		in use	 
+  19		 0x635000	 0x635800	 0x634800	 0x635028	2048		2008		1185		823		in use	 
+  20		 0x635800	 0x636000	 0x635000	 0x635828	2048		2008		1200		808		in use	 
+  21		 0x636000	 0x636800	 0x635800	 0x636028	2048		2008		1215		793		in use	 
+  22		 0x636800	 0x637000	 0x636000	 0x636828	2048		2008		1230		778		in use	 
+  23		 0x637000	 0x637800	 0x636800	 0x637028	2048		2008		1245		763		in use	 
+  24		 0x637800	 0x638000	 0x637000	 0x637828	2048		2008		1260		748		in use	 
+  25		 0x638000	 0x638800	 0x637800	 0x638028	2048		2008		1275		733		in use	 
+  26		 0x638800	 0x639000	 0x638000	 0x638828	2048		2008		1290		718		in use	 
+  27		 0x639000	 0x639800	 0x638800	 0x639028	2048		2008		1305		703		in use	 
+  28		 0x639800	 0x63a000	 0x639000	 0x639828	2048		2008		1320		688		in use	 
+  29		 0x63a000	 0x63a800	 0x639800	 0x63a028	2048		2008		1335		673		in use	 
+  30		 0x63a800	 0x63b000	 0x63a000	 0x63a828	2048		2008		1350		658		in use	 
+  31		 0x63b000	 0x63b800	 0x63a800	 0x63b028	2048		2008		1365		643		in use	 
+  32		 0x63b800	 0x63c000	 0x63b000	 0x63b828	2048		2008		1380		628		in use	 
+  33		 0x63c000	 0x63c800	 0x63b800	 0x63c028	2048		2008		1395		613		in use	 
+  34		 0x63c800	 0x63d000	 0x63c000	 0x63c828	2048		2008		1410		598		in use	 
+  35		 0x63d000	 0x63d800	 0x63c800	 0x63d028	2048		2008		1425		583		in use	 
+  36		 0x63d800	 0x63e000	 0x63d000	 0x63d828	2048		2008		1440		568		in use	 
+  37		 0x63e000	 0x63e800	 0x63d800	 0x63e028	2048		2008		1455		553		in use	 
+  38		 0x63e800	 0x63f000	 0x63e000	 0x63e828	2048		2008		1470		538		in use	 
+  39		 0x63f000	 0x63f800	 0x63e800	 0x63f028	2048		2008		1485		523		in use	 
+  40		 0x63f800	 0x640000	 0x63f000	 0x63f828	2048		2008		1500		508		in use	 
+  41		 0x640000	 0x640800	 0x63f800	 0x640028	2048		2008		1515		493		in use	 
+  42		 0x640800	 0x641000	 0x640000	 0x640828	2048		2008		1530		478		in use	 
+  43		 0x641000	 0x641800	 0x640800	 0x641028	2048		2008		1545		463		in use	 
+  44		 0x641800	 0x642000	 0x641000	 0x641828	2048		2008		1560		448		in use	 
+  45		 0x642000	 0x642800	 0x641800	 0x642028	2048		2008		1575		433		in use	 
+  46		 0x642800	 0x643000	 0x642000	 0x642828	2048		2008		1590		418		in use	 
+  47		 0x643000	 0x643800	 0x642800	 0x643028	2048		2008		1605		403		in use	 
+  48		 0x643800	 0x644000	 0x643000	 0x643828	2048		2008		1620		388		in use	 
+  49		 0x644000	 0x644800	 0x643800	 0x644028	2048		2008		1635		373		in use	 
+  50		 0x644800	 0x645000	 0x644000	 0x644828	2048		2008		1650		358		in use	 
+  51		 0x645000	 0x645800	 0x644800	 0x645028	2048		2008		1665		343		in use	 
+  52		 0x645800	 0x646000	 0x645000	 0x645828	2048		2008		1680		328		in use	 
+  53		 0x646000	 0x646800	 0x645800	 0x646028	2048		2008		1695		313		in use	 
+  54		 0x646800	 0x647000	 0x646000	 0x646828	2048		2008		1710		298		in use	 
+  55		 0x647000	 0x647800	 0x646800	 0x647028	2048		2008		1725		283		in use	 
+  56		 0x647800	 0x648000	 0x647000	 0x647828	2048		2008		1740		268		in use	 
+  57		 0x648000	 0x648800	 0x647800	 0x648028	2048		2008		1755		253		in use	 
+  58		 0x648800	 0x649000	 0x648000	 0x648828	2048		2008		1770		238		in use	 
+  59		 0x649000	 0x649800	 0x648800	 0x649028	2048		2008		1785		223		in use	 
+  60		 0x649800	 0x64a000	 0x649000	 0x649828	2048		2008		1800		208		in use	 
+  61		 0x64a000	 0x64a800	 0x649800	 0x64a028	2048		2008		1815		193		in use	 
+  62		 0x64a800	 0x64b000	 0x64a000	 0x64a828	2048		2008		1830		178		in use	 
+  63		 0x64b000	 0x64b800	 0x64a800	 0x64b028	2048		2008		1845		163		in use	 
+  64		 0x64b800	 0x64c000	 0x64b000	 0x64b828	2048		2008		1860		148		in use	 
+  65		 0x64c000	 0x64c800	 0x64b800	 0x64c028	2048		2008		1875		133		in use	 
+  66		 0x64c800	 0x64d000	 0x64c000	 0x64c828	2048		2008		1890		118		in use	 
+  67		 0x64d000	 0x64d800	 0x64c800	 0x64d028	2048		2008		1905		103		in use	 
+  68		 0x64d800	 0x64e000	 0x64d000	 0x64d828	2048		2008		1920		88		in use	 
+  69		 0x64e000	 0x64e800	 0x64d800	 0x64e028	2048		2008		1935		73		in use	 
+  70		 0x64e800	 0x64f000	 0x64e000	 0x64e828	2048		2008		1950		58		in use	 
+  71		 0x64f000	 0x64f800	 0x64e800	 0x64f028	2048		2008		1965		43		in use	 
+  72		 0x64f800	 0x650000	 0x64f000	 0x64f828	2048		2008		1980		28		in use	 
+  73		 0x650000	 0x650800	 0x64f800	 0x650028	2048		2008		1995		13		in use	 
+  74		 0x650800	 0x651400	 0x650000	 0x650828	3072		3032		2010		1022		in use	 
+  75		 0x651400	 0x652000	 0x650800	 0x651428	3072		3032		2025		1007		in use	 
+  76		 0x652000	 0x652c00	 0x651400	 0x652028	3072		3032		2040		992		in use	 
+  77		 0x652c00	 0x653800	 0x652000	 0x652c28	3072		3032		2055		977		in use	 
+  78		 0x653800	 0x654400	 0x652c00	 0x653828	3072		3032		2070		962		in use	 
+  79		 0x654400	 0x655000	 0x653800	 0x654428	3072		3032		2085		947		in use	 
+  80		 0x655000	 0x655c00	 0x654400	 0x655028	3072		3032		2100		932		in use	 
+  81		 0x655c00	 0x656800	 0x655000	 0x655c28	3072		3032		2115		917		in use	 
+  82		 0x656800	 0x657400	 0x655c00	 0x656828	3072		3032		2130		902		in use	 
+  83		 0x657400	 0x658000	 0x656800	 0x657428	3072		3032		2145		887		in use	 
+  84		 0x658000	 0x658c00	 0x657400	 0x658028	3072		3032		2160		872		in use	 
+  85		 0x658c00	 0x659800	 0x658000	 0x658c28	3072		3032		2175		857		in use	 
+  86		 0x659800	 0x65a400	 0x658c00	 0x659828	3072		3032		2190		842		in use	 
+  87		 0x65a400	 0x65b000	 0x659800	 0x65a428	3072		3032		2205		827		in use	 
+  88		 0x65b000	 0x65bc00	 0x65a400	 0x65b028	3072		3032		2220		812		in use	 
+  89		 0x65bc00	 0x65c800	 0x65b000	 0x65bc28	3072		3032		2235		797		in use	 
+  90		 0x65c800	 0x65d400	 0x65bc00	 0x65c828	3072		3032		2250		782		in use	 
+  91		 0x65d400	 0x65e000	 0x65c800	 0x65d428	3072		3032		2265		767		in use	 
+  92		 0x65e000	 0x65ec00	 0x65d400	 0x65e028	3072		3032		2280		752		in use	 
+  93		 0x65ec00	 0x65f800	 0x65e000	 0x65ec28	3072		3032		2295		737		in use	 
+  94		 0x65f800	 0x660400	 0x65ec00	 0x65f828	3072		3032		2310		722		in use	 
+  95		 0x660400	 0x661000	 0x65f800	 0x660428	3072		3032		2325		707		in use	 
+  96		 0x661000	 0x661c00	 0x660400	 0x661028	3072		3032		2340		692		in use	 
+  97		 0x661c00	 0x662800	 0x661000	 0x661c28	3072		3032		2355		677		in use	 
+  98		 0x662800	 0x663400	 0x661c00	 0x662828	3072		3032		2370		662		in use	 
+  99		 0x663400	    (nil)	 0x662800	 0x663428	3072		3032		2385		647		in use	 
+  Total bytes used								225280		221280		164250		57030
+  Used blocks:  100  Free blocks:    0  Min heap:  0x62d000    Max heap:  0x664000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d400	    (nil)	 0x62d028	1024		984		900		84		in use	 
+  1		 0x62d400	 0x62d800	 0x62d000	 0x62d428	1024		984		915		69		in use	 
+  2		 0x62d800	 0x62dc00	 0x62d400	 0x62d828	1024		984		930		54		in use	 
+  3		 0x62dc00	 0x62e000	 0x62d800	 0x62dc28	1024		984		0		984		free  	*
+  4		 0x62e000	 0x62e400	 0x62dc00	 0x62e028	1024		984		960		24		in use	 
+  5		 0x62e400	 0x62e800	 0x62e000	 0x62e428	1024		984		975		9		in use	 
+  6		 0x62e800	 0x62f000	 0x62e400	 0x62e828	2048		2008		990		1018		in use	 
+  7		 0x62f000	 0x62f800	 0x62e800	 0x62f028	2048		2008		0		2008		free  	*
+  8		 0x62f800	 0x630000	 0x62f000	 0x62f828	2048		2008		1020		988		in use	 
+  9		 0x630000	 0x630800	 0x62f800	 0x630028	2048		2008		1035		973		in use	 
+  10		 0x630800	 0x631000	 0x630000	 0x630828	2048		2008		1050		958		in use	 
+  11		 0x631000	 0x631800	 0x630800	 0x631028	2048		2008		0		2008		free  	*
+  12		 0x631800	 0x632000	 0x631000	 0x631828	2048		2008		1080		928		in use	 
+  13		 0x632000	 0x632800	 0x631800	 0x632028	2048		2008		1095		913		in use	 
+  14		 0x632800	 0x633000	 0x632000	 0x632828	2048		2008		1110		898		in use	 
+  15		 0x633000	 0x633800	 0x632800	 0x633028	2048		2008		0		2008		free  	*
+  16		 0x633800	 0x634000	 0x633000	 0x633828	2048		2008		1140		868		in use	 
+  17		 0x634000	 0x634800	 0x633800	 0x634028	2048		2008		1155		853		in use	 
+  18		 0x634800	 0x635000	 0x634000	 0x634828	2048		2008		1170		838		in use	 
+  19		 0x635000	 0x635800	 0x634800	 0x635028	2048		2008		0		2008		free  	*
+  20		 0x635800	 0x636000	 0x635000	 0x635828	2048		2008		1200		808		in use	 
+  21		 0x636000	 0x636800	 0x635800	 0x636028	2048		2008		1215		793		in use	 
+  22		 0x636800	 0x637000	 0x636000	 0x636828	2048		2008		1230		778		in use	 
+  23		 0x637000	 0x637800	 0x636800	 0x637028	2048		2008		0		2008		free  	*
+  24		 0x637800	 0x638000	 0x637000	 0x637828	2048		2008		1260		748		in use	 
+  25		 0x638000	 0x638800	 0x637800	 0x638028	2048		2008		1275		733		in use	 
+  26		 0x638800	 0x639000	 0x638000	 0x638828	2048		2008		1290		718		in use	 
+  27		 0x639000	 0x639800	 0x638800	 0x639028	2048		2008		0		2008		free  	*
+  28		 0x639800	 0x63a000	 0x639000	 0x639828	2048		2008		1320		688		in use	 
+  29		 0x63a000	 0x63a800	 0x639800	 0x63a028	2048		2008		1335		673		in use	 
+  30		 0x63a800	 0x63b000	 0x63a000	 0x63a828	2048		2008		1350		658		in use	 
+  31		 0x63b000	 0x63b800	 0x63a800	 0x63b028	2048		2008		0		2008		free  	*
+  32		 0x63b800	 0x63c000	 0x63b000	 0x63b828	2048		2008		1380		628		in use	 
+  33		 0x63c000	 0x63c800	 0x63b800	 0x63c028	2048		2008		1395		613		in use	 
+  34		 0x63c800	 0x63d000	 0x63c000	 0x63c828	2048		2008		1410		598		in use	 
+  35		 0x63d000	 0x63d800	 0x63c800	 0x63d028	2048		2008		0		2008		free  	*
+  36		 0x63d800	 0x63e000	 0x63d000	 0x63d828	2048		2008		1440		568		in use	 
+  37		 0x63e000	 0x63e800	 0x63d800	 0x63e028	2048		2008		1455		553		in use	 
+  38		 0x63e800	 0x63f000	 0x63e000	 0x63e828	2048		2008		1470		538		in use	 
+  39		 0x63f000	 0x63f800	 0x63e800	 0x63f028	2048		2008		0		2008		free  	*
+  40		 0x63f800	 0x640000	 0x63f000	 0x63f828	2048		2008		1500		508		in use	 
+  41		 0x640000	 0x640800	 0x63f800	 0x640028	2048		2008		1515		493		in use	 
+  42		 0x640800	 0x641000	 0x640000	 0x640828	2048		2008		1530		478		in use	 
+  43		 0x641000	 0x641800	 0x640800	 0x641028	2048		2008		0		2008		free  	*
+  44		 0x641800	 0x642000	 0x641000	 0x641828	2048		2008		1560		448		in use	 
+  45		 0x642000	 0x642800	 0x641800	 0x642028	2048		2008		1575		433		in use	 
+  46		 0x642800	 0x643000	 0x642000	 0x642828	2048		2008		1590		418		in use	 
+  47		 0x643000	 0x643800	 0x642800	 0x643028	2048		2008		0		2008		free  	*
+  48		 0x643800	 0x644000	 0x643000	 0x643828	2048		2008		1620		388		in use	 
+  49		 0x644000	 0x644800	 0x643800	 0x644028	2048		2008		1635		373		in use	 
+  50		 0x644800	 0x645000	 0x644000	 0x644828	2048		2008		1650		358		in use	 
+  51		 0x645000	 0x645800	 0x644800	 0x645028	2048		2008		0		2008		free  	*
+  52		 0x645800	 0x646000	 0x645000	 0x645828	2048		2008		1680		328		in use	 
+  53		 0x646000	 0x646800	 0x645800	 0x646028	2048		2008		1695		313		in use	 
+  54		 0x646800	 0x647000	 0x646000	 0x646828	2048		2008		1710		298		in use	 
+  55		 0x647000	 0x647800	 0x646800	 0x647028	2048		2008		0		2008		free  	*
+  56		 0x647800	 0x648000	 0x647000	 0x647828	2048		2008		1740		268		in use	 
+  57		 0x648000	 0x648800	 0x647800	 0x648028	2048		2008		1755		253		in use	 
+  58		 0x648800	 0x649000	 0x648000	 0x648828	2048		2008		1770		238		in use	 
+  59		 0x649000	 0x649800	 0x648800	 0x649028	2048		2008		0		2008		free  	*
+  60		 0x649800	 0x64a000	 0x649000	 0x649828	2048		2008		1800		208		in use	 
+  61		 0x64a000	 0x64a800	 0x649800	 0x64a028	2048		2008		1815		193		in use	 
+  62		 0x64a800	 0x64b000	 0x64a000	 0x64a828	2048		2008		1830		178		in use	 
+  63		 0x64b000	 0x64b800	 0x64a800	 0x64b028	2048		2008		0		2008		free  	*
+  64		 0x64b800	 0x64c000	 0x64b000	 0x64b828	2048		2008		1860		148		in use	 
+  65		 0x64c000	 0x64c800	 0x64b800	 0x64c028	2048		2008		1875		133		in use	 
+  66		 0x64c800	 0x64d000	 0x64c000	 0x64c828	2048		2008		1890		118		in use	 
+  67		 0x64d000	 0x64d800	 0x64c800	 0x64d028	2048		2008		0		2008		free  	*
+  68		 0x64d800	 0x64e000	 0x64d000	 0x64d828	2048		2008		1920		88		in use	 
+  69		 0x64e000	 0x64e800	 0x64d800	 0x64e028	2048		2008		1935		73		in use	 
+  70		 0x64e800	 0x64f000	 0x64e000	 0x64e828	2048		2008		1950		58		in use	 
+  71		 0x64f000	 0x64f800	 0x64e800	 0x64f028	2048		2008		0		2008		free  	*
+  72		 0x64f800	 0x650000	 0x64f000	 0x64f828	2048		2008		1980		28		in use	 
+  73		 0x650000	 0x650800	 0x64f800	 0x650028	2048		2008		1995		13		in use	 
+  74		 0x650800	 0x651400	 0x650000	 0x650828	3072		3032		2010		1022		in use	 
+  75		 0x651400	 0x652000	 0x650800	 0x651428	3072		3032		0		3032		free  	*
+  76		 0x652000	 0x652c00	 0x651400	 0x652028	3072		3032		2040		992		in use	 
+  77		 0x652c00	 0x653800	 0x652000	 0x652c28	3072		3032		2055		977		in use	 
+  78		 0x653800	 0x654400	 0x652c00	 0x653828	3072		3032		2070		962		in use	 
+  79		 0x654400	 0x655000	 0x653800	 0x654428	3072		3032		0		3032		free  	*
+  80		 0x655000	 0x655c00	 0x654400	 0x655028	3072		3032		2100		932		in use	 
+  81		 0x655c00	 0x656800	 0x655000	 0x655c28	3072		3032		2115		917		in use	 
+  82		 0x656800	 0x657400	 0x655c00	 0x656828	3072		3032		2130		902		in use	 
+  83		 0x657400	 0x658000	 0x656800	 0x657428	3072		3032		0		3032		free  	*
+  84		 0x658000	 0x658c00	 0x657400	 0x658028	3072		3032		2160		872		in use	 
+  85		 0x658c00	 0x659800	 0x658000	 0x658c28	3072		3032		2175		857		in use	 
+  86		 0x659800	 0x65a400	 0x658c00	 0x659828	3072		3032		2190		842		in use	 
+  87		 0x65a400	 0x65b000	 0x659800	 0x65a428	3072		3032		0		3032		free  	*
+  88		 0x65b000	 0x65bc00	 0x65a400	 0x65b028	3072		3032		2220		812		in use	 
+  89		 0x65bc00	 0x65c800	 0x65b000	 0x65bc28	3072		3032		2235		797		in use	 
+  90		 0x65c800	 0x65d400	 0x65bc00	 0x65c828	3072		3032		2250		782		in use	 
+  91		 0x65d400	 0x65e000	 0x65c800	 0x65d428	3072		3032		0		3032		free  	*
+  92		 0x65e000	 0x65ec00	 0x65d400	 0x65e028	3072		3032		2280		752		in use	 
+  93		 0x65ec00	 0x65f800	 0x65e000	 0x65ec28	3072		3032		2295		737		in use	 
+  94		 0x65f800	 0x660400	 0x65ec00	 0x65f828	3072		3032		2310		722		in use	 
+  95		 0x660400	 0x661000	 0x65f800	 0x660428	3072		3032		0		3032		free  	*
+  96		 0x661000	 0x661c00	 0x660400	 0x661028	3072		3032		2340		692		in use	 
+  97		 0x661c00	 0x662800	 0x661000	 0x661c28	3072		3032		2355		677		in use	 
+  98		 0x662800	 0x663400	 0x661c00	 0x662828	3072		3032		2370		662		in use	 
+  99		 0x663400	    (nil)	 0x662800	 0x663428	3072		3032		0		3032		free  	*
+  Total bytes used								225280		221280		122625		98655
+  Used blocks:   75  Free blocks:   25  Min heap:  0x62d000    Max heap:  0x664000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d400	    (nil)	 0x62d028	1024		984		900		84		in use	 
+  1		 0x62d400	 0x62d800	 0x62d000	 0x62d428	1024		984		915		69		in use	 
+  2		 0x62d800	 0x62e000	 0x62d400	 0x62d828	2048		2008		0		2008		free  	*
+  3		 0x62e000	 0x62e400	 0x62d800	 0x62e028	1024		984		960		24		in use	 
+  4		 0x62e400	 0x62e800	 0x62e000	 0x62e428	1024		984		975		9		in use	 
+  5		 0x62e800	 0x62f800	 0x62e400	 0x62e828	4096		4056		0		4056		free  	*
+  6		 0x62f800	 0x630000	 0x62e800	 0x62f828	2048		2008		1020		988		in use	 
+  7		 0x630000	 0x630800	 0x62f800	 0x630028	2048		2008		1035		973		in use	 
+  8		 0x630800	 0x631800	 0x630000	 0x630828	4096		4056		0		4056		free  	*
+  9		 0x631800	 0x632000	 0x630800	 0x631828	2048		2008		1080		928		in use	 
+  10		 0x632000	 0x632800	 0x631800	 0x632028	2048		2008		1095		913		in use	 
+  11		 0x632800	 0x633800	 0x632000	 0x632828	4096		4056		0		4056		free  	*
+  12		 0x633800	 0x634000	 0x632800	 0x633828	2048		2008		1140		868		in use	 
+  13		 0x634000	 0x634800	 0x633800	 0x634028	2048		2008		1155		853		in use	 
+  14		 0x634800	 0x635800	 0x634000	 0x634828	4096		4056		0		4056		free  	*
+  15		 0x635800	 0x636000	 0x634800	 0x635828	2048		2008		1200		808		in use	 
+  16		 0x636000	 0x636800	 0x635800	 0x636028	2048		2008		1215		793		in use	 
+  17		 0x636800	 0x637800	 0x636000	 0x636828	4096		4056		0		4056		free  	*
+  18		 0x637800	 0x638000	 0x636800	 0x637828	2048		2008		1260		748		in use	 
+  19		 0x638000	 0x638800	 0x637800	 0x638028	2048		2008		1275		733		in use	 
+  20		 0x638800	 0x639800	 0x638000	 0x638828	4096		4056		0		4056		free  	*
+  21		 0x639800	 0x63a000	 0x638800	 0x639828	2048		2008		1320		688		in use	 
+  22		 0x63a000	 0x63a800	 0x639800	 0x63a028	2048		2008		1335		673		in use	 
+  23		 0x63a800	 0x63b800	 0x63a000	 0x63a828	4096		4056		0		4056		free  	*
+  24		 0x63b800	 0x63c000	 0x63a800	 0x63b828	2048		2008		1380		628		in use	 
+  25		 0x63c000	 0x63c800	 0x63b800	 0x63c028	2048		2008		1395		613		in use	 
+  26		 0x63c800	 0x63d800	 0x63c000	 0x63c828	4096		4056		0		4056		free  	*
+  27		 0x63d800	 0x63e000	 0x63c800	 0x63d828	2048		2008		1440		568		in use	 
+  28		 0x63e000	 0x63e800	 0x63d800	 0x63e028	2048		2008		1455		553		in use	 
+  29		 0x63e800	 0x63f800	 0x63e000	 0x63e828	4096		4056		0		4056		free  	*
+  30		 0x63f800	 0x640000	 0x63e800	 0x63f828	2048		2008		1500		508		in use	 
+  31		 0x640000	 0x640800	 0x63f800	 0x640028	2048		2008		1515		493		in use	 
+  32		 0x640800	 0x641800	 0x640000	 0x640828	4096		4056		0		4056		free  	*
+  33		 0x641800	 0x642000	 0x640800	 0x641828	2048		2008		1560		448		in use	 
+  34		 0x642000	 0x642800	 0x641800	 0x642028	2048		2008		1575		433		in use	 
+  35		 0x642800	 0x643800	 0x642000	 0x642828	4096		4056		0		4056		free  	*
+  36		 0x643800	 0x644000	 0x642800	 0x643828	2048		2008		1620		388		in use	 
+  37		 0x644000	 0x644800	 0x643800	 0x644028	2048		2008		1635		373		in use	 
+  38		 0x644800	 0x645800	 0x644000	 0x644828	4096		4056		0		4056		free  	*
+  39		 0x645800	 0x646000	 0x644800	 0x645828	2048		2008		1680		328		in use	 
+  40		 0x646000	 0x646800	 0x645800	 0x646028	2048		2008		1695		313		in use	 
+  41		 0x646800	 0x647800	 0x646000	 0x646828	4096		4056		0		4056		free  	*
+  42		 0x647800	 0x648000	 0x646800	 0x647828	2048		2008		1740		268		in use	 
+  43		 0x648000	 0x648800	 0x647800	 0x648028	2048		2008		1755		253		in use	 
+  44		 0x648800	 0x649800	 0x648000	 0x648828	4096		4056		0		4056		free  	*
+  45		 0x649800	 0x64a000	 0x648800	 0x649828	2048		2008		1800		208		in use	 
+  46		 0x64a000	 0x64a800	 0x649800	 0x64a028	2048		2008		1815		193		in use	 
+  47		 0x64a800	 0x64b800	 0x64a000	 0x64a828	4096		4056		0		4056		free  	*
+  48		 0x64b800	 0x64c000	 0x64a800	 0x64b828	2048		2008		1860		148		in use	 
+  49		 0x64c000	 0x64c800	 0x64b800	 0x64c028	2048		2008		1875		133		in use	 
+  50		 0x64c800	 0x64d800	 0x64c000	 0x64c828	4096		4056		0		4056		free  	*
+  51		 0x64d800	 0x64e000	 0x64c800	 0x64d828	2048		2008		1920		88		in use	 
+  52		 0x64e000	 0x64e800	 0x64d800	 0x64e028	2048		2008		1935		73		in use	 
+  53		 0x64e800	 0x64f800	 0x64e000	 0x64e828	4096		4056		0		4056		free  	*
+  54		 0x64f800	 0x650000	 0x64e800	 0x64f828	2048		2008		1980		28		in use	 
+  55		 0x650000	 0x650800	 0x64f800	 0x650028	2048		2008		1995		13		in use	 
+  56		 0x650800	 0x652000	 0x650000	 0x650828	6144		6104		0		6104		free  	*
+  57		 0x652000	 0x652c00	 0x650800	 0x652028	3072		3032		2040		992		in use	 
+  58		 0x652c00	 0x653800	 0x652000	 0x652c28	3072		3032		2055		977		in use	 
+  59		 0x653800	 0x655000	 0x652c00	 0x653828	6144		6104		0		6104		free  	*
+  60		 0x655000	 0x655c00	 0x653800	 0x655028	3072		3032		2100		932		in use	 
+  61		 0x655c00	 0x656800	 0x655000	 0x655c28	3072		3032		2115		917		in use	 
+  62		 0x656800	 0x658000	 0x655c00	 0x656828	6144		6104		0		6104		free  	*
+  63		 0x658000	 0x658c00	 0x656800	 0x658028	3072		3032		2160		872		in use	 
+  64		 0x658c00	 0x659800	 0x658000	 0x658c28	3072		3032		2175		857		in use	 
+  65		 0x659800	 0x65b000	 0x658c00	 0x659828	6144		6104		0		6104		free  	*
+  66		 0x65b000	 0x65bc00	 0x659800	 0x65b028	3072		3032		2220		812		in use	 
+  67		 0x65bc00	 0x65c800	 0x65b000	 0x65bc28	3072		3032		2235		797		in use	 
+  68		 0x65c800	 0x65e000	 0x65bc00	 0x65c828	6144		6104		0		6104		free  	*
+  69		 0x65e000	 0x65ec00	 0x65c800	 0x65e028	3072		3032		2280		752		in use	 
+  70		 0x65ec00	 0x65f800	 0x65e000	 0x65ec28	3072		3032		2295		737		in use	 
+  71		 0x65f800	 0x661000	 0x65ec00	 0x65f828	6144		6104		0		6104		free  	*
+  72		 0x661000	 0x661c00	 0x65f800	 0x661028	3072		3032		2340		692		in use	 
+  73		 0x661c00	 0x662800	 0x661000	 0x661c28	3072		3032		2355		677		in use	 
+  74		 0x662800	    (nil)	 0x661c00	 0x662828	6144		6104		0		6104		free  	*
+  Total bytes used								225280		222280		81375		140905
+  Used blocks:   50  Free blocks:   25  Min heap:  0x62d000    Max heap:  0x664000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d400	    (nil)	 0x62d028	1024		984		900		84		in use	 
+  1		 0x62d400	 0x62e000	 0x62d000	 0x62d428	3072		3032		0		3032		free  	*
+  2		 0x62e000	 0x62e400	 0x62d400	 0x62e028	1024		984		960		24		in use	 
+  3		 0x62e400	 0x62f800	 0x62e000	 0x62e428	5120		5080		0		5080		free  	*
+  4		 0x62f800	 0x630000	 0x62e400	 0x62f828	2048		2008		1020		988		in use	 
+  5		 0x630000	 0x631800	 0x62f800	 0x630028	6144		6104		0		6104		free  	*
+  6		 0x631800	 0x632000	 0x630000	 0x631828	2048		2008		1080		928		in use	 
+  7		 0x632000	 0x633800	 0x631800	 0x632028	6144		6104		0		6104		free  	*
+  8		 0x633800	 0x634000	 0x632000	 0x633828	2048		2008		1140		868		in use	 
+  9		 0x634000	 0x635800	 0x633800	 0x634028	6144		6104		0		6104		free  	*
+  10		 0x635800	 0x636000	 0x634000	 0x635828	2048		2008		1200		808		in use	 
+  11		 0x636000	 0x637800	 0x635800	 0x636028	6144		6104		0		6104		free  	*
+  12		 0x637800	 0x638000	 0x636000	 0x637828	2048		2008		1260		748		in use	 
+  13		 0x638000	 0x639800	 0x637800	 0x638028	6144		6104		0		6104		free  	*
+  14		 0x639800	 0x63a000	 0x638000	 0x639828	2048		2008		1320		688		in use	 
+  15		 0x63a000	 0x63b800	 0x639800	 0x63a028	6144		6104		0		6104		free  	*
+  16		 0x63b800	 0x63c000	 0x63a000	 0x63b828	2048		2008		1380		628		in use	 
+  17		 0x63c000	 0x63d800	 0x63b800	 0x63c028	6144		6104		0		6104		free  	*
+  18		 0x63d800	 0x63e000	 0x63c000	 0x63d828	2048		2008		1440		568		in use	 
+  19		 0x63e000	 0x63f800	 0x63d800	 0x63e028	6144		6104		0		6104		free  	*
+  20		 0x63f800	 0x640000	 0x63e000	 0x63f828	2048		2008		1500		508		in use	 
+  21		 0x640000	 0x641800	 0x63f800	 0x640028	6144		6104		0		6104		free  	*
+  22		 0x641800	 0x642000	 0x640000	 0x641828	2048		2008		1560		448		in use	 
+  23		 0x642000	 0x643800	 0x641800	 0x642028	6144		6104		0		6104		free  	*
+  24		 0x643800	 0x644000	 0x642000	 0x643828	2048		2008		1620		388		in use	 
+  25		 0x644000	 0x645800	 0x643800	 0x644028	6144		6104		0		6104		free  	*
+  26		 0x645800	 0x646000	 0x644000	 0x645828	2048		2008		1680		328		in use	 
+  27		 0x646000	 0x647800	 0x645800	 0x646028	6144		6104		0		6104		free  	*
+  28		 0x647800	 0x648000	 0x646000	 0x647828	2048		2008		1740		268		in use	 
+  29		 0x648000	 0x649800	 0x647800	 0x648028	6144		6104		0		6104		free  	*
+  30		 0x649800	 0x64a000	 0x648000	 0x649828	2048		2008		1800		208		in use	 
+  31		 0x64a000	 0x64b800	 0x649800	 0x64a028	6144		6104		0		6104		free  	*
+  32		 0x64b800	 0x64c000	 0x64a000	 0x64b828	2048		2008		1860		148		in use	 
+  33		 0x64c000	 0x64d800	 0x64b800	 0x64c028	6144		6104		0		6104		free  	*
+  34		 0x64d800	 0x64e000	 0x64c000	 0x64d828	2048		2008		1920		88		in use	 
+  35		 0x64e000	 0x64f800	 0x64d800	 0x64e028	6144		6104		0		6104		free  	*
+  36		 0x64f800	 0x650000	 0x64e000	 0x64f828	2048		2008		1980		28		in use	 
+  37		 0x650000	 0x652000	 0x64f800	 0x650028	8192		8152		0		8152		free  	*
+  38		 0x652000	 0x652c00	 0x650000	 0x652028	3072		3032		2040		992		in use	 
+  39		 0x652c00	 0x655000	 0x652000	 0x652c28	9216		9176		0		9176		free  	*
+  40		 0x655000	 0x655c00	 0x652c00	 0x655028	3072		3032		2100		932		in use	 
+  41		 0x655c00	 0x658000	 0x655000	 0x655c28	9216		9176		0		9176		free  	*
+  42		 0x658000	 0x658c00	 0x655c00	 0x658028	3072		3032		2160		872		in use	 
+  43		 0x658c00	 0x65b000	 0x658000	 0x658c28	9216		9176		0		9176		free  	*
+  44		 0x65b000	 0x65bc00	 0x658c00	 0x65b028	3072		3032		2220		812		in use	 
+  45		 0x65bc00	 0x65e000	 0x65b000	 0x65bc28	9216		9176		0		9176		free  	*
+  46		 0x65e000	 0x65ec00	 0x65bc00	 0x65e028	3072		3032		2280		752		in use	 
+  47		 0x65ec00	 0x661000	 0x65e000	 0x65ec28	9216		9176		0		9176		free  	*
+  48		 0x661000	 0x661c00	 0x65ec00	 0x661028	3072		3032		2340		692		in use	 
+  49		 0x661c00	    (nil)	 0x661000	 0x661c28	9216		9176		0		9176		free  	*
+  Total bytes used								225280		223280		40500		182780
+  Used blocks:   25  Free blocks:   25  Min heap:  0x62d000    Max heap:  0x664000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	    (nil)	    (nil)	 0x62d028	225280		225240		0		225240		free  	*
+  Total bytes used								225280		225240		0		225240
+  Used blocks:    0  Free blocks:    1  Min heap:  0x62d000    Max heap:  0x664000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d21c	    (nil)	 0x62d028	540		500		500		0		in use	 
+  1		 0x62d21c	 0x62d447	 0x62d000	 0x62d244	555		515		515		0		in use	 
+  2		 0x62d447	 0x62d681	 0x62d21c	 0x62d46f	570		530		530		0		in use	 
+  3		 0x62d681	 0x62d8ca	 0x62d447	 0x62d6a9	585		545		545		0		in use	 
+  4		 0x62d8ca	 0x62db22	 0x62d681	 0x62d8f2	600		560		560		0		in use	 
+  5		 0x62db22	 0x62dd89	 0x62d8ca	 0x62db4a	615		575		575		0		in use	 
+  6		 0x62dd89	 0x62dfff	 0x62db22	 0x62ddb1	630		590		590		0		in use	 
+  7		 0x62dfff	 0x62e284	 0x62dd89	 0x62e027	645		605		605		0		in use	 
+  8		 0x62e284	 0x62e518	 0x62dfff	 0x62e2ac	660		620		620		0		in use	 
+  9		 0x62e518	 0x62e7bb	 0x62e284	 0x62e540	675		635		635		0		in use	 
+  10		 0x62e7bb	 0x62ea6d	 0x62e518	 0x62e7e3	690		650		650		0		in use	 
+  11		 0x62ea6d	 0x62ed2e	 0x62e7bb	 0x62ea95	705		665		665		0		in use	 
+  12		 0x62ed2e	 0x62effe	 0x62ea6d	 0x62ed56	720		680		680		0		in use	 
+  13		 0x62effe	 0x62f2dd	 0x62ed2e	 0x62f026	735		695		695		0		in use	 
+  14		 0x62f2dd	 0x62f5cb	 0x62effe	 0x62f305	750		710		710		0		in use	 
+  15		 0x62f5cb	 0x62f8c8	 0x62f2dd	 0x62f5f3	765		725		725		0		in use	 
+  16		 0x62f8c8	 0x62fbd4	 0x62f5cb	 0x62f8f0	780		740		740		0		in use	 
+  17		 0x62fbd4	 0x62feef	 0x62f8c8	 0x62fbfc	795		755		755		0		in use	 
+  18		 0x62feef	 0x630219	 0x62fbd4	 0x62ff17	810		770		770		0		in use	 
+  19		 0x630219	 0x630552	 0x62feef	 0x630241	825		785		785		0		in use	 
+  20		 0x630552	 0x63089a	 0x630219	 0x63057a	840		800		800		0		in use	 
+  21		 0x63089a	 0x630bf1	 0x630552	 0x6308c2	855		815		815		0		in use	 
+  22		 0x630bf1	 0x630f57	 0x63089a	 0x630c19	870		830		830		0		in use	 
+  23		 0x630f57	 0x6312cc	 0x630bf1	 0x630f7f	885		845		845		0		in use	 
+  24		 0x6312cc	 0x631650	 0x630f57	 0x6312f4	900		860		860		0		in use	 
+  25		 0x631650	 0x6319e3	 0x6312cc	 0x631678	915		875		875		0		in use	 
+  26		 0x6319e3	 0x631d85	 0x631650	 0x631a0b	930		890		890		0		in use	 
+  27		 0x631d85	 0x632136	 0x6319e3	 0x631dad	945		905		905		0		in use	 
+  28		 0x632136	 0x6324f6	 0x631d85	 0x63215e	960		920		920		0		in use	 
+  29		 0x6324f6	 0x6328c5	 0x632136	 0x63251e	975		935		935		0		in use	 
+  30		 0x6328c5	 0x632ca3	 0x6324f6	 0x6328ed	990		950		950		0		in use	 
+  31		 0x632ca3	 0x633090	 0x6328c5	 0x632ccb	1005		965		965		0		in use	 
+  32		 0x633090	 0x63348c	 0x632ca3	 0x6330b8	1020		980		980		0		in use	 
+  33		 0x63348c	 0x633897	 0x633090	 0x6334b4	1035		995		995		0		in use	 
+  34		 0x633897	 0x633cb1	 0x63348c	 0x6338bf	1050		1010		1010		0		in use	 
+  35		 0x633cb1	 0x6340da	 0x633897	 0x633cd9	1065		1025		1025		0		in use	 
+  36		 0x6340da	 0x634512	 0x633cb1	 0x634102	1080		1040		1040		0		in use	 
+  37		 0x634512	 0x634959	 0x6340da	 0x63453a	1095		1055		1055		0		in use	 
+  38		 0x634959	 0x634daf	 0x634512	 0x634981	1110		1070		1070		0		in use	 
+  39		 0x634daf	 0x635214	 0x634959	 0x634dd7	1125		1085		1085		0		in use	 
+  40		 0x635214	 0x635688	 0x634daf	 0x63523c	1140		1100		1100		0		in use	 
+  41		 0x635688	 0x635b0b	 0x635214	 0x6356b0	1155		1115		1115		0		in use	 
+  42		 0x635b0b	 0x635f9d	 0x635688	 0x635b33	1170		1130		1130		0		in use	 
+  43		 0x635f9d	 0x63643e	 0x635b0b	 0x635fc5	1185		1145		1145		0		in use	 
+  44		 0x63643e	 0x6368ee	 0x635f9d	 0x636466	1200		1160		1160		0		in use	 
+  45		 0x6368ee	 0x636dad	 0x63643e	 0x636916	1215		1175		1175		0		in use	 
+  46		 0x636dad	 0x63727b	 0x6368ee	 0x636dd5	1230		1190		1190		0		in use	 
+  47		 0x63727b	 0x637758	 0x636dad	 0x6372a3	1245		1205		1205		0		in use	 
+  48		 0x637758	 0x637c44	 0x63727b	 0x637780	1260		1220		1220		0		in use	 
+  49		 0x637c44	 0x63813f	 0x637758	 0x637c6c	1275		1235		1235		0		in use	 
+  50		 0x63813f	 0x638649	 0x637c44	 0x638167	1290		1250		1250		0		in use	 
+  51		 0x638649	 0x638b62	 0x63813f	 0x638671	1305		1265		1265		0		in use	 
+  52		 0x638b62	 0x63908a	 0x638649	 0x638b8a	1320		1280		1280		0		in use	 
+  53		 0x63908a	 0x6395c1	 0x638b62	 0x6390b2	1335		1295		1295		0		in use	 
+  54		 0x6395c1	 0x639b07	 0x63908a	 0x6395e9	1350		1310		1310		0		in use	 
+  55		 0x639b07	 0x63a05c	 0x6395c1	 0x639b2f	1365		1325		1325		0		in use	 
+  56		 0x63a05c	 0x63a5c0	 0x639b07	 0x63a084	1380		1340		1340		0		in use	 
+  57		 0x63a5c0	 0x63ab33	 0x63a05c	 0x63a5e8	1395		1355		1355		0		in use	 
+  58		 0x63ab33	 0x63b0b5	 0x63a5c0	 0x63ab5b	1410		1370		1370		0		in use	 
+  59		 0x63b0b5	 0x63b646	 0x63ab33	 0x63b0dd	1425		1385		1385		0		in use	 
+  60		 0x63b646	 0x63bbe6	 0x63b0b5	 0x63b66e	1440		1400		1400		0		in use	 
+  61		 0x63bbe6	 0x63c195	 0x63b646	 0x63bc0e	1455		1415		1415		0		in use	 
+  62		 0x63c195	 0x63c753	 0x63bbe6	 0x63c1bd	1470		1430		1430		0		in use	 
+  63		 0x63c753	 0x63cd20	 0x63c195	 0x63c77b	1485		1445		1445		0		in use	 
+  64		 0x63cd20	 0x63d2fc	 0x63c753	 0x63cd48	1500		1460		1460		0		in use	 
+  65		 0x63d2fc	 0x63d8e7	 0x63cd20	 0x63d324	1515		1475		1475		0		in use	 
+  66		 0x63d8e7	 0x63dee1	 0x63d2fc	 0x63d90f	1530		1490		1490		0		in use	 
+  67		 0x63dee1	 0x63e4ea	 0x63d8e7	 0x63df09	1545		1505		1505		0		in use	 
+  68		 0x63e4ea	 0x63eb02	 0x63dee1	 0x63e512	1560		1520		1520		0		in use	 
+  69		 0x63eb02	 0x63f129	 0x63e4ea	 0x63eb2a	1575		1535		1535		0		in use	 
+  70		 0x63f129	 0x63f75f	 0x63eb02	 0x63f151	1590		1550		1550		0		in use	 
+  71		 0x63f75f	 0x63fda4	 0x63f129	 0x63f787	1605		1565		1565		0		in use	 
+  72		 0x63fda4	 0x6403f8	 0x63f75f	 0x63fdcc	1620		1580		1580		0		in use	 
+  73		 0x6403f8	 0x640a5b	 0x63fda4	 0x640420	1635		1595		1595		0		in use	 
+  74		 0x640a5b	 0x6410cd	 0x6403f8	 0x640a83	1650		1610		1610		0		in use	 
+  75		 0x6410cd	 0x64174e	 0x640a5b	 0x6410f5	1665		1625		1625		0		in use	 
+  76		 0x64174e	 0x641dde	 0x6410cd	 0x641776	1680		1640		1640		0		in use	 
+  77		 0x641dde	 0x64247d	 0x64174e	 0x641e06	1695		1655		1655		0		in use	 
+  78		 0x64247d	 0x642b2b	 0x641dde	 0x6424a5	1710		1670		1670		0		in use	 
+  79		 0x642b2b	 0x6431e8	 0x64247d	 0x642b53	1725		1685		1685		0		in use	 
+  80		 0x6431e8	 0x6438b4	 0x642b2b	 0x643210	1740		1700		1700		0		in use	 
+  81		 0x6438b4	 0x643f8f	 0x6431e8	 0x6438dc	1755		1715		1715		0		in use	 
+  82		 0x643f8f	 0x644679	 0x6438b4	 0x643fb7	1770		1730		1730		0		in use	 
+  83		 0x644679	 0x644d72	 0x643f8f	 0x6446a1	1785		1745		1745		0		in use	 
+  84		 0x644d72	 0x64547a	 0x644679	 0x644d9a	1800		1760		1760		0		in use	 
+  85		 0x64547a	 0x645b91	 0x644d72	 0x6454a2	1815		1775		1775		0		in use	 
+  86		 0x645b91	 0x6462b7	 0x64547a	 0x645bb9	1830		1790		1790		0		in use	 
+  87		 0x6462b7	 0x6469ec	 0x645b91	 0x6462df	1845		1805		1805		0		in use	 
+  88		 0x6469ec	 0x647130	 0x6462b7	 0x646a14	1860		1820		1820		0		in use	 
+  89		 0x647130	 0x647883	 0x6469ec	 0x647158	1875		1835		1835		0		in use	 
+  90		 0x647883	 0x647fe5	 0x647130	 0x6478ab	1890		1850		1850		0		in use	 
+  91		 0x647fe5	 0x648756	 0x647883	 0x64800d	1905		1865		1865		0		in use	 
+  92		 0x648756	 0x648ed6	 0x647fe5	 0x64877e	1920		1880		1880		0		in use	 
+  93		 0x648ed6	 0x649665	 0x648756	 0x648efe	1935		1895		1895		0		in use	 
+  94		 0x649665	 0x649e03	 0x648ed6	 0x64968d	1950		1910		1910		0		in use	 
+  95		 0x649e03	 0x64a5b0	 0x649665	 0x649e2b	1965		1925		1925		0		in use	 
+  96		 0x64a5b0	 0x64ad6c	 0x649e03	 0x64a5d8	1980		1940		1940		0		in use	 
+  97		 0x64ad6c	 0x64b537	 0x64a5b0	 0x64ad94	1995		1955		1955		0		in use	 
+  98		 0x64b537	 0x64bd11	 0x64ad6c	 0x64b55f	2010		1970		1970		0		in use	 
+  99		 0x64bd11	    (nil)	 0x64b537	 0x64bd39	99055		99015		1985		97030		in use	 
+  Total bytes used								225280		221280		124250		97030
+  Used blocks:  100  Free blocks:    0  Min heap:  0x62d000    Max heap:  0x664000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d21c	    (nil)	 0x62d028	540		500		0		500		free  	*
+  1		 0x62d21c	 0x62d447	 0x62d000	 0x62d244	555		515		515		0		in use	 
+  2		 0x62d447	 0x62d681	 0x62d21c	 0x62d46f	570		530		530		0		in use	 
+  3		 0x62d681	 0x62d8ca	 0x62d447	 0x62d6a9	585		545		545		0		in use	 
+  4		 0x62d8ca	 0x62db22	 0x62d681	 0x62d8f2	600		560		0		560		free  	*
+  5		 0x62db22	 0x62dd89	 0x62d8ca	 0x62db4a	615		575		575		0		in use	 
+  6		 0x62dd89	 0x62dfff	 0x62db22	 0x62ddb1	630		590		590		0		in use	 
+  7		 0x62dfff	 0x62e284	 0x62dd89	 0x62e027	645		605		605		0		in use	 
+  8		 0x62e284	 0x62e518	 0x62dfff	 0x62e2ac	660		620		0		620		free  	*
+  9		 0x62e518	 0x62e7bb	 0x62e284	 0x62e540	675		635		635		0		in use	 
+  10		 0x62e7bb	 0x62ea6d	 0x62e518	 0x62e7e3	690		650		650		0		in use	 
+  11		 0x62ea6d	 0x62ed2e	 0x62e7bb	 0x62ea95	705		665		665		0		in use	 
+  12		 0x62ed2e	 0x62effe	 0x62ea6d	 0x62ed56	720		680		0		680		free  	*
+  13		 0x62effe	 0x62f2dd	 0x62ed2e	 0x62f026	735		695		695		0		in use	 
+  14		 0x62f2dd	 0x62f5cb	 0x62effe	 0x62f305	750		710		710		0		in use	 
+  15		 0x62f5cb	 0x62f8c8	 0x62f2dd	 0x62f5f3	765		725		725		0		in use	 
+  16		 0x62f8c8	 0x62fbd4	 0x62f5cb	 0x62f8f0	780		740		0		740		free  	*
+  17		 0x62fbd4	 0x62feef	 0x62f8c8	 0x62fbfc	795		755		755		0		in use	 
+  18		 0x62feef	 0x630219	 0x62fbd4	 0x62ff17	810		770		770		0		in use	 
+  19		 0x630219	 0x630552	 0x62feef	 0x630241	825		785		785		0		in use	 
+  20		 0x630552	 0x63089a	 0x630219	 0x63057a	840		800		0		800		free  	*
+  21		 0x63089a	 0x630bf1	 0x630552	 0x6308c2	855		815		815		0		in use	 
+  22		 0x630bf1	 0x630f57	 0x63089a	 0x630c19	870		830		830		0		in use	 
+  23		 0x630f57	 0x6312cc	 0x630bf1	 0x630f7f	885		845		845		0		in use	 
+  24		 0x6312cc	 0x631650	 0x630f57	 0x6312f4	900		860		0		860		free  	*
+  25		 0x631650	 0x6319e3	 0x6312cc	 0x631678	915		875		875		0		in use	 
+  26		 0x6319e3	 0x631d85	 0x631650	 0x631a0b	930		890		890		0		in use	 
+  27		 0x631d85	 0x632136	 0x6319e3	 0x631dad	945		905		905		0		in use	 
+  28		 0x632136	 0x6324f6	 0x631d85	 0x63215e	960		920		0		920		free  	*
+  29		 0x6324f6	 0x6328c5	 0x632136	 0x63251e	975		935		935		0		in use	 
+  30		 0x6328c5	 0x632ca3	 0x6324f6	 0x6328ed	990		950		950		0		in use	 
+  31		 0x632ca3	 0x633090	 0x6328c5	 0x632ccb	1005		965		965		0		in use	 
+  32		 0x633090	 0x63348c	 0x632ca3	 0x6330b8	1020		980		0		980		free  	*
+  33		 0x63348c	 0x633897	 0x633090	 0x6334b4	1035		995		995		0		in use	 
+  34		 0x633897	 0x633cb1	 0x63348c	 0x6338bf	1050		1010		1010		0		in use	 
+  35		 0x633cb1	 0x6340da	 0x633897	 0x633cd9	1065		1025		1025		0		in use	 
+  36		 0x6340da	 0x634512	 0x633cb1	 0x634102	1080		1040		0		1040		free  	*
+  37		 0x634512	 0x634959	 0x6340da	 0x63453a	1095		1055		1055		0		in use	 
+  38		 0x634959	 0x634daf	 0x634512	 0x634981	1110		1070		1070		0		in use	 
+  39		 0x634daf	 0x635214	 0x634959	 0x634dd7	1125		1085		1085		0		in use	 
+  40		 0x635214	 0x635688	 0x634daf	 0x63523c	1140		1100		0		1100		free  	*
+  41		 0x635688	 0x635b0b	 0x635214	 0x6356b0	1155		1115		1115		0		in use	 
+  42		 0x635b0b	 0x635f9d	 0x635688	 0x635b33	1170		1130		1130		0		in use	 
+  43		 0x635f9d	 0x63643e	 0x635b0b	 0x635fc5	1185		1145		1145		0		in use	 
+  44		 0x63643e	 0x6368ee	 0x635f9d	 0x636466	1200		1160		0		1160		free  	*
+  45		 0x6368ee	 0x636dad	 0x63643e	 0x636916	1215		1175		1175		0		in use	 
+  46		 0x636dad	 0x63727b	 0x6368ee	 0x636dd5	1230		1190		1190		0		in use	 
+  47		 0x63727b	 0x637758	 0x636dad	 0x6372a3	1245		1205		1205		0		in use	 
+  48		 0x637758	 0x637c44	 0x63727b	 0x637780	1260		1220		0		1220		free  	*
+  49		 0x637c44	 0x63813f	 0x637758	 0x637c6c	1275		1235		1235		0		in use	 
+  50		 0x63813f	 0x638649	 0x637c44	 0x638167	1290		1250		1250		0		in use	 
+  51		 0x638649	 0x638b62	 0x63813f	 0x638671	1305		1265		1265		0		in use	 
+  52		 0x638b62	 0x63908a	 0x638649	 0x638b8a	1320		1280		0		1280		free  	*
+  53		 0x63908a	 0x6395c1	 0x638b62	 0x6390b2	1335		1295		1295		0		in use	 
+  54		 0x6395c1	 0x639b07	 0x63908a	 0x6395e9	1350		1310		1310		0		in use	 
+  55		 0x639b07	 0x63a05c	 0x6395c1	 0x639b2f	1365		1325		1325		0		in use	 
+  56		 0x63a05c	 0x63a5c0	 0x639b07	 0x63a084	1380		1340		0		1340		free  	*
+  57		 0x63a5c0	 0x63ab33	 0x63a05c	 0x63a5e8	1395		1355		1355		0		in use	 
+  58		 0x63ab33	 0x63b0b5	 0x63a5c0	 0x63ab5b	1410		1370		1370		0		in use	 
+  59		 0x63b0b5	 0x63b646	 0x63ab33	 0x63b0dd	1425		1385		1385		0		in use	 
+  60		 0x63b646	 0x63bbe6	 0x63b0b5	 0x63b66e	1440		1400		0		1400		free  	*
+  61		 0x63bbe6	 0x63c195	 0x63b646	 0x63bc0e	1455		1415		1415		0		in use	 
+  62		 0x63c195	 0x63c753	 0x63bbe6	 0x63c1bd	1470		1430		1430		0		in use	 
+  63		 0x63c753	 0x63cd20	 0x63c195	 0x63c77b	1485		1445		1445		0		in use	 
+  64		 0x63cd20	 0x63d2fc	 0x63c753	 0x63cd48	1500		1460		0		1460		free  	*
+  65		 0x63d2fc	 0x63d8e7	 0x63cd20	 0x63d324	1515		1475		1475		0		in use	 
+  66		 0x63d8e7	 0x63dee1	 0x63d2fc	 0x63d90f	1530		1490		1490		0		in use	 
+  67		 0x63dee1	 0x63e4ea	 0x63d8e7	 0x63df09	1545		1505		1505		0		in use	 
+  68		 0x63e4ea	 0x63eb02	 0x63dee1	 0x63e512	1560		1520		0		1520		free  	*
+  69		 0x63eb02	 0x63f129	 0x63e4ea	 0x63eb2a	1575		1535		1535		0		in use	 
+  70		 0x63f129	 0x63f75f	 0x63eb02	 0x63f151	1590		1550		1550		0		in use	 
+  71		 0x63f75f	 0x63fda4	 0x63f129	 0x63f787	1605		1565		1565		0		in use	 
+  72		 0x63fda4	 0x6403f8	 0x63f75f	 0x63fdcc	1620		1580		0		1580		free  	*
+  73		 0x6403f8	 0x640a5b	 0x63fda4	 0x640420	1635		1595		1595		0		in use	 
+  74		 0x640a5b	 0x6410cd	 0x6403f8	 0x640a83	1650		1610		1610		0		in use	 
+  75		 0x6410cd	 0x64174e	 0x640a5b	 0x6410f5	1665		1625		1625		0		in use	 
+  76		 0x64174e	 0x641dde	 0x6410cd	 0x641776	1680		1640		0		1640		free  	*
+  77		 0x641dde	 0x64247d	 0x64174e	 0x641e06	1695		1655		1655		0		in use	 
+  78		 0x64247d	 0x642b2b	 0x641dde	 0x6424a5	1710		1670		1670		0		in use	 
+  79		 0x642b2b	 0x6431e8	 0x64247d	 0x642b53	1725		1685		1685		0		in use	 
+  80		 0x6431e8	 0x6438b4	 0x642b2b	 0x643210	1740		1700		0		1700		free  	*
+  81		 0x6438b4	 0x643f8f	 0x6431e8	 0x6438dc	1755		1715		1715		0		in use	 
+  82		 0x643f8f	 0x644679	 0x6438b4	 0x643fb7	1770		1730		1730		0		in use	 
+  83		 0x644679	 0x644d72	 0x643f8f	 0x6446a1	1785		1745		1745		0		in use	 
+  84		 0x644d72	 0x64547a	 0x644679	 0x644d9a	1800		1760		0		1760		free  	*
+  85		 0x64547a	 0x645b91	 0x644d72	 0x6454a2	1815		1775		1775		0		in use	 
+  86		 0x645b91	 0x6462b7	 0x64547a	 0x645bb9	1830		1790		1790		0		in use	 
+  87		 0x6462b7	 0x6469ec	 0x645b91	 0x6462df	1845		1805		1805		0		in use	 
+  88		 0x6469ec	 0x647130	 0x6462b7	 0x646a14	1860		1820		0		1820		free  	*
+  89		 0x647130	 0x647883	 0x6469ec	 0x647158	1875		1835		1835		0		in use	 
+  90		 0x647883	 0x647fe5	 0x647130	 0x6478ab	1890		1850		1850		0		in use	 
+  91		 0x647fe5	 0x648756	 0x647883	 0x64800d	1905		1865		1865		0		in use	 
+  92		 0x648756	 0x648ed6	 0x647fe5	 0x64877e	1920		1880		0		1880		free  	*
+  93		 0x648ed6	 0x649665	 0x648756	 0x648efe	1935		1895		1895		0		in use	 
+  94		 0x649665	 0x649e03	 0x648ed6	 0x64968d	1950		1910		1910		0		in use	 
+  95		 0x649e03	 0x64a5b0	 0x649665	 0x649e2b	1965		1925		1925		0		in use	 
+  96		 0x64a5b0	 0x64ad6c	 0x649e03	 0x64a5d8	1980		1940		0		1940		free  	*
+  97		 0x64ad6c	 0x64b537	 0x64a5b0	 0x64ad94	1995		1955		1955		0		in use	 
+  98		 0x64b537	 0x64bd11	 0x64ad6c	 0x64b55f	2010		1970		1970		0		in use	 
+  99		 0x64bd11	    (nil)	 0x64b537	 0x64bd39	99055		99015		1985		97030		in use	 
+  Total bytes used								225280		221280		93750		127530
+  Used blocks:   75  Free blocks:   25  Min heap:  0x62d000    Max heap:  0x664000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d447	    (nil)	 0x62d028	1095		1055		0		1055		free  	*
+  1		 0x62d447	 0x62d681	 0x62d000	 0x62d46f	570		530		530		0		in use	 
+  2		 0x62d681	 0x62d8ca	 0x62d447	 0x62d6a9	585		545		545		0		in use	 
+  3		 0x62d8ca	 0x62dd89	 0x62d681	 0x62d8f2	1215		1175		0		1175		free  	*
+  4		 0x62dd89	 0x62dfff	 0x62d8ca	 0x62ddb1	630		590		590		0		in use	 
+  5		 0x62dfff	 0x62e284	 0x62dd89	 0x62e027	645		605		605		0		in use	 
+  6		 0x62e284	 0x62e7bb	 0x62dfff	 0x62e2ac	1335		1295		0		1295		free  	*
+  7		 0x62e7bb	 0x62ea6d	 0x62e284	 0x62e7e3	690		650		650		0		in use	 
+  8		 0x62ea6d	 0x62ed2e	 0x62e7bb	 0x62ea95	705		665		665		0		in use	 
+  9		 0x62ed2e	 0x62f2dd	 0x62ea6d	 0x62ed56	1455		1415		0		1415		free  	*
+  10		 0x62f2dd	 0x62f5cb	 0x62ed2e	 0x62f305	750		710		710		0		in use	 
+  11		 0x62f5cb	 0x62f8c8	 0x62f2dd	 0x62f5f3	765		725		725		0		in use	 
+  12		 0x62f8c8	 0x62feef	 0x62f5cb	 0x62f8f0	1575		1535		0		1535		free  	*
+  13		 0x62feef	 0x630219	 0x62f8c8	 0x62ff17	810		770		770		0		in use	 
+  14		 0x630219	 0x630552	 0x62feef	 0x630241	825		785		785		0		in use	 
+  15		 0x630552	 0x630bf1	 0x630219	 0x63057a	1695		1655		0		1655		free  	*
+  16		 0x630bf1	 0x630f57	 0x630552	 0x630c19	870		830		830		0		in use	 
+  17		 0x630f57	 0x6312cc	 0x630bf1	 0x630f7f	885		845		845		0		in use	 
+  18		 0x6312cc	 0x6319e3	 0x630f57	 0x6312f4	1815		1775		0		1775		free  	*
+  19		 0x6319e3	 0x631d85	 0x6312cc	 0x631a0b	930		890		890		0		in use	 
+  20		 0x631d85	 0x632136	 0x6319e3	 0x631dad	945		905		905		0		in use	 
+  21		 0x632136	 0x6328c5	 0x631d85	 0x63215e	1935		1895		0		1895		free  	*
+  22		 0x6328c5	 0x632ca3	 0x632136	 0x6328ed	990		950		950		0		in use	 
+  23		 0x632ca3	 0x633090	 0x6328c5	 0x632ccb	1005		965		965		0		in use	 
+  24		 0x633090	 0x633897	 0x632ca3	 0x6330b8	2055		2015		0		2015		free  	*
+  25		 0x633897	 0x633cb1	 0x633090	 0x6338bf	1050		1010		1010		0		in use	 
+  26		 0x633cb1	 0x6340da	 0x633897	 0x633cd9	1065		1025		1025		0		in use	 
+  27		 0x6340da	 0x634959	 0x633cb1	 0x634102	2175		2135		0		2135		free  	*
+  28		 0x634959	 0x634daf	 0x6340da	 0x634981	1110		1070		1070		0		in use	 
+  29		 0x634daf	 0x635214	 0x634959	 0x634dd7	1125		1085		1085		0		in use	 
+  30		 0x635214	 0x635b0b	 0x634daf	 0x63523c	2295		2255		0		2255		free  	*
+  31		 0x635b0b	 0x635f9d	 0x635214	 0x635b33	1170		1130		1130		0		in use	 
+  32		 0x635f9d	 0x63643e	 0x635b0b	 0x635fc5	1185		1145		1145		0		in use	 
+  33		 0x63643e	 0x636dad	 0x635f9d	 0x636466	2415		2375		0		2375		free  	*
+  34		 0x636dad	 0x63727b	 0x63643e	 0x636dd5	1230		1190		1190		0		in use	 
+  35		 0x63727b	 0x637758	 0x636dad	 0x6372a3	1245		1205		1205		0		in use	 
+  36		 0x637758	 0x63813f	 0x63727b	 0x637780	2535		2495		0		2495		free  	*
+  37		 0x63813f	 0x638649	 0x637758	 0x638167	1290		1250		1250		0		in use	 
+  38		 0x638649	 0x638b62	 0x63813f	 0x638671	1305		1265		1265		0		in use	 
+  39		 0x638b62	 0x6395c1	 0x638649	 0x638b8a	2655		2615		0		2615		free  	*
+  40		 0x6395c1	 0x639b07	 0x638b62	 0x6395e9	1350		1310		1310		0		in use	 
+  41		 0x639b07	 0x63a05c	 0x6395c1	 0x639b2f	1365		1325		1325		0		in use	 
+  42		 0x63a05c	 0x63ab33	 0x639b07	 0x63a084	2775		2735		0		2735		free  	*
+  43		 0x63ab33	 0x63b0b5	 0x63a05c	 0x63ab5b	1410		1370		1370		0		in use	 
+  44		 0x63b0b5	 0x63b646	 0x63ab33	 0x63b0dd	1425		1385		1385		0		in use	 
+  45		 0x63b646	 0x63c195	 0x63b0b5	 0x63b66e	2895		2855		0		2855		free  	*
+  46		 0x63c195	 0x63c753	 0x63b646	 0x63c1bd	1470		1430		1430		0		in use	 
+  47		 0x63c753	 0x63cd20	 0x63c195	 0x63c77b	1485		1445		1445		0		in use	 
+  48		 0x63cd20	 0x63d8e7	 0x63c753	 0x63cd48	3015		2975		0		2975		free  	*
+  49		 0x63d8e7	 0x63dee1	 0x63cd20	 0x63d90f	1530		1490		1490		0		in use	 
+  50		 0x63dee1	 0x63e4ea	 0x63d8e7	 0x63df09	1545		1505		1505		0		in use	 
+  51		 0x63e4ea	 0x63f129	 0x63dee1	 0x63e512	3135		3095		0		3095		free  	*
+  52		 0x63f129	 0x63f75f	 0x63e4ea	 0x63f151	1590		1550		1550		0		in use	 
+  53		 0x63f75f	 0x63fda4	 0x63f129	 0x63f787	1605		1565		1565		0		in use	 
+  54		 0x63fda4	 0x640a5b	 0x63f75f	 0x63fdcc	3255		3215		0		3215		free  	*
+  55		 0x640a5b	 0x6410cd	 0x63fda4	 0x640a83	1650		1610		1610		0		in use	 
+  56		 0x6410cd	 0x64174e	 0x640a5b	 0x6410f5	1665		1625		1625		0		in use	 
+  57		 0x64174e	 0x64247d	 0x6410cd	 0x641776	3375		3335		0		3335		free  	*
+  58		 0x64247d	 0x642b2b	 0x64174e	 0x6424a5	1710		1670		1670		0		in use	 
+  59		 0x642b2b	 0x6431e8	 0x64247d	 0x642b53	1725		1685		1685		0		in use	 
+  60		 0x6431e8	 0x643f8f	 0x642b2b	 0x643210	3495		3455		0		3455		free  	*
+  61		 0x643f8f	 0x644679	 0x6431e8	 0x643fb7	1770		1730		1730		0		in use	 
+  62		 0x644679	 0x644d72	 0x643f8f	 0x6446a1	1785		1745		1745		0		in use	 
+  63		 0x644d72	 0x645b91	 0x644679	 0x644d9a	3615		3575		0		3575		free  	*
+  64		 0x645b91	 0x6462b7	 0x644d72	 0x645bb9	1830		1790		1790		0		in use	 
+  65		 0x6462b7	 0x6469ec	 0x645b91	 0x6462df	1845		1805		1805		0		in use	 
+  66		 0x6469ec	 0x647883	 0x6462b7	 0x646a14	3735		3695		0		3695		free  	*
+  67		 0x647883	 0x647fe5	 0x6469ec	 0x6478ab	1890		1850		1850		0		in use	 
+  68		 0x647fe5	 0x648756	 0x647883	 0x64800d	1905		1865		1865		0		in use	 
+  69		 0x648756	 0x649665	 0x647fe5	 0x64877e	3855		3815		0		3815		free  	*
+  70		 0x649665	 0x649e03	 0x648756	 0x64968d	1950		1910		1910		0		in use	 
+  71		 0x649e03	 0x64a5b0	 0x649665	 0x649e2b	1965		1925		1925		0		in use	 
+  72		 0x64a5b0	 0x64b537	 0x649e03	 0x64a5d8	3975		3935		0		3935		free  	*
+  73		 0x64b537	 0x64bd11	 0x64a5b0	 0x64b55f	2010		1970		1970		0		in use	 
+  74		 0x64bd11	    (nil)	 0x64b537	 0x64bd39	99055		99015		1985		97030		in use	 
+  Total bytes used								225280		222280		62875		159405
+  Used blocks:   50  Free blocks:   25  Min heap:  0x62d000    Max heap:  0x664000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d681	    (nil)	 0x62d028	1665		1625		0		1625		free  	*
+  1		 0x62d681	 0x62d8ca	 0x62d000	 0x62d6a9	585		545		545		0		in use	 
+  2		 0x62d8ca	 0x62dfff	 0x62d681	 0x62d8f2	1845		1805		0		1805		free  	*
+  3		 0x62dfff	 0x62e284	 0x62d8ca	 0x62e027	645		605		605		0		in use	 
+  4		 0x62e284	 0x62ea6d	 0x62dfff	 0x62e2ac	2025		1985		0		1985		free  	*
+  5		 0x62ea6d	 0x62ed2e	 0x62e284	 0x62ea95	705		665		665		0		in use	 
+  6		 0x62ed2e	 0x62f5cb	 0x62ea6d	 0x62ed56	2205		2165		0		2165		free  	*
+  7		 0x62f5cb	 0x62f8c8	 0x62ed2e	 0x62f5f3	765		725		725		0		in use	 
+  8		 0x62f8c8	 0x630219	 0x62f5cb	 0x62f8f0	2385		2345		0		2345		free  	*
+  9		 0x630219	 0x630552	 0x62f8c8	 0x630241	825		785		785		0		in use	 
+  10		 0x630552	 0x630f57	 0x630219	 0x63057a	2565		2525		0		2525		free  	*
+  11		 0x630f57	 0x6312cc	 0x630552	 0x630f7f	885		845		845		0		in use	 
+  12		 0x6312cc	 0x631d85	 0x630f57	 0x6312f4	2745		2705		0		2705		free  	*
+  13		 0x631d85	 0x632136	 0x6312cc	 0x631dad	945		905		905		0		in use	 
+  14		 0x632136	 0x632ca3	 0x631d85	 0x63215e	2925		2885		0		2885		free  	*
+  15		 0x632ca3	 0x633090	 0x632136	 0x632ccb	1005		965		965		0		in use	 
+  16		 0x633090	 0x633cb1	 0x632ca3	 0x6330b8	3105		3065		0		3065		free  	*
+  17		 0x633cb1	 0x6340da	 0x633090	 0x633cd9	1065		1025		1025		0		in use	 
+  18		 0x6340da	 0x634daf	 0x633cb1	 0x634102	3285		3245		0		3245		free  	*
+  19		 0x634daf	 0x635214	 0x6340da	 0x634dd7	1125		1085		1085		0		in use	 
+  20		 0x635214	 0x635f9d	 0x634daf	 0x63523c	3465		3425		0		3425		free  	*
+  21		 0x635f9d	 0x63643e	 0x635214	 0x635fc5	1185		1145		1145		0		in use	 
+  22		 0x63643e	 0x63727b	 0x635f9d	 0x636466	3645		3605		0		3605		free  	*
+  23		 0x63727b	 0x637758	 0x63643e	 0x6372a3	1245		1205		1205		0		in use	 
+  24		 0x637758	 0x638649	 0x63727b	 0x637780	3825		3785		0		3785		free  	*
+  25		 0x638649	 0x638b62	 0x637758	 0x638671	1305		1265		1265		0		in use	 
+  26		 0x638b62	 0x639b07	 0x638649	 0x638b8a	4005		3965		0		3965		free  	*
+  27		 0x639b07	 0x63a05c	 0x638b62	 0x639b2f	1365		1325		1325		0		in use	 
+  28		 0x63a05c	 0x63b0b5	 0x639b07	 0x63a084	4185		4145		0		4145		free  	*
+  29		 0x63b0b5	 0x63b646	 0x63a05c	 0x63b0dd	1425		1385		1385		0		in use	 
+  30		 0x63b646	 0x63c753	 0x63b0b5	 0x63b66e	4365		4325		0		4325		free  	*
+  31		 0x63c753	 0x63cd20	 0x63b646	 0x63c77b	1485		1445		1445		0		in use	 
+  32		 0x63cd20	 0x63dee1	 0x63c753	 0x63cd48	4545		4505		0		4505		free  	*
+  33		 0x63dee1	 0x63e4ea	 0x63cd20	 0x63df09	1545		1505		1505		0		in use	 
+  34		 0x63e4ea	 0x63f75f	 0x63dee1	 0x63e512	4725		4685		0		4685		free  	*
+  35		 0x63f75f	 0x63fda4	 0x63e4ea	 0x63f787	1605		1565		1565		0		in use	 
+  36		 0x63fda4	 0x6410cd	 0x63f75f	 0x63fdcc	4905		4865		0		4865		free  	*
+  37		 0x6410cd	 0x64174e	 0x63fda4	 0x6410f5	1665		1625		1625		0		in use	 
+  38		 0x64174e	 0x642b2b	 0x6410cd	 0x641776	5085		5045		0		5045		free  	*
+  39		 0x642b2b	 0x6431e8	 0x64174e	 0x642b53	1725		1685		1685		0		in use	 
+  40		 0x6431e8	 0x644679	 0x642b2b	 0x643210	5265		5225		0		5225		free  	*
+  41		 0x644679	 0x644d72	 0x6431e8	 0x6446a1	1785		1745		1745		0		in use	 
+  42		 0x644d72	 0x6462b7	 0x644679	 0x644d9a	5445		5405		0		5405		free  	*
+  43		 0x6462b7	 0x6469ec	 0x644d72	 0x6462df	1845		1805		1805		0		in use	 
+  44		 0x6469ec	 0x647fe5	 0x6462b7	 0x646a14	5625		5585		0		5585		free  	*
+  45		 0x647fe5	 0x648756	 0x6469ec	 0x64800d	1905		1865		1865		0		in use	 
+  46		 0x648756	 0x649e03	 0x647fe5	 0x64877e	5805		5765		0		5765		free  	*
+  47		 0x649e03	 0x64a5b0	 0x648756	 0x649e2b	1965		1925		1925		0		in use	 
+  48		 0x64a5b0	 0x64bd11	 0x649e03	 0x64a5d8	5985		5945		0		5945		free  	*
+  49		 0x64bd11	    (nil)	 0x64a5b0	 0x64bd39	99055		99015		1985		97030		in use	 
+  Total bytes used								225280		223280		31625		191655
+  Used blocks:   25  Free blocks:   25  Min heap:  0x62d000    Max heap:  0x664000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	    (nil)	    (nil)	 0x62d028	225280		225240		0		225240		free  	*
+  Total bytes used								225280		225240		0		225240
+  Used blocks:    0  Free blocks:    1  Min heap:  0x62d000    Max heap:  0x664000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d7f8	    (nil)	 0x62d028	2040		2000		2000		0		in use	 
+  1		 0x62d7f8	 0x62dfff	 0x62d000	 0x62d820	2055		2015		2015		0		in use	 
+  2		 0x62dfff	 0x62e815	 0x62d7f8	 0x62e027	2070		2030		2030		0		in use	 
+  3		 0x62e815	 0x62f03a	 0x62dfff	 0x62e83d	2085		2045		2045		0		in use	 
+  4		 0x62f03a	 0x62f86e	 0x62e815	 0x62f062	2100		2060		2060		0		in use	 
+  5		 0x62f86e	 0x6300b1	 0x62f03a	 0x62f896	2115		2075		2075		0		in use	 
+  6		 0x6300b1	 0x630903	 0x62f86e	 0x6300d9	2130		2090		2090		0		in use	 
+  7		 0x630903	 0x631164	 0x6300b1	 0x63092b	2145		2105		2105		0		in use	 
+  8		 0x631164	 0x6319d4	 0x630903	 0x63118c	2160		2120		2120		0		in use	 
+  9		 0x6319d4	 0x632253	 0x631164	 0x6319fc	2175		2135		2135		0		in use	 
+  10		 0x632253	 0x632ae1	 0x6319d4	 0x63227b	2190		2150		2150		0		in use	 
+  11		 0x632ae1	 0x63337e	 0x632253	 0x632b09	2205		2165		2165		0		in use	 
+  12		 0x63337e	 0x633c2a	 0x632ae1	 0x6333a6	2220		2180		2180		0		in use	 
+  13		 0x633c2a	 0x6344e5	 0x63337e	 0x633c52	2235		2195		2195		0		in use	 
+  14		 0x6344e5	 0x634daf	 0x633c2a	 0x63450d	2250		2210		2210		0		in use	 
+  15		 0x634daf	 0x635688	 0x6344e5	 0x634dd7	2265		2225		2225		0		in use	 
+  16		 0x635688	 0x635f70	 0x634daf	 0x6356b0	2280		2240		2240		0		in use	 
+  17		 0x635f70	 0x636867	 0x635688	 0x635f98	2295		2255		2255		0		in use	 
+  18		 0x636867	 0x63716d	 0x635f70	 0x63688f	2310		2270		2270		0		in use	 
+  19		 0x63716d	 0x637a82	 0x636867	 0x637195	2325		2285		2285		0		in use	 
+  20		 0x637a82	 0x6383a6	 0x63716d	 0x637aaa	2340		2300		2300		0		in use	 
+  21		 0x6383a6	 0x638cd9	 0x637a82	 0x6383ce	2355		2315		2315		0		in use	 
+  22		 0x638cd9	 0x63961b	 0x6383a6	 0x638d01	2370		2330		2330		0		in use	 
+  23		 0x63961b	 0x639f6c	 0x638cd9	 0x639643	2385		2345		2345		0		in use	 
+  24		 0x639f6c	 0x63a8cc	 0x63961b	 0x639f94	2400		2360		2360		0		in use	 
+  25		 0x63a8cc	 0x63b23b	 0x639f6c	 0x63a8f4	2415		2375		2375		0		in use	 
+  26		 0x63b23b	 0x63bbb9	 0x63a8cc	 0x63b263	2430		2390		2390		0		in use	 
+  27		 0x63bbb9	 0x63c546	 0x63b23b	 0x63bbe1	2445		2405		2405		0		in use	 
+  28		 0x63c546	 0x63cee2	 0x63bbb9	 0x63c56e	2460		2420		2420		0		in use	 
+  29		 0x63cee2	 0x63d88d	 0x63c546	 0x63cf0a	2475		2435		2435		0		in use	 
+  30		 0x63d88d	 0x63e247	 0x63cee2	 0x63d8b5	2490		2450		2450		0		in use	 
+  31		 0x63e247	 0x63ec10	 0x63d88d	 0x63e26f	2505		2465		2465		0		in use	 
+  32		 0x63ec10	 0x63f5e8	 0x63e247	 0x63ec38	2520		2480		2480		0		in use	 
+  33		 0x63f5e8	 0x63ffcf	 0x63ec10	 0x63f610	2535		2495		2495		0		in use	 
+  34		 0x63ffcf	 0x6409c5	 0x63f5e8	 0x63fff7	2550		2510		2510		0		in use	 
+  35		 0x6409c5	 0x6413ca	 0x63ffcf	 0x6409ed	2565		2525		2525		0		in use	 
+  36		 0x6413ca	 0x641dde	 0x6409c5	 0x6413f2	2580		2540		2540		0		in use	 
+  37		 0x641dde	 0x642801	 0x6413ca	 0x641e06	2595		2555		2555		0		in use	 
+  38		 0x642801	 0x643233	 0x641dde	 0x642829	2610		2570		2570		0		in use	 
+  39		 0x643233	 0x643c74	 0x642801	 0x64325b	2625		2585		2585		0		in use	 
+  40		 0x643c74	 0x6446c4	 0x643233	 0x643c9c	2640		2600		2600		0		in use	 
+  41		 0x6446c4	 0x645123	 0x643c74	 0x6446ec	2655		2615		2615		0		in use	 
+  42		 0x645123	 0x645b91	 0x6446c4	 0x64514b	2670		2630		2630		0		in use	 
+  43		 0x645b91	 0x64660e	 0x645123	 0x645bb9	2685		2645		2645		0		in use	 
+  44		 0x64660e	 0x64709a	 0x645b91	 0x646636	2700		2660		2660		0		in use	 
+  45		 0x64709a	 0x647b35	 0x64660e	 0x6470c2	2715		2675		2675		0		in use	 
+  46		 0x647b35	 0x6485df	 0x64709a	 0x647b5d	2730		2690		2690		0		in use	 
+  47		 0x6485df	 0x649098	 0x647b35	 0x648607	2745		2705		2705		0		in use	 
+  48		 0x649098	 0x649b60	 0x6485df	 0x6490c0	2760		2720		2720		0		in use	 
+  49		 0x649b60	 0x64a637	 0x649098	 0x649b88	2775		2735		2735		0		in use	 
+  50		 0x64a637	 0x64b11d	 0x649b60	 0x64a65f	2790		2750		2750		0		in use	 
+  51		 0x64b11d	 0x64bc12	 0x64a637	 0x64b145	2805		2765		2765		0		in use	 
+  52		 0x64bc12	 0x64c716	 0x64b11d	 0x64bc3a	2820		2780		2780		0		in use	 
+  53		 0x64c716	 0x64d229	 0x64bc12	 0x64c73e	2835		2795		2795		0		in use	 
+  54		 0x64d229	 0x64dd4b	 0x64c716	 0x64d251	2850		2810		2810		0		in use	 
+  55		 0x64dd4b	 0x64e87c	 0x64d229	 0x64dd73	2865		2825		2825		0		in use	 
+  56		 0x64e87c	 0x64f3bc	 0x64dd4b	 0x64e8a4	2880		2840		2840		0		in use	 
+  57		 0x64f3bc	 0x64ff0b	 0x64e87c	 0x64f3e4	2895		2855		2855		0		in use	 
+  58		 0x64ff0b	 0x650a69	 0x64f3bc	 0x64ff33	2910		2870		2870		0		in use	 
+  59		 0x650a69	 0x6515d6	 0x64ff0b	 0x650a91	2925		2885		2885		0		in use	 
+  60		 0x6515d6	 0x652152	 0x650a69	 0x6515fe	2940		2900		2900		0		in use	 
+  61		 0x652152	 0x652cdd	 0x6515d6	 0x65217a	2955		2915		2915		0		in use	 
+  62		 0x652cdd	 0x653877	 0x652152	 0x652d05	2970		2930		2930		0		in use	 
+  63		 0x653877	 0x654420	 0x652cdd	 0x65389f	2985		2945		2945		0		in use	 
+  64		 0x654420	 0x654fd8	 0x653877	 0x654448	3000		2960		2960		0		in use	 
+  65		 0x654fd8	 0x655b9f	 0x654420	 0x655000	3015		2975		2975		0		in use	 
+  66		 0x655b9f	 0x656775	 0x654fd8	 0x655bc7	3030		2990		2990		0		in use	 
+  67		 0x656775	 0x65735a	 0x655b9f	 0x65679d	3045		3005		3005		0		in use	 
+  68		 0x65735a	 0x657f4e	 0x656775	 0x657382	3060		3020		3020		0		in use	 
+  69		 0x657f4e	 0x658b51	 0x65735a	 0x657f76	3075		3035		3035		0		in use	 
+  70		 0x658b51	 0x659763	 0x657f4e	 0x658b79	3090		3050		3050		0		in use	 
+  71		 0x659763	 0x65a384	 0x658b51	 0x65978b	3105		3065		3065		0		in use	 
+  72		 0x65a384	 0x65afb4	 0x659763	 0x65a3ac	3120		3080		3080		0		in use	 
+  73		 0x65afb4	 0x65bbf3	 0x65a384	 0x65afdc	3135		3095		3095		0		in use	 
+  74		 0x65bbf3	 0x65c841	 0x65afb4	 0x65bc1b	3150		3110		3110		0		in use	 
+  75		 0x65c841	 0x65d49e	 0x65bbf3	 0x65c869	3165		3125		3125		0		in use	 
+  76		 0x65d49e	 0x65e10a	 0x65c841	 0x65d4c6	3180		3140		3140		0		in use	 
+  77		 0x65e10a	 0x65ed85	 0x65d49e	 0x65e132	3195		3155		3155		0		in use	 
+  78		 0x65ed85	 0x65fa0f	 0x65e10a	 0x65edad	3210		3170		3170		0		in use	 
+  79		 0x65fa0f	 0x6606a8	 0x65ed85	 0x65fa37	3225		3185		3185		0		in use	 
+  80		 0x6606a8	 0x661350	 0x65fa0f	 0x6606d0	3240		3200		3200		0		in use	 
+  81		 0x661350	 0x662007	 0x6606a8	 0x661378	3255		3215		3215		0		in use	 
+  82		 0x662007	 0x662ccd	 0x661350	 0x66202f	3270		3230		3230		0		in use	 
+  83		 0x662ccd	 0x664000	 0x662007	 0x662cf5	4915		4875		3245		1630		in use	 
+  84		 0x664000	 0x665000	 0x662ccd	 0x664028	4096		4056		3260		796		in use	 
+  85		 0x665000	 0x666000	 0x664000	 0x665028	4096		4056		3275		781		in use	 
+  86		 0x666000	 0x667000	 0x665000	 0x666028	4096		4056		3290		766		in use	 
+  87		 0x667000	 0x668000	 0x666000	 0x667028	4096		4056		3305		751		in use	 
+  88		 0x668000	 0x669000	 0x667000	 0x668028	4096		4056		3320		736		in use	 
+  89		 0x669000	 0x66a000	 0x668000	 0x669028	4096		4056		3335		721		in use	 
+  90		 0x66a000	 0x66b000	 0x669000	 0x66a028	4096		4056		3350		706		in use	 
+  91		 0x66b000	 0x66c000	 0x66a000	 0x66b028	4096		4056		3365		691		in use	 
+  92		 0x66c000	 0x66d000	 0x66b000	 0x66c028	4096		4056		3380		676		in use	 
+  93		 0x66d000	 0x66e000	 0x66c000	 0x66d028	4096		4056		3395		661		in use	 
+  94		 0x66e000	 0x66f000	 0x66d000	 0x66e028	4096		4056		3410		646		in use	 
+  95		 0x66f000	 0x670000	 0x66e000	 0x66f028	4096		4056		3425		631		in use	 
+  96		 0x670000	 0x671000	 0x66f000	 0x670028	4096		4056		3440		616		in use	 
+  97		 0x671000	 0x672000	 0x670000	 0x671028	4096		4056		3455		601		in use	 
+  98		 0x672000	 0x673000	 0x671000	 0x672028	4096		4056		3470		586		in use	 
+  99		 0x673000	    (nil)	 0x672000	 0x673028	4096		4056		3485		571		in use	 
+  Total bytes used								290816		286816		274250		12566
+  Used blocks:  100  Free blocks:    0  Min heap:  0x62d000    Max heap:  0x674000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d7f8	    (nil)	 0x62d028	2040		2000		2000		0		in use	 
+  1		 0x62d7f8	 0x62dfff	 0x62d000	 0x62d820	2055		2015		2015		0		in use	 
+  2		 0x62dfff	 0x62e815	 0x62d7f8	 0x62e027	2070		2030		2030		0		in use	 
+  3		 0x62e815	 0x62f03a	 0x62dfff	 0x62e83d	2085		2045		0		2045		free  	*
+  4		 0x62f03a	 0x62f86e	 0x62e815	 0x62f062	2100		2060		2060		0		in use	 
+  5		 0x62f86e	 0x6300b1	 0x62f03a	 0x62f896	2115		2075		2075		0		in use	 
+  6		 0x6300b1	 0x630903	 0x62f86e	 0x6300d9	2130		2090		2090		0		in use	 
+  7		 0x630903	 0x631164	 0x6300b1	 0x63092b	2145		2105		0		2105		free  	*
+  8		 0x631164	 0x6319d4	 0x630903	 0x63118c	2160		2120		2120		0		in use	 
+  9		 0x6319d4	 0x632253	 0x631164	 0x6319fc	2175		2135		2135		0		in use	 
+  10		 0x632253	 0x632ae1	 0x6319d4	 0x63227b	2190		2150		2150		0		in use	 
+  11		 0x632ae1	 0x63337e	 0x632253	 0x632b09	2205		2165		0		2165		free  	*
+  12		 0x63337e	 0x633c2a	 0x632ae1	 0x6333a6	2220		2180		2180		0		in use	 
+  13		 0x633c2a	 0x6344e5	 0x63337e	 0x633c52	2235		2195		2195		0		in use	 
+  14		 0x6344e5	 0x634daf	 0x633c2a	 0x63450d	2250		2210		2210		0		in use	 
+  15		 0x634daf	 0x635688	 0x6344e5	 0x634dd7	2265		2225		0		2225		free  	*
+  16		 0x635688	 0x635f70	 0x634daf	 0x6356b0	2280		2240		2240		0		in use	 
+  17		 0x635f70	 0x636867	 0x635688	 0x635f98	2295		2255		2255		0		in use	 
+  18		 0x636867	 0x63716d	 0x635f70	 0x63688f	2310		2270		2270		0		in use	 
+  19		 0x63716d	 0x637a82	 0x636867	 0x637195	2325		2285		0		2285		free  	*
+  20		 0x637a82	 0x6383a6	 0x63716d	 0x637aaa	2340		2300		2300		0		in use	 
+  21		 0x6383a6	 0x638cd9	 0x637a82	 0x6383ce	2355		2315		2315		0		in use	 
+  22		 0x638cd9	 0x63961b	 0x6383a6	 0x638d01	2370		2330		2330		0		in use	 
+  23		 0x63961b	 0x639f6c	 0x638cd9	 0x639643	2385		2345		0		2345		free  	*
+  24		 0x639f6c	 0x63a8cc	 0x63961b	 0x639f94	2400		2360		2360		0		in use	 
+  25		 0x63a8cc	 0x63b23b	 0x639f6c	 0x63a8f4	2415		2375		2375		0		in use	 
+  26		 0x63b23b	 0x63bbb9	 0x63a8cc	 0x63b263	2430		2390		2390		0		in use	 
+  27		 0x63bbb9	 0x63c546	 0x63b23b	 0x63bbe1	2445		2405		0		2405		free  	*
+  28		 0x63c546	 0x63cee2	 0x63bbb9	 0x63c56e	2460		2420		2420		0		in use	 
+  29		 0x63cee2	 0x63d88d	 0x63c546	 0x63cf0a	2475		2435		2435		0		in use	 
+  30		 0x63d88d	 0x63e247	 0x63cee2	 0x63d8b5	2490		2450		2450		0		in use	 
+  31		 0x63e247	 0x63ec10	 0x63d88d	 0x63e26f	2505		2465		0		2465		free  	*
+  32		 0x63ec10	 0x63f5e8	 0x63e247	 0x63ec38	2520		2480		2480		0		in use	 
+  33		 0x63f5e8	 0x63ffcf	 0x63ec10	 0x63f610	2535		2495		2495		0		in use	 
+  34		 0x63ffcf	 0x6409c5	 0x63f5e8	 0x63fff7	2550		2510		2510		0		in use	 
+  35		 0x6409c5	 0x6413ca	 0x63ffcf	 0x6409ed	2565		2525		0		2525		free  	*
+  36		 0x6413ca	 0x641dde	 0x6409c5	 0x6413f2	2580		2540		2540		0		in use	 
+  37		 0x641dde	 0x642801	 0x6413ca	 0x641e06	2595		2555		2555		0		in use	 
+  38		 0x642801	 0x643233	 0x641dde	 0x642829	2610		2570		2570		0		in use	 
+  39		 0x643233	 0x643c74	 0x642801	 0x64325b	2625		2585		0		2585		free  	*
+  40		 0x643c74	 0x6446c4	 0x643233	 0x643c9c	2640		2600		2600		0		in use	 
+  41		 0x6446c4	 0x645123	 0x643c74	 0x6446ec	2655		2615		2615		0		in use	 
+  42		 0x645123	 0x645b91	 0x6446c4	 0x64514b	2670		2630		2630		0		in use	 
+  43		 0x645b91	 0x64660e	 0x645123	 0x645bb9	2685		2645		0		2645		free  	*
+  44		 0x64660e	 0x64709a	 0x645b91	 0x646636	2700		2660		2660		0		in use	 
+  45		 0x64709a	 0x647b35	 0x64660e	 0x6470c2	2715		2675		2675		0		in use	 
+  46		 0x647b35	 0x6485df	 0x64709a	 0x647b5d	2730		2690		2690		0		in use	 
+  47		 0x6485df	 0x649098	 0x647b35	 0x648607	2745		2705		0		2705		free  	*
+  48		 0x649098	 0x649b60	 0x6485df	 0x6490c0	2760		2720		2720		0		in use	 
+  49		 0x649b60	 0x64a637	 0x649098	 0x649b88	2775		2735		2735		0		in use	 
+  50		 0x64a637	 0x64b11d	 0x649b60	 0x64a65f	2790		2750		2750		0		in use	 
+  51		 0x64b11d	 0x64bc12	 0x64a637	 0x64b145	2805		2765		0		2765		free  	*
+  52		 0x64bc12	 0x64c716	 0x64b11d	 0x64bc3a	2820		2780		2780		0		in use	 
+  53		 0x64c716	 0x64d229	 0x64bc12	 0x64c73e	2835		2795		2795		0		in use	 
+  54		 0x64d229	 0x64dd4b	 0x64c716	 0x64d251	2850		2810		2810		0		in use	 
+  55		 0x64dd4b	 0x64e87c	 0x64d229	 0x64dd73	2865		2825		0		2825		free  	*
+  56		 0x64e87c	 0x64f3bc	 0x64dd4b	 0x64e8a4	2880		2840		2840		0		in use	 
+  57		 0x64f3bc	 0x64ff0b	 0x64e87c	 0x64f3e4	2895		2855		2855		0		in use	 
+  58		 0x64ff0b	 0x650a69	 0x64f3bc	 0x64ff33	2910		2870		2870		0		in use	 
+  59		 0x650a69	 0x6515d6	 0x64ff0b	 0x650a91	2925		2885		0		2885		free  	*
+  60		 0x6515d6	 0x652152	 0x650a69	 0x6515fe	2940		2900		2900		0		in use	 
+  61		 0x652152	 0x652cdd	 0x6515d6	 0x65217a	2955		2915		2915		0		in use	 
+  62		 0x652cdd	 0x653877	 0x652152	 0x652d05	2970		2930		2930		0		in use	 
+  63		 0x653877	 0x654420	 0x652cdd	 0x65389f	2985		2945		0		2945		free  	*
+  64		 0x654420	 0x654fd8	 0x653877	 0x654448	3000		2960		2960		0		in use	 
+  65		 0x654fd8	 0x655b9f	 0x654420	 0x655000	3015		2975		2975		0		in use	 
+  66		 0x655b9f	 0x656775	 0x654fd8	 0x655bc7	3030		2990		2990		0		in use	 
+  67		 0x656775	 0x65735a	 0x655b9f	 0x65679d	3045		3005		0		3005		free  	*
+  68		 0x65735a	 0x657f4e	 0x656775	 0x657382	3060		3020		3020		0		in use	 
+  69		 0x657f4e	 0x658b51	 0x65735a	 0x657f76	3075		3035		3035		0		in use	 
+  70		 0x658b51	 0x659763	 0x657f4e	 0x658b79	3090		3050		3050		0		in use	 
+  71		 0x659763	 0x65a384	 0x658b51	 0x65978b	3105		3065		0		3065		free  	*
+  72		 0x65a384	 0x65afb4	 0x659763	 0x65a3ac	3120		3080		3080		0		in use	 
+  73		 0x65afb4	 0x65bbf3	 0x65a384	 0x65afdc	3135		3095		3095		0		in use	 
+  74		 0x65bbf3	 0x65c841	 0x65afb4	 0x65bc1b	3150		3110		3110		0		in use	 
+  75		 0x65c841	 0x65d49e	 0x65bbf3	 0x65c869	3165		3125		0		3125		free  	*
+  76		 0x65d49e	 0x65e10a	 0x65c841	 0x65d4c6	3180		3140		3140		0		in use	 
+  77		 0x65e10a	 0x65ed85	 0x65d49e	 0x65e132	3195		3155		3155		0		in use	 
+  78		 0x65ed85	 0x65fa0f	 0x65e10a	 0x65edad	3210		3170		3170		0		in use	 
+  79		 0x65fa0f	 0x6606a8	 0x65ed85	 0x65fa37	3225		3185		0		3185		free  	*
+  80		 0x6606a8	 0x661350	 0x65fa0f	 0x6606d0	3240		3200		3200		0		in use	 
+  81		 0x661350	 0x662007	 0x6606a8	 0x661378	3255		3215		3215		0		in use	 
+  82		 0x662007	 0x662ccd	 0x661350	 0x66202f	3270		3230		3230		0		in use	 
+  83		 0x662ccd	 0x664000	 0x662007	 0x662cf5	4915		4875		0		4875		free  	*
+  84		 0x664000	 0x665000	 0x662ccd	 0x664028	4096		4056		3260		796		in use	 
+  85		 0x665000	 0x666000	 0x664000	 0x665028	4096		4056		3275		781		in use	 
+  86		 0x666000	 0x667000	 0x665000	 0x666028	4096		4056		3290		766		in use	 
+  87		 0x667000	 0x668000	 0x666000	 0x667028	4096		4056		0		4056		free  	*
+  88		 0x668000	 0x669000	 0x667000	 0x668028	4096		4056		3320		736		in use	 
+  89		 0x669000	 0x66a000	 0x668000	 0x669028	4096		4056		3335		721		in use	 
+  90		 0x66a000	 0x66b000	 0x669000	 0x66a028	4096		4056		3350		706		in use	 
+  91		 0x66b000	 0x66c000	 0x66a000	 0x66b028	4096		4056		0		4056		free  	*
+  92		 0x66c000	 0x66d000	 0x66b000	 0x66c028	4096		4056		3380		676		in use	 
+  93		 0x66d000	 0x66e000	 0x66c000	 0x66d028	4096		4056		3395		661		in use	 
+  94		 0x66e000	 0x66f000	 0x66d000	 0x66e028	4096		4056		3410		646		in use	 
+  95		 0x66f000	 0x670000	 0x66e000	 0x66f028	4096		4056		0		4056		free  	*
+  96		 0x670000	 0x671000	 0x66f000	 0x670028	4096		4056		3440		616		in use	 
+  97		 0x671000	 0x672000	 0x670000	 0x671028	4096		4056		3455		601		in use	 
+  98		 0x672000	 0x673000	 0x671000	 0x672028	4096		4056		3470		586		in use	 
+  99		 0x673000	    (nil)	 0x672000	 0x673028	4096		4056		0		4056		free  	*
+  Total bytes used								290816		286816		205125		81691
+  Used blocks:   75  Free blocks:   25  Min heap:  0x62d000    Max heap:  0x674000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d7f8	    (nil)	 0x62d028	2040		2000		0		2000		free  	*
+  1		 0x62d7f8	 0x62dfff	 0x62d000	 0x62d820	2055		2015		2015		0		in use	 
+  2		 0x62dfff	 0x62e815	 0x62d7f8	 0x62e027	2070		2030		2030		0		in use	 
+  3		 0x62e815	 0x62f86e	 0x62dfff	 0x62e83d	4185		4145		0		4145		free  	*
+  4		 0x62f86e	 0x6300b1	 0x62e815	 0x62f896	2115		2075		2075		0		in use	 
+  5		 0x6300b1	 0x630903	 0x62f86e	 0x6300d9	2130		2090		2090		0		in use	 
+  6		 0x630903	 0x6319d4	 0x6300b1	 0x63092b	4305		4265		0		4265		free  	*
+  7		 0x6319d4	 0x632253	 0x630903	 0x6319fc	2175		2135		2135		0		in use	 
+  8		 0x632253	 0x632ae1	 0x6319d4	 0x63227b	2190		2150		2150		0		in use	 
+  9		 0x632ae1	 0x633c2a	 0x632253	 0x632b09	4425		4385		0		4385		free  	*
+  10		 0x633c2a	 0x6344e5	 0x632ae1	 0x633c52	2235		2195		2195		0		in use	 
+  11		 0x6344e5	 0x634daf	 0x633c2a	 0x63450d	2250		2210		2210		0		in use	 
+  12		 0x634daf	 0x635f70	 0x6344e5	 0x634dd7	4545		4505		0		4505		free  	*
+  13		 0x635f70	 0x636867	 0x634daf	 0x635f98	2295		2255		2255		0		in use	 
+  14		 0x636867	 0x63716d	 0x635f70	 0x63688f	2310		2270		2270		0		in use	 
+  15		 0x63716d	 0x6383a6	 0x636867	 0x637195	4665		4625		0		4625		free  	*
+  16		 0x6383a6	 0x638cd9	 0x63716d	 0x6383ce	2355		2315		2315		0		in use	 
+  17		 0x638cd9	 0x63961b	 0x6383a6	 0x638d01	2370		2330		2330		0		in use	 
+  18		 0x63961b	 0x63a8cc	 0x638cd9	 0x639643	4785		4745		0		4745		free  	*
+  19		 0x63a8cc	 0x63b23b	 0x63961b	 0x63a8f4	2415		2375		2375		0		in use	 
+  20		 0x63b23b	 0x63bbb9	 0x63a8cc	 0x63b263	2430		2390		2390		0		in use	 
+  21		 0x63bbb9	 0x63cee2	 0x63b23b	 0x63bbe1	4905		4865		0		4865		free  	*
+  22		 0x63cee2	 0x63d88d	 0x63bbb9	 0x63cf0a	2475		2435		2435		0		in use	 
+  23		 0x63d88d	 0x63e247	 0x63cee2	 0x63d8b5	2490		2450		2450		0		in use	 
+  24		 0x63e247	 0x63f5e8	 0x63d88d	 0x63e26f	5025		4985		0		4985		free  	*
+  25		 0x63f5e8	 0x63ffcf	 0x63e247	 0x63f610	2535		2495		2495		0		in use	 
+  26		 0x63ffcf	 0x6409c5	 0x63f5e8	 0x63fff7	2550		2510		2510		0		in use	 
+  27		 0x6409c5	 0x641dde	 0x63ffcf	 0x6409ed	5145		5105		0		5105		free  	*
+  28		 0x641dde	 0x642801	 0x6409c5	 0x641e06	2595		2555		2555		0		in use	 
+  29		 0x642801	 0x643233	 0x641dde	 0x642829	2610		2570		2570		0		in use	 
+  30		 0x643233	 0x6446c4	 0x642801	 0x64325b	5265		5225		0		5225		free  	*
+  31		 0x6446c4	 0x645123	 0x643233	 0x6446ec	2655		2615		2615		0		in use	 
+  32		 0x645123	 0x645b91	 0x6446c4	 0x64514b	2670		2630		2630		0		in use	 
+  33		 0x645b91	 0x64709a	 0x645123	 0x645bb9	5385		5345		0		5345		free  	*
+  34		 0x64709a	 0x647b35	 0x645b91	 0x6470c2	2715		2675		2675		0		in use	 
+  35		 0x647b35	 0x6485df	 0x64709a	 0x647b5d	2730		2690		2690		0		in use	 
+  36		 0x6485df	 0x649b60	 0x647b35	 0x648607	5505		5465		0		5465		free  	*
+  37		 0x649b60	 0x64a637	 0x6485df	 0x649b88	2775		2735		2735		0		in use	 
+  38		 0x64a637	 0x64b11d	 0x649b60	 0x64a65f	2790		2750		2750		0		in use	 
+  39		 0x64b11d	 0x64c716	 0x64a637	 0x64b145	5625		5585		0		5585		free  	*
+  40		 0x64c716	 0x64d229	 0x64b11d	 0x64c73e	2835		2795		2795		0		in use	 
+  41		 0x64d229	 0x64dd4b	 0x64c716	 0x64d251	2850		2810		2810		0		in use	 
+  42		 0x64dd4b	 0x64f3bc	 0x64d229	 0x64dd73	5745		5705		0		5705		free  	*
+  43		 0x64f3bc	 0x64ff0b	 0x64dd4b	 0x64f3e4	2895		2855		2855		0		in use	 
+  44		 0x64ff0b	 0x650a69	 0x64f3bc	 0x64ff33	2910		2870		2870		0		in use	 
+  45		 0x650a69	 0x652152	 0x64ff0b	 0x650a91	5865		5825		0		5825		free  	*
+  46		 0x652152	 0x652cdd	 0x650a69	 0x65217a	2955		2915		2915		0		in use	 
+  47		 0x652cdd	 0x653877	 0x652152	 0x652d05	2970		2930		2930		0		in use	 
+  48		 0x653877	 0x654fd8	 0x652cdd	 0x65389f	5985		5945		0		5945		free  	*
+  49		 0x654fd8	 0x655b9f	 0x653877	 0x655000	3015		2975		2975		0		in use	 
+  50		 0x655b9f	 0x656775	 0x654fd8	 0x655bc7	3030		2990		2990		0		in use	 
+  51		 0x656775	 0x657f4e	 0x655b9f	 0x65679d	6105		6065		0		6065		free  	*
+  52		 0x657f4e	 0x658b51	 0x656775	 0x657f76	3075		3035		3035		0		in use	 
+  53		 0x658b51	 0x659763	 0x657f4e	 0x658b79	3090		3050		3050		0		in use	 
+  54		 0x659763	 0x65afb4	 0x658b51	 0x65978b	6225		6185		0		6185		free  	*
+  55		 0x65afb4	 0x65bbf3	 0x659763	 0x65afdc	3135		3095		3095		0		in use	 
+  56		 0x65bbf3	 0x65c841	 0x65afb4	 0x65bc1b	3150		3110		3110		0		in use	 
+  57		 0x65c841	 0x65e10a	 0x65bbf3	 0x65c869	6345		6305		0		6305		free  	*
+  58		 0x65e10a	 0x65ed85	 0x65c841	 0x65e132	3195		3155		3155		0		in use	 
+  59		 0x65ed85	 0x65fa0f	 0x65e10a	 0x65edad	3210		3170		3170		0		in use	 
+  60		 0x65fa0f	 0x661350	 0x65ed85	 0x65fa37	6465		6425		0		6425		free  	*
+  61		 0x661350	 0x662007	 0x65fa0f	 0x661378	3255		3215		3215		0		in use	 
+  62		 0x662007	 0x662ccd	 0x661350	 0x66202f	3270		3230		3230		0		in use	 
+  63		 0x662ccd	 0x665000	 0x662007	 0x662cf5	9011		8971		0		8971		free  	*
+  64		 0x665000	 0x666000	 0x662ccd	 0x665028	4096		4056		3275		781		in use	 
+  65		 0x666000	 0x667000	 0x665000	 0x666028	4096		4056		3290		766		in use	 
+  66		 0x667000	 0x669000	 0x666000	 0x667028	8192		8152		0		8152		free  	*
+  67		 0x669000	 0x66a000	 0x667000	 0x669028	4096		4056		3335		721		in use	 
+  68		 0x66a000	 0x66b000	 0x669000	 0x66a028	4096		4056		3350		706		in use	 
+  69		 0x66b000	 0x66d000	 0x66a000	 0x66b028	8192		8152		0		8152		free  	*
+  70		 0x66d000	 0x66e000	 0x66b000	 0x66d028	4096		4056		3395		661		in use	 
+  71		 0x66e000	 0x66f000	 0x66d000	 0x66e028	4096		4056		3410		646		in use	 
+  72		 0x66f000	 0x671000	 0x66e000	 0x66f028	8192		8152		0		8152		free  	*
+  73		 0x671000	 0x672000	 0x66f000	 0x671028	4096		4056		3455		601		in use	 
+  74		 0x672000	 0x673000	 0x671000	 0x672028	4096		4056		3470		586		in use	 
+  75		 0x673000	    (nil)	 0x672000	 0x673028	4096		4056		0		4056		free  	*
+  Total bytes used								290816		287776		137125		150651
+  Used blocks:   50  Free blocks:   26  Min heap:  0x62d000    Max heap:  0x674000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d7f8	    (nil)	 0x62d028	2040		2000		0		2000		free  	*
+  1		 0x62d7f8	 0x62dfff	 0x62d000	 0x62d820	2055		2015		2015		0		in use	 
+  2		 0x62dfff	 0x62f86e	 0x62d7f8	 0x62e027	6255		6215		0		6215		free  	*
+  3		 0x62f86e	 0x6300b1	 0x62dfff	 0x62f896	2115		2075		2075		0		in use	 
+  4		 0x6300b1	 0x6319d4	 0x62f86e	 0x6300d9	6435		6395		0		6395		free  	*
+  5		 0x6319d4	 0x632253	 0x6300b1	 0x6319fc	2175		2135		2135		0		in use	 
+  6		 0x632253	 0x633c2a	 0x6319d4	 0x63227b	6615		6575		0		6575		free  	*
+  7		 0x633c2a	 0x6344e5	 0x632253	 0x633c52	2235		2195		2195		0		in use	 
+  8		 0x6344e5	 0x635f70	 0x633c2a	 0x63450d	6795		6755		0		6755		free  	*
+  9		 0x635f70	 0x636867	 0x6344e5	 0x635f98	2295		2255		2255		0		in use	 
+  10		 0x636867	 0x6383a6	 0x635f70	 0x63688f	6975		6935		0		6935		free  	*
+  11		 0x6383a6	 0x638cd9	 0x636867	 0x6383ce	2355		2315		2315		0		in use	 
+  12		 0x638cd9	 0x63a8cc	 0x6383a6	 0x638d01	7155		7115		0		7115		free  	*
+  13		 0x63a8cc	 0x63b23b	 0x638cd9	 0x63a8f4	2415		2375		2375		0		in use	 
+  14		 0x63b23b	 0x63cee2	 0x63a8cc	 0x63b263	7335		7295		0		7295		free  	*
+  15		 0x63cee2	 0x63d88d	 0x63b23b	 0x63cf0a	2475		2435		2435		0		in use	 
+  16		 0x63d88d	 0x63f5e8	 0x63cee2	 0x63d8b5	7515		7475		0		7475		free  	*
+  17		 0x63f5e8	 0x63ffcf	 0x63d88d	 0x63f610	2535		2495		2495		0		in use	 
+  18		 0x63ffcf	 0x641dde	 0x63f5e8	 0x63fff7	7695		7655		0		7655		free  	*
+  19		 0x641dde	 0x642801	 0x63ffcf	 0x641e06	2595		2555		2555		0		in use	 
+  20		 0x642801	 0x6446c4	 0x641dde	 0x642829	7875		7835		0		7835		free  	*
+  21		 0x6446c4	 0x645123	 0x642801	 0x6446ec	2655		2615		2615		0		in use	 
+  22		 0x645123	 0x64709a	 0x6446c4	 0x64514b	8055		8015		0		8015		free  	*
+  23		 0x64709a	 0x647b35	 0x645123	 0x6470c2	2715		2675		2675		0		in use	 
+  24		 0x647b35	 0x649b60	 0x64709a	 0x647b5d	8235		8195		0		8195		free  	*
+  25		 0x649b60	 0x64a637	 0x647b35	 0x649b88	2775		2735		2735		0		in use	 
+  26		 0x64a637	 0x64c716	 0x649b60	 0x64a65f	8415		8375		0		8375		free  	*
+  27		 0x64c716	 0x64d229	 0x64a637	 0x64c73e	2835		2795		2795		0		in use	 
+  28		 0x64d229	 0x64f3bc	 0x64c716	 0x64d251	8595		8555		0		8555		free  	*
+  29		 0x64f3bc	 0x64ff0b	 0x64d229	 0x64f3e4	2895		2855		2855		0		in use	 
+  30		 0x64ff0b	 0x652152	 0x64f3bc	 0x64ff33	8775		8735		0		8735		free  	*
+  31		 0x652152	 0x652cdd	 0x64ff0b	 0x65217a	2955		2915		2915		0		in use	 
+  32		 0x652cdd	 0x654fd8	 0x652152	 0x652d05	8955		8915		0		8915		free  	*
+  33		 0x654fd8	 0x655b9f	 0x652cdd	 0x655000	3015		2975		2975		0		in use	 
+  34		 0x655b9f	 0x657f4e	 0x654fd8	 0x655bc7	9135		9095		0		9095		free  	*
+  35		 0x657f4e	 0x658b51	 0x655b9f	 0x657f76	3075		3035		3035		0		in use	 
+  36		 0x658b51	 0x65afb4	 0x657f4e	 0x658b79	9315		9275		0		9275		free  	*
+  37		 0x65afb4	 0x65bbf3	 0x658b51	 0x65afdc	3135		3095		3095		0		in use	 
+  38		 0x65bbf3	 0x65e10a	 0x65afb4	 0x65bc1b	9495		9455		0		9455		free  	*
+  39		 0x65e10a	 0x65ed85	 0x65bbf3	 0x65e132	3195		3155		3155		0		in use	 
+  40		 0x65ed85	 0x661350	 0x65e10a	 0x65edad	9675		9635		0		9635		free  	*
+  41		 0x661350	 0x662007	 0x65ed85	 0x661378	3255		3215		3215		0		in use	 
+  42		 0x662007	 0x665000	 0x661350	 0x66202f	12281		12241		0		12241		free  	*
+  43		 0x665000	 0x666000	 0x662007	 0x665028	4096		4056		3275		781		in use	 
+  44		 0x666000	 0x669000	 0x665000	 0x666028	12288		12248		0		12248		free  	*
+  45		 0x669000	 0x66a000	 0x666000	 0x669028	4096		4056		3335		721		in use	 
+  46		 0x66a000	 0x66d000	 0x669000	 0x66a028	12288		12248		0		12248		free  	*
+  47		 0x66d000	 0x66e000	 0x66a000	 0x66d028	4096		4056		3395		661		in use	 
+  48		 0x66e000	 0x671000	 0x66d000	 0x66e028	12288		12248		0		12248		free  	*
+  49		 0x671000	 0x672000	 0x66e000	 0x671028	4096		4056		3455		601		in use	 
+  50		 0x672000	    (nil)	 0x671000	 0x672028	8192		8152		0		8152		free  	*
+  Total bytes used								290816		288776		68375		220401
+  Used blocks:   25  Free blocks:   26  Min heap:  0x62d000    Max heap:  0x674000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0x62d000	 0x62d7f8	    (nil)	 0x62d028	2040		2000		0		2000		free  	*
+  1		 0x62d7f8	 0x62dfff	 0x62d000	 0x62d820	2055		2015		2015		0		in use	 
+  2		 0x62dfff	 0x62f86e	 0x62d7f8	 0x62e027	6255		6215		0		6215		free  	*
+  3		 0x62f86e	 0x6300b1	 0x62dfff	 0x62f896	2115		2075		2075		0		in use	 
+  4		 0x6300b1	 0x6319d4	 0x62f86e	 0x6300d9	6435		6395		0		6395		free  	*
+  5		 0x6319d4	 0x632253	 0x6300b1	 0x6319fc	2175		2135		2135		0		in use	 
+  6		 0x632253	 0x633c2a	 0x6319d4	 0x63227b	6615		6575		0		6575		free  	*
+  7		 0x633c2a	 0x6344e5	 0x632253	 0x633c52	2235		2195		2195		0		in use	 
+  8		 0x6344e5	 0x635f70	 0x633c2a	 0x63450d	6795		6755		0		6755		free  	*
+  9		 0x635f70	 0x636867	 0x6344e5	 0x635f98	2295		2255		2255		0		in use	 
+  10		 0x636867	 0x6383a6	 0x635f70	 0x63688f	6975		6935		0		6935		free  	*
+  11		 0x6383a6	 0x638cd9	 0x636867	 0x6383ce	2355		2315		2315		0		in use	 
+  12		 0x638cd9	 0x63a8cc	 0x6383a6	 0x638d01	7155		7115		0		7115		free  	*
+  13		 0x63a8cc	 0x63b23b	 0x638cd9	 0x63a8f4	2415		2375		2375		0		in use	 
+  14		 0x63b23b	 0x63cee2	 0x63a8cc	 0x63b263	7335		7295		0		7295		free  	*
+  15		 0x63cee2	 0x63d88d	 0x63b23b	 0x63cf0a	2475		2435		2435		0		in use	 
+  16		 0x63d88d	 0x63f5e8	 0x63cee2	 0x63d8b5	7515		7475		0		7475		free  	*
+  17		 0x63f5e8	 0x63ffcf	 0x63d88d	 0x63f610	2535		2495		2495		0		in use	 
+  18		 0x63ffcf	 0x641dde	 0x63f5e8	 0x63fff7	7695		7655		0		7655		free  	*
+  19		 0x641dde	 0x642801	 0x63ffcf	 0x641e06	2595		2555		2555		0		in use	 
+  20		 0x642801	 0x6446c4	 0x641dde	 0x642829	7875		7835		0		7835		free  	*
+  21		 0x6446c4	 0x645123	 0x642801	 0x6446ec	2655		2615		2615		0		in use	 
+  22		 0x645123	 0x64709a	 0x6446c4	 0x64514b	8055		8015		0		8015		free  	*
+  23		 0x64709a	 0x647b35	 0x645123	 0x6470c2	2715		2675		2675		0		in use	 
+  24		 0x647b35	 0x649b60	 0x64709a	 0x647b5d	8235		8195		0		8195		free  	*
+  25		 0x649b60	 0x64a637	 0x647b35	 0x649b88	2775		2735		2735		0		in use	 
+  26		 0x64a637	 0x64c716	 0x649b60	 0x64a65f	8415		8375		0		8375		free  	*
+  27		 0x64c716	 0x64d229	 0x64a637	 0x64c73e	2835		2795		2795		0		in use	 
+  28		 0x64d229	 0x64f3bc	 0x64c716	 0x64d251	8595		8555		0		8555		free  	*
+  29		 0x64f3bc	 0x64ff0b	 0x64d229	 0x64f3e4	2895		2855		2855		0		in use	 
+  30		 0x64ff0b	 0x652152	 0x64f3bc	 0x64ff33	8775		8735		0		8735		free  	*
+  31		 0x652152	 0x652cdd	 0x64ff0b	 0x65217a	2955		2915		2915		0		in use	 
+  32		 0x652cdd	 0x654fd8	 0x652152	 0x652d05	8955		8915		0		8915		free  	*
+  33		 0x654fd8	 0x655b9f	 0x652cdd	 0x655000	3015		2975		2975		0		in use	 
+  34		 0x655b9f	 0x657f4e	 0x654fd8	 0x655bc7	9135		9095		0		9095		free  	*
+  35		 0x657f4e	 0x658b51	 0x655b9f	 0x657f76	3075		3035		3035		0		in use	 
+  36		 0x658b51	 0x65afb4	 0x657f4e	 0x658b79	9315		9275		0		9275		free  	*
+  37		 0x65afb4	 0x65bbf3	 0x658b51	 0x65afdc	3135		3095		3095		0		in use	 
+  38		 0x65bbf3	 0x65e10a	 0x65afb4	 0x65bc1b	9495		9455		0		9455		free  	*
+  39		 0x65e10a	 0x65ed85	 0x65bbf3	 0x65e132	3195		3155		3155		0		in use	 
+  40		 0x65ed85	 0x661350	 0x65e10a	 0x65edad	9675		9635		0		9635		free  	*
+  41		 0x661350	 0x662007	 0x65ed85	 0x661378	3255		3215		3215		0		in use	 
+  42		 0x662007	 0x665000	 0x661350	 0x66202f	12281		12241		0		12241		free  	*
+  43		 0x665000	 0x666000	 0x662007	 0x665028	4096		4056		3275		781		in use	 
+  44		 0x666000	 0x669000	 0x665000	 0x666028	12288		12248		0		12248		free  	*
+  45		 0x669000	 0x66a000	 0x666000	 0x669028	4096		4056		3335		721		in use	 
+  46		 0x66a000	 0x66d000	 0x669000	 0x66a028	12288		12248		0		12248		free  	*
+  47		 0x66d000	 0x66e000	 0x66a000	 0x66d028	4096		4056		3395		661		in use	 
+  48		 0x66e000	 0x671000	 0x66d000	 0x66e028	12288		12248		0		12248		free  	*
+  49		 0x671000	 0x672000	 0x66e000	 0x671028	4096		4056		3455		601		in use	 
+  50		 0x672000	    (nil)	 0x671000	 0x672028	8192		8152		0		8152		free  	*
+  Total bytes used								290816		288776		68375		220401
+  Used blocks:   25  Free blocks:   26  Min heap:  0x62d000    Max heap:  0x674000   Block size: 40 bytes
+*** End 25
+
+
+WoooooooHooooooo!!! You survived test 25. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 26
+Initial base address of heap: 0xa8a000
+*** Begin 26
+      stress 3  100
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0xa8a000	 0xa8a400	    (nil)	 0xa8a028	1024		984		900		84		in use	 
+  1		 0xa8a400	 0xa8a800	 0xa8a000	 0xa8a428	1024		984		915		69		in use	 
+  2		 0xa8a800	 0xa8ac00	 0xa8a400	 0xa8a828	1024		984		930		54		in use	 
+  3		 0xa8ac00	 0xa8b000	 0xa8a800	 0xa8ac28	1024		984		945		39		in use	 
+  4		 0xa8b000	 0xa8b400	 0xa8ac00	 0xa8b028	1024		984		960		24		in use	 
+  5		 0xa8b400	 0xa8b800	 0xa8b000	 0xa8b428	1024		984		975		9		in use	 
+  6		 0xa8b800	 0xa8c000	 0xa8b400	 0xa8b828	2048		2008		990		1018		in use	 
+  7		 0xa8c000	 0xa8c800	 0xa8b800	 0xa8c028	2048		2008		1005		1003		in use	 
+  8		 0xa8c800	 0xa8d000	 0xa8c000	 0xa8c828	2048		2008		1020		988		in use	 
+  9		 0xa8d000	 0xa8d800	 0xa8c800	 0xa8d028	2048		2008		1035		973		in use	 
+  10		 0xa8d800	 0xa8e000	 0xa8d000	 0xa8d828	2048		2008		1050		958		in use	 
+  11		 0xa8e000	 0xa8e800	 0xa8d800	 0xa8e028	2048		2008		1065		943		in use	 
+  12		 0xa8e800	 0xa8f000	 0xa8e000	 0xa8e828	2048		2008		1080		928		in use	 
+  13		 0xa8f000	 0xa8f800	 0xa8e800	 0xa8f028	2048		2008		1095		913		in use	 
+  14		 0xa8f800	 0xa90000	 0xa8f000	 0xa8f828	2048		2008		1110		898		in use	 
+  15		 0xa90000	 0xa90800	 0xa8f800	 0xa90028	2048		2008		1125		883		in use	 
+  16		 0xa90800	 0xa91000	 0xa90000	 0xa90828	2048		2008		1140		868		in use	 
+  17		 0xa91000	 0xa91800	 0xa90800	 0xa91028	2048		2008		1155		853		in use	 
+  18		 0xa91800	 0xa92000	 0xa91000	 0xa91828	2048		2008		1170		838		in use	 
+  19		 0xa92000	 0xa92800	 0xa91800	 0xa92028	2048		2008		1185		823		in use	 
+  20		 0xa92800	 0xa93000	 0xa92000	 0xa92828	2048		2008		1200		808		in use	 
+  21		 0xa93000	 0xa93800	 0xa92800	 0xa93028	2048		2008		1215		793		in use	 
+  22		 0xa93800	 0xa94000	 0xa93000	 0xa93828	2048		2008		1230		778		in use	 
+  23		 0xa94000	 0xa94800	 0xa93800	 0xa94028	2048		2008		1245		763		in use	 
+  24		 0xa94800	 0xa95000	 0xa94000	 0xa94828	2048		2008		1260		748		in use	 
+  25		 0xa95000	 0xa95800	 0xa94800	 0xa95028	2048		2008		1275		733		in use	 
+  26		 0xa95800	 0xa96000	 0xa95000	 0xa95828	2048		2008		1290		718		in use	 
+  27		 0xa96000	 0xa96800	 0xa95800	 0xa96028	2048		2008		1305		703		in use	 
+  28		 0xa96800	 0xa97000	 0xa96000	 0xa96828	2048		2008		1320		688		in use	 
+  29		 0xa97000	 0xa97800	 0xa96800	 0xa97028	2048		2008		1335		673		in use	 
+  30		 0xa97800	 0xa98000	 0xa97000	 0xa97828	2048		2008		1350		658		in use	 
+  31		 0xa98000	 0xa98800	 0xa97800	 0xa98028	2048		2008		1365		643		in use	 
+  32		 0xa98800	 0xa99000	 0xa98000	 0xa98828	2048		2008		1380		628		in use	 
+  33		 0xa99000	 0xa99800	 0xa98800	 0xa99028	2048		2008		1395		613		in use	 
+  34		 0xa99800	 0xa9a000	 0xa99000	 0xa99828	2048		2008		1410		598		in use	 
+  35		 0xa9a000	 0xa9a800	 0xa99800	 0xa9a028	2048		2008		1425		583		in use	 
+  36		 0xa9a800	 0xa9b000	 0xa9a000	 0xa9a828	2048		2008		1440		568		in use	 
+  37		 0xa9b000	 0xa9b800	 0xa9a800	 0xa9b028	2048		2008		1455		553		in use	 
+  38		 0xa9b800	 0xa9c000	 0xa9b000	 0xa9b828	2048		2008		1470		538		in use	 
+  39		 0xa9c000	 0xa9c800	 0xa9b800	 0xa9c028	2048		2008		1485		523		in use	 
+  40		 0xa9c800	 0xa9d000	 0xa9c000	 0xa9c828	2048		2008		1500		508		in use	 
+  41		 0xa9d000	 0xa9d800	 0xa9c800	 0xa9d028	2048		2008		1515		493		in use	 
+  42		 0xa9d800	 0xa9e000	 0xa9d000	 0xa9d828	2048		2008		1530		478		in use	 
+  43		 0xa9e000	 0xa9e800	 0xa9d800	 0xa9e028	2048		2008		1545		463		in use	 
+  44		 0xa9e800	 0xa9f000	 0xa9e000	 0xa9e828	2048		2008		1560		448		in use	 
+  45		 0xa9f000	 0xa9f800	 0xa9e800	 0xa9f028	2048		2008		1575		433		in use	 
+  46		 0xa9f800	 0xaa0000	 0xa9f000	 0xa9f828	2048		2008		1590		418		in use	 
+  47		 0xaa0000	 0xaa0800	 0xa9f800	 0xaa0028	2048		2008		1605		403		in use	 
+  48		 0xaa0800	 0xaa1000	 0xaa0000	 0xaa0828	2048		2008		1620		388		in use	 
+  49		 0xaa1000	 0xaa1800	 0xaa0800	 0xaa1028	2048		2008		1635		373		in use	 
+  50		 0xaa1800	 0xaa2000	 0xaa1000	 0xaa1828	2048		2008		1650		358		in use	 
+  51		 0xaa2000	 0xaa2800	 0xaa1800	 0xaa2028	2048		2008		1665		343		in use	 
+  52		 0xaa2800	 0xaa3000	 0xaa2000	 0xaa2828	2048		2008		1680		328		in use	 
+  53		 0xaa3000	 0xaa3800	 0xaa2800	 0xaa3028	2048		2008		1695		313		in use	 
+  54		 0xaa3800	 0xaa4000	 0xaa3000	 0xaa3828	2048		2008		1710		298		in use	 
+  55		 0xaa4000	 0xaa4800	 0xaa3800	 0xaa4028	2048		2008		1725		283		in use	 
+  56		 0xaa4800	 0xaa5000	 0xaa4000	 0xaa4828	2048		2008		1740		268		in use	 
+  57		 0xaa5000	 0xaa5800	 0xaa4800	 0xaa5028	2048		2008		1755		253		in use	 
+  58		 0xaa5800	 0xaa6000	 0xaa5000	 0xaa5828	2048		2008		1770		238		in use	 
+  59		 0xaa6000	 0xaa6800	 0xaa5800	 0xaa6028	2048		2008		1785		223		in use	 
+  60		 0xaa6800	 0xaa7000	 0xaa6000	 0xaa6828	2048		2008		1800		208		in use	 
+  61		 0xaa7000	 0xaa7800	 0xaa6800	 0xaa7028	2048		2008		1815		193		in use	 
+  62		 0xaa7800	 0xaa8000	 0xaa7000	 0xaa7828	2048		2008		1830		178		in use	 
+  63		 0xaa8000	 0xaa8800	 0xaa7800	 0xaa8028	2048		2008		1845		163		in use	 
+  64		 0xaa8800	 0xaa9000	 0xaa8000	 0xaa8828	2048		2008		1860		148		in use	 
+  65		 0xaa9000	 0xaa9800	 0xaa8800	 0xaa9028	2048		2008		1875		133		in use	 
+  66		 0xaa9800	 0xaaa000	 0xaa9000	 0xaa9828	2048		2008		1890		118		in use	 
+  67		 0xaaa000	 0xaaa800	 0xaa9800	 0xaaa028	2048		2008		1905		103		in use	 
+  68		 0xaaa800	 0xaab000	 0xaaa000	 0xaaa828	2048		2008		1920		88		in use	 
+  69		 0xaab000	 0xaab800	 0xaaa800	 0xaab028	2048		2008		1935		73		in use	 
+  70		 0xaab800	 0xaac000	 0xaab000	 0xaab828	2048		2008		1950		58		in use	 
+  71		 0xaac000	 0xaac800	 0xaab800	 0xaac028	2048		2008		1965		43		in use	 
+  72		 0xaac800	 0xaad000	 0xaac000	 0xaac828	2048		2008		1980		28		in use	 
+  73		 0xaad000	 0xaad800	 0xaac800	 0xaad028	2048		2008		1995		13		in use	 
+  74		 0xaad800	 0xaae400	 0xaad000	 0xaad828	3072		3032		2010		1022		in use	 
+  75		 0xaae400	 0xaaf000	 0xaad800	 0xaae428	3072		3032		2025		1007		in use	 
+  76		 0xaaf000	 0xaafc00	 0xaae400	 0xaaf028	3072		3032		2040		992		in use	 
+  77		 0xaafc00	 0xab0800	 0xaaf000	 0xaafc28	3072		3032		2055		977		in use	 
+  78		 0xab0800	 0xab1400	 0xaafc00	 0xab0828	3072		3032		2070		962		in use	 
+  79		 0xab1400	 0xab2000	 0xab0800	 0xab1428	3072		3032		2085		947		in use	 
+  80		 0xab2000	 0xab2c00	 0xab1400	 0xab2028	3072		3032		2100		932		in use	 
+  81		 0xab2c00	 0xab3800	 0xab2000	 0xab2c28	3072		3032		2115		917		in use	 
+  82		 0xab3800	 0xab4400	 0xab2c00	 0xab3828	3072		3032		2130		902		in use	 
+  83		 0xab4400	 0xab5000	 0xab3800	 0xab4428	3072		3032		2145		887		in use	 
+  84		 0xab5000	 0xab5c00	 0xab4400	 0xab5028	3072		3032		2160		872		in use	 
+  85		 0xab5c00	 0xab6800	 0xab5000	 0xab5c28	3072		3032		2175		857		in use	 
+  86		 0xab6800	 0xab7400	 0xab5c00	 0xab6828	3072		3032		2190		842		in use	 
+  87		 0xab7400	 0xab8000	 0xab6800	 0xab7428	3072		3032		2205		827		in use	 
+  88		 0xab8000	 0xab8c00	 0xab7400	 0xab8028	3072		3032		2220		812		in use	 
+  89		 0xab8c00	 0xab9800	 0xab8000	 0xab8c28	3072		3032		2235		797		in use	 
+  90		 0xab9800	 0xaba400	 0xab8c00	 0xab9828	3072		3032		2250		782		in use	 
+  91		 0xaba400	 0xabb000	 0xab9800	 0xaba428	3072		3032		2265		767		in use	 
+  92		 0xabb000	 0xabbc00	 0xaba400	 0xabb028	3072		3032		2280		752		in use	 
+  93		 0xabbc00	 0xabc800	 0xabb000	 0xabbc28	3072		3032		2295		737		in use	 
+  94		 0xabc800	 0xabd400	 0xabbc00	 0xabc828	3072		3032		2310		722		in use	 
+  95		 0xabd400	 0xabe000	 0xabc800	 0xabd428	3072		3032		2325		707		in use	 
+  96		 0xabe000	 0xabec00	 0xabd400	 0xabe028	3072		3032		2340		692		in use	 
+  97		 0xabec00	 0xabf800	 0xabe000	 0xabec28	3072		3032		2355		677		in use	 
+  98		 0xabf800	 0xac0400	 0xabec00	 0xabf828	3072		3032		2370		662		in use	 
+  99		 0xac0400	    (nil)	 0xabf800	 0xac0428	3072		3032		2385		647		in use	 
+  Total bytes used								225280		221280		164250		57030
+  Used blocks:  100  Free blocks:    0  Min heap:  0xa8a000    Max heap:  0xac1000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0xa8a000	 0xa8a400	    (nil)	 0xa8a028	1024		984		900		84		in use	 
+  1		 0xa8a400	 0xa8ac00	 0xa8a000	 0xa8a428	2048		2008		2001		7		in use	 
+  2		 0xa8ac00	 0xa8ac9b	 0xa8a400	 0xa8ac28	155		115		115		0		in use	 
+  3		 0xa8ac9b	 0xa8ad4a	 0xa8ac00	 0xa8acc3	175		135		135		0		in use	 
+  4		 0xa8ad4a	 0xa8ae0d	 0xa8ac9b	 0xa8ad72	195		155		155		0		in use	 
+  5		 0xa8ae0d	 0xa8aee4	 0xa8ad4a	 0xa8ae35	215		175		175		0		in use	 
+  6		 0xa8aee4	 0xa8b000	 0xa8ae0d	 0xa8af0c	284		244		195		49		in use	 
+  7		 0xa8b000	 0xa8b400	 0xa8aee4	 0xa8b028	1024		984		960		24		in use	 
+  8		 0xa8b400	 0xa8bc06	 0xa8b000	 0xa8b428	2054		2014		2005		9		in use	 
+  9		 0xa8bc06	 0xa8bd05	 0xa8b400	 0xa8bc2e	255		215		215		0		in use	 
+  10		 0xa8bd05	 0xa8be18	 0xa8bc06	 0xa8bd2d	275		235		235		0		in use	 
+  11		 0xa8be18	 0xa8c000	 0xa8bd05	 0xa8be40	488		448		255		193		in use	 
+  12		 0xa8c000	 0xa8c13b	 0xa8be18	 0xa8c028	315		275		275		0		in use	 
+  13		 0xa8c13b	 0xa8c28a	 0xa8c000	 0xa8c163	335		295		295		0		in use	 
+  14		 0xa8c28a	 0xa8c3ed	 0xa8c13b	 0xa8c2b2	355		315		315		0		in use	 
+  15		 0xa8c3ed	 0xa8c564	 0xa8c28a	 0xa8c415	375		335		335		0		in use	 
+  16		 0xa8c564	 0xa8c800	 0xa8c3ed	 0xa8c58c	668		628		355		273		in use	 
+  17		 0xa8c800	 0xa8cc24	 0xa8c564	 0xa8c828	1060		1020		1020		0		in use	 
+  18		 0xa8cc24	 0xa8cdc3	 0xa8c800	 0xa8cc4c	415		375		375		0		in use	 
+  19		 0xa8cdc3	 0xa8d000	 0xa8cc24	 0xa8cdeb	573		533		395		138		in use	 
+  20		 0xa8d000	 0xa8d433	 0xa8cdc3	 0xa8d028	1075		1035		0		1035		free  	*
+  21		 0xa8d433	 0xa8d5fa	 0xa8d000	 0xa8d45b	455		415		415		0		in use	 
+  22		 0xa8d5fa	 0xa8d800	 0xa8d433	 0xa8d622	518		478		435		43		in use	 
+  23		 0xa8d800	 0xa8dc42	 0xa8d5fa	 0xa8d828	1090		1050		1050		0		in use	 
+  24		 0xa8dc42	 0xa8e000	 0xa8d800	 0xa8dc6a	958		918		455		463		in use	 
+  25		 0xa8e000	 0xa8e203	 0xa8dc42	 0xa8e028	515		475		475		0		in use	 
+  26		 0xa8e203	 0xa8e41a	 0xa8e000	 0xa8e22b	535		495		495		0		in use	 
+  27		 0xa8e41a	 0xa8e800	 0xa8e203	 0xa8e442	998		958		515		443		in use	 
+  28		 0xa8e800	 0xa8ec60	 0xa8e41a	 0xa8e828	1120		1080		1080		0		in use	 
+  29		 0xa8ec60	 0xa8f000	 0xa8e800	 0xa8ec88	928		888		535		353		in use	 
+  30		 0xa8f000	 0xa8f46f	 0xa8ec60	 0xa8f028	1135		1095		0		1095		free  	*
+  31		 0xa8f46f	 0xa8f800	 0xa8f000	 0xa8f497	913		873		555		318		in use	 
+  32		 0xa8f800	 0xa8fc7e	 0xa8f46f	 0xa8f828	1150		1110		1070		40		in use	 
+  33		 0xa8fc7e	 0xa90000	 0xa8f800	 0xa8fca6	898		858		575		283		in use	 
+  34		 0xa90000	 0xa9027b	 0xa8fc7e	 0xa90028	635		595		595		0		in use	 
+  35		 0xa9027b	 0xa90800	 0xa90000	 0xa902a3	1413		1373		1010		363		in use	 
+  36		 0xa90800	 0xa91000	 0xa9027b	 0xa90828	2048		2008		1140		868		in use	 
+  37		 0xa91000	 0xa91800	 0xa90800	 0xa91028	2048		2008		0		2008		free  	*
+  38		 0xa91800	 0xa92000	 0xa91000	 0xa91828	2048		2008		1090		918		in use	 
+  39		 0xa92000	 0xa92800	 0xa91800	 0xa92028	2048		2008		1030		978		in use	 
+  40		 0xa92800	 0xa93000	 0xa92000	 0xa92828	2048		2008		1200		808		in use	 
+  41		 0xa93000	 0xa93800	 0xa92800	 0xa93028	2048		2008		0		2008		free  	*
+  42		 0xa93800	 0xa93c7e	 0xa93000	 0xa93828	1150		1110		1110		0		in use	 
+  43		 0xa93c7e	 0xa94110	 0xa93800	 0xa93ca6	1170		1130		1130		0		in use	 
+  44		 0xa94110	 0xa94800	 0xa93c7e	 0xa94138	1776		1736		1150		586		in use	 
+  45		 0xa94800	 0xa95000	 0xa94110	 0xa94828	2048		2008		1260		748		in use	 
+  46		 0xa95000	 0xa95800	 0xa94800	 0xa95028	2048		2008		0		2008		free  	*
+  47		 0xa95800	 0xa95cba	 0xa95000	 0xa95828	1210		1170		1170		0		in use	 
+  48		 0xa95cba	 0xa96188	 0xa95800	 0xa95ce2	1230		1190		1190		0		in use	 
+  49		 0xa96188	 0xa96800	 0xa95cba	 0xa961b0	1656		1616		1210		406		in use	 
+  50		 0xa96800	 0xa97000	 0xa96188	 0xa96828	2048		2008		1320		688		in use	 
+  51		 0xa97000	 0xa97800	 0xa96800	 0xa97028	2048		2008		0		2008		free  	*
+  52		 0xa97800	 0xa97cf6	 0xa97000	 0xa97828	1270		1230		1230		0		in use	 
+  53		 0xa97cf6	 0xa98200	 0xa97800	 0xa97d1e	1290		1250		1250		0		in use	 
+  54		 0xa98200	 0xa98800	 0xa97cf6	 0xa98228	1536		1496		1270		226		in use	 
+  55		 0xa98800	 0xa99000	 0xa98200	 0xa98828	2048		2008		1380		628		in use	 
+  56		 0xa99000	 0xa99800	 0xa98800	 0xa99028	2048		2008		0		2008		free  	*
+  57		 0xa99800	 0xa99d32	 0xa99000	 0xa99828	1330		1290		1290		0		in use	 
+  58		 0xa99d32	 0xa9a278	 0xa99800	 0xa99d5a	1350		1310		1310		0		in use	 
+  59		 0xa9a278	 0xa9a800	 0xa99d32	 0xa9a2a0	1416		1376		1330		46		in use	 
+  60		 0xa9a800	 0xa9b000	 0xa9a278	 0xa9a828	2048		2008		1440		568		in use	 
+  61		 0xa9b000	 0xa9b800	 0xa9a800	 0xa9b028	2048		2008		0		2008		free  	*
+  62		 0xa9b800	 0xa9bd6e	 0xa9b000	 0xa9b828	1390		1350		1350		0		in use	 
+  63		 0xa9bd6e	 0xa9c800	 0xa9b800	 0xa9bd96	2706		2666		1370		1296		in use	 
+  64		 0xa9c800	 0xa9d000	 0xa9bd6e	 0xa9c828	2048		2008		1500		508		in use	 
+  65		 0xa9d000	 0xa9d800	 0xa9c800	 0xa9d028	2048		2008		0		2008		free  	*
+  66		 0xa9d800	 0xa9dd96	 0xa9d000	 0xa9d828	1430		1390		1390		0		in use	 
+  67		 0xa9dd96	 0xa9e800	 0xa9d800	 0xa9ddbe	2666		2626		1410		1216		in use	 
+  68		 0xa9e800	 0xa9f000	 0xa9dd96	 0xa9e828	2048		2008		1560		448		in use	 
+  69		 0xa9f000	 0xa9f800	 0xa9e800	 0xa9f028	2048		2008		0		2008		free  	*
+  70		 0xa9f800	 0xa9fdbe	 0xa9f000	 0xa9f828	1470		1430		1430		0		in use	 
+  71		 0xa9fdbe	 0xaa0800	 0xa9f800	 0xa9fde6	2626		2586		1450		1136		in use	 
+  72		 0xaa0800	 0xaa1000	 0xa9fdbe	 0xaa0828	2048		2008		1620		388		in use	 
+  73		 0xaa1000	 0xaa1800	 0xaa0800	 0xaa1028	2048		2008		0		2008		free  	*
+  74		 0xaa1800	 0xaa1de6	 0xaa1000	 0xaa1828	1510		1470		1470		0		in use	 
+  75		 0xaa1de6	 0xaa2800	 0xaa1800	 0xaa1e0e	2586		2546		1490		1056		in use	 
+  76		 0xaa2800	 0xaa3000	 0xaa1de6	 0xaa2828	2048		2008		1680		328		in use	 
+  77		 0xaa3000	 0xaa3800	 0xaa2800	 0xaa3028	2048		2008		0		2008		free  	*
+  78		 0xaa3800	 0xaa4800	 0xaa3000	 0xaa3828	4096		4056		2009		2047		in use	 
+  79		 0xaa4800	 0xaa5000	 0xaa3800	 0xaa4828	2048		2008		1740		268		in use	 
+  80		 0xaa5000	 0xaa5800	 0xaa4800	 0xaa5028	2048		2008		0		2008		free  	*
+  81		 0xaa5800	 0xaa6800	 0xaa5000	 0xaa5828	4096		4056		2013		2043		in use	 
+  82		 0xaa6800	 0xaa7000	 0xaa5800	 0xaa6828	2048		2008		1800		208		in use	 
+  83		 0xaa7000	 0xaa7800	 0xaa6800	 0xaa7028	2048		2008		0		2008		free  	*
+  84		 0xaa7800	 0xaa8800	 0xaa7000	 0xaa7828	4096		4056		2017		2039		in use	 
+  85		 0xaa8800	 0xaa9000	 0xaa7800	 0xaa8828	2048		2008		1860		148		in use	 
+  86		 0xaa9000	 0xaa9800	 0xaa8800	 0xaa9028	2048		2008		0		2008		free  	*
+  87		 0xaa9800	 0xaaa800	 0xaa9000	 0xaa9828	4096		4056		2021		2035		in use	 
+  88		 0xaaa800	 0xaab000	 0xaa9800	 0xaaa828	2048		2008		1920		88		in use	 
+  89		 0xaab000	 0xaab800	 0xaaa800	 0xaab028	2048		2008		0		2008		free  	*
+  90		 0xaab800	 0xaac800	 0xaab000	 0xaab828	4096		4056		2025		2031		in use	 
+  91		 0xaac800	 0xaad000	 0xaab800	 0xaac828	2048		2008		1980		28		in use	 
+  92		 0xaad000	 0xaad800	 0xaac800	 0xaad028	2048		2008		0		2008		free  	*
+  93		 0xaad800	 0xaae015	 0xaad000	 0xaad828	2069		2029		2029		0		in use	 
+  94		 0xaae015	 0xaaf000	 0xaad800	 0xaae03d	4075		4035		2033		2002		in use	 
+  95		 0xaaf000	 0xaafc00	 0xaae015	 0xaaf028	3072		3032		2040		992		in use	 
+  96		 0xaafc00	 0xab0800	 0xaaf000	 0xaafc28	3072		3032		2077		955		in use	 
+  97		 0xab0800	 0xab101d	 0xaafc00	 0xab0828	2077		2037		2037		0		in use	 
+  98		 0xab101d	 0xab2000	 0xab0800	 0xab1045	4067		4027		2041		1986		in use	 
+  99		 0xab2000	 0xab2c00	 0xab101d	 0xab2028	3072		3032		2100		932		in use	 
+  100		 0xab2c00	 0xab3800	 0xab2000	 0xab2c28	3072		3032		2081		951		in use	 
+  101		 0xab3800	 0xab4025	 0xab2c00	 0xab3828	2085		2045		2045		0		in use	 
+  102		 0xab4025	 0xab5000	 0xab3800	 0xab404d	4059		4019		2049		1970		in use	 
+  103		 0xab5000	 0xab5c00	 0xab4025	 0xab5028	3072		3032		2160		872		in use	 
+  104		 0xab5c00	 0xab6800	 0xab5000	 0xab5c28	3072		3032		2085		947		in use	 
+  105		 0xab6800	 0xab702d	 0xab5c00	 0xab6828	2093		2053		2053		0		in use	 
+  106		 0xab702d	 0xab8000	 0xab6800	 0xab7055	4051		4011		2057		1954		in use	 
+  107		 0xab8000	 0xab8c00	 0xab702d	 0xab8028	3072		3032		2220		812		in use	 
+  108		 0xab8c00	 0xab9800	 0xab8000	 0xab8c28	3072		3032		2089		943		in use	 
+  109		 0xab9800	 0xaba035	 0xab8c00	 0xab9828	2101		2061		2061		0		in use	 
+  110		 0xaba035	 0xabb000	 0xab9800	 0xaba05d	4043		4003		2065		1938		in use	 
+  111		 0xabb000	 0xabbc00	 0xaba035	 0xabb028	3072		3032		2280		752		in use	 
+  112		 0xabbc00	 0xabc800	 0xabb000	 0xabbc28	3072		3032		2093		939		in use	 
+  113		 0xabc800	 0xabd03d	 0xabbc00	 0xabc828	2109		2069		2069		0		in use	 
+  114		 0xabd03d	 0xabe000	 0xabc800	 0xabd065	4035		3995		2073		1922		in use	 
+  115		 0xabe000	 0xabec00	 0xabd03d	 0xabe028	3072		3032		2340		692		in use	 
+  116		 0xabec00	    (nil)	 0xabe000	 0xabec28	9216		9176		2097		7079		in use	 
+  Total bytes used								225280		220600		131850		88750
+  Used blocks:  100  Free blocks:   17  Min heap:  0xa8a000    Max heap:  0xac1000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		 0xa8a000	    (nil)	    (nil)	 0xa8a028	225280		225240		0		225240		free  	*
+  Total bytes used								225280		225240		0		225240
+  Used blocks:    0  Free blocks:    1  Min heap:  0xa8a000    Max heap:  0xac1000   Block size: 40 bytes
+*** End 26
+
+
+WoooooooHooooooo!!! You survived test 26. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 27
+Initial base address of heap: 0x1630000
+*** Begin 27
+      stress 4  100
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1630000	0x1630032	    (nil)	0x1630028	50		10		10		0		in use	 
+  1		0x1630032	0x1630065	0x1630000	0x163005a	51		11		11		0		in use	 
+  2		0x1630065	0x1630099	0x1630032	0x163008d	52		12		12		0		in use	 
+  3		0x1630099	0x16300ce	0x1630065	0x16300c1	53		13		13		0		in use	 
+  4		0x16300ce	0x1630104	0x1630099	0x16300f6	54		14		14		0		in use	 
+  5		0x1630104	0x163013b	0x16300ce	0x163012c	55		15		15		0		in use	 
+  6		0x163013b	0x1630173	0x1630104	0x1630163	56		16		16		0		in use	 
+  7		0x1630173	0x16301ac	0x163013b	0x163019b	57		17		17		0		in use	 
+  8		0x16301ac	0x16301e6	0x1630173	0x16301d4	58		18		18		0		in use	 
+  9		0x16301e6	0x1630221	0x16301ac	0x163020e	59		19		19		0		in use	 
+  10		0x1630221	0x163025d	0x16301e6	0x1630249	60		20		20		0		in use	 
+  11		0x163025d	0x163029a	0x1630221	0x1630285	61		21		21		0		in use	 
+  12		0x163029a	0x16302d8	0x163025d	0x16302c2	62		22		22		0		in use	 
+  13		0x16302d8	0x1630317	0x163029a	0x1630300	63		23		23		0		in use	 
+  14		0x1630317	0x1630357	0x16302d8	0x163033f	64		24		24		0		in use	 
+  15		0x1630357	0x1630398	0x1630317	0x163037f	65		25		25		0		in use	 
+  16		0x1630398	0x1630400	0x1630357	0x16303c0	104		64		26		38		in use	 
+  17		0x1630400	0x1630443	0x1630398	0x1630428	67		27		27		0		in use	 
+  18		0x1630443	0x1630487	0x1630400	0x163046b	68		28		28		0		in use	 
+  19		0x1630487	0x16304cc	0x1630443	0x16304af	69		29		29		0		in use	 
+  20		0x16304cc	0x1630512	0x1630487	0x16304f4	70		30		30		0		in use	 
+  21		0x1630512	0x1630559	0x16304cc	0x163053a	71		31		31		0		in use	 
+  22		0x1630559	0x16305a1	0x1630512	0x1630581	72		32		32		0		in use	 
+  23		0x16305a1	0x16305ea	0x1630559	0x16305c9	73		33		33		0		in use	 
+  24		0x16305ea	0x1630634	0x16305a1	0x1630612	74		34		34		0		in use	 
+  25		0x1630634	0x163067f	0x16305ea	0x163065c	75		35		35		0		in use	 
+  26		0x163067f	0x16306cb	0x1630634	0x16306a7	76		36		36		0		in use	 
+  27		0x16306cb	0x1630718	0x163067f	0x16306f3	77		37		37		0		in use	 
+  28		0x1630718	0x1630766	0x16306cb	0x1630740	78		38		38		0		in use	 
+  29		0x1630766	0x1630800	0x1630718	0x163078e	154		114		39		75		in use	 
+  30		0x1630800	0x1630850	0x1630766	0x1630828	80		40		40		0		in use	 
+  31		0x1630850	0x16308a1	0x1630800	0x1630878	81		41		41		0		in use	 
+  32		0x16308a1	0x16308f3	0x1630850	0x16308c9	82		42		42		0		in use	 
+  33		0x16308f3	0x1630946	0x16308a1	0x163091b	83		43		43		0		in use	 
+  34		0x1630946	0x163099a	0x16308f3	0x163096e	84		44		44		0		in use	 
+  35		0x163099a	0x16309ef	0x1630946	0x16309c2	85		45		45		0		in use	 
+  36		0x16309ef	0x1630a45	0x163099a	0x1630a17	86		46		46		0		in use	 
+  37		0x1630a45	0x1630a9c	0x16309ef	0x1630a6d	87		47		47		0		in use	 
+  38		0x1630a9c	0x1630af4	0x1630a45	0x1630ac4	88		48		48		0		in use	 
+  39		0x1630af4	0x1630b4d	0x1630a9c	0x1630b1c	89		49		49		0		in use	 
+  40		0x1630b4d	0x1630c00	0x1630af4	0x1630b75	179		139		50		89		in use	 
+  41		0x1630c00	0x1630c5b	0x1630b4d	0x1630c28	91		51		51		0		in use	 
+  42		0x1630c5b	0x1630cb7	0x1630c00	0x1630c83	92		52		52		0		in use	 
+  43		0x1630cb7	0x1630d14	0x1630c5b	0x1630cdf	93		53		53		0		in use	 
+  44		0x1630d14	0x1630d72	0x1630cb7	0x1630d3c	94		54		54		0		in use	 
+  45		0x1630d72	0x1630dd1	0x1630d14	0x1630d9a	95		55		55		0		in use	 
+  46		0x1630dd1	0x1630e31	0x1630d72	0x1630df9	96		56		56		0		in use	 
+  47		0x1630e31	0x1630e92	0x1630dd1	0x1630e59	97		57		57		0		in use	 
+  48		0x1630e92	0x1630ef4	0x1630e31	0x1630eba	98		58		58		0		in use	 
+  49		0x1630ef4	0x1630f57	0x1630e92	0x1630f1c	99		59		59		0		in use	 
+  50		0x1630f57	0x1631000	0x1630ef4	0x1630f7f	169		129		60		69		in use	 
+  51		0x1631000	0x1631065	0x1630f57	0x1631028	101		61		61		0		in use	 
+  52		0x1631065	0x16310cb	0x1631000	0x163108d	102		62		62		0		in use	 
+  53		0x16310cb	0x1631132	0x1631065	0x16310f3	103		63		63		0		in use	 
+  54		0x1631132	0x163119a	0x16310cb	0x163115a	104		64		64		0		in use	 
+  55		0x163119a	0x1631203	0x1631132	0x16311c2	105		65		65		0		in use	 
+  56		0x1631203	0x163126d	0x163119a	0x163122b	106		66		66		0		in use	 
+  57		0x163126d	0x16312d8	0x1631203	0x1631295	107		67		67		0		in use	 
+  58		0x16312d8	0x1631344	0x163126d	0x1631300	108		68		68		0		in use	 
+  59		0x1631344	0x1631400	0x16312d8	0x163136c	188		148		69		79		in use	 
+  60		0x1631400	0x163146e	0x1631344	0x1631428	110		70		70		0		in use	 
+  61		0x163146e	0x16314dd	0x1631400	0x1631496	111		71		71		0		in use	 
+  62		0x16314dd	0x163154d	0x163146e	0x1631505	112		72		72		0		in use	 
+  63		0x163154d	0x16315be	0x16314dd	0x1631575	113		73		73		0		in use	 
+  64		0x16315be	0x1631630	0x163154d	0x16315e6	114		74		74		0		in use	 
+  65		0x1631630	0x16316a3	0x16315be	0x1631658	115		75		75		0		in use	 
+  66		0x16316a3	0x1631717	0x1631630	0x16316cb	116		76		76		0		in use	 
+  67		0x1631717	0x1631800	0x16316a3	0x163173f	233		193		77		116		in use	 
+  68		0x1631800	0x1631876	0x1631717	0x1631828	118		78		78		0		in use	 
+  69		0x1631876	0x16318ed	0x1631800	0x163189e	119		79		79		0		in use	 
+  70		0x16318ed	0x1631965	0x1631876	0x1631915	120		80		80		0		in use	 
+  71		0x1631965	0x16319de	0x16318ed	0x163198d	121		81		81		0		in use	 
+  72		0x16319de	0x1631a58	0x1631965	0x1631a06	122		82		82		0		in use	 
+  73		0x1631a58	0x1631ad3	0x16319de	0x1631a80	123		83		83		0		in use	 
+  74		0x1631ad3	0x1631b4f	0x1631a58	0x1631afb	124		84		84		0		in use	 
+  75		0x1631b4f	0x1631c00	0x1631ad3	0x1631b77	177		137		85		52		in use	 
+  76		0x1631c00	0x1631c7e	0x1631b4f	0x1631c28	126		86		86		0		in use	 
+  77		0x1631c7e	0x1631cfd	0x1631c00	0x1631ca6	127		87		87		0		in use	 
+  78		0x1631cfd	0x1631d7d	0x1631c7e	0x1631d25	128		88		88		0		in use	 
+  79		0x1631d7d	0x1631dfe	0x1631cfd	0x1631da5	129		89		89		0		in use	 
+  80		0x1631dfe	0x1631e80	0x1631d7d	0x1631e26	130		90		90		0		in use	 
+  81		0x1631e80	0x1631f03	0x1631dfe	0x1631ea8	131		91		91		0		in use	 
+  82		0x1631f03	0x1632000	0x1631e80	0x1631f2b	253		213		92		121		in use	 
+  83		0x1632000	0x1632085	0x1631f03	0x1632028	133		93		93		0		in use	 
+  84		0x1632085	0x163210b	0x1632000	0x16320ad	134		94		94		0		in use	 
+  85		0x163210b	0x1632192	0x1632085	0x1632133	135		95		95		0		in use	 
+  86		0x1632192	0x163221a	0x163210b	0x16321ba	136		96		96		0		in use	 
+  87		0x163221a	0x16322a3	0x1632192	0x1632242	137		97		97		0		in use	 
+  88		0x16322a3	0x163232d	0x163221a	0x16322cb	138		98		98		0		in use	 
+  89		0x163232d	0x1632400	0x16322a3	0x1632355	211		171		99		72		in use	 
+  90		0x1632400	0x163248c	0x163232d	0x1632428	140		100		100		0		in use	 
+  91		0x163248c	0x1632519	0x1632400	0x16324b4	141		101		101		0		in use	 
+  92		0x1632519	0x16325a7	0x163248c	0x1632541	142		102		102		0		in use	 
+  93		0x16325a7	0x1632636	0x1632519	0x16325cf	143		103		103		0		in use	 
+  94		0x1632636	0x16326c6	0x16325a7	0x163265e	144		104		104		0		in use	 
+  95		0x16326c6	0x1632757	0x1632636	0x16326ee	145		105		105		0		in use	 
+  96		0x1632757	0x1632800	0x16326c6	0x163277f	169		129		106		23		in use	 
+  97		0x1632800	0x1632893	0x1632757	0x1632828	147		107		107		0		in use	 
+  98		0x1632893	0x1632927	0x1632800	0x16328bb	148		108		108		0		in use	 
+  99		0x1632927	    (nil)	0x1632893	0x163294f	729		689		109		580		in use	 
+  Total bytes used								11264		7264		5950		1314
+  Used blocks:  100  Free blocks:    0  Min heap: 0x1630000    Max heap: 0x1632c00   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1630000	    (nil)	    (nil)	0x1630028	11264		11224		0		11224		free  	*
+  Total bytes used								11264		11224		0		11224
+  Used blocks:    0  Free blocks:    1  Min heap: 0x1630000    Max heap: 0x1632c00   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1630000	0x1630410	    (nil)	0x1630028	1040		1000		1000		0		in use	 
+  1		0x1630410	0x1630821	0x1630000	0x1630438	1041		1001		1001		0		in use	 
+  2		0x1630821	0x1630c33	0x1630410	0x1630849	1042		1002		1002		0		in use	 
+  3		0x1630c33	0x1631046	0x1630821	0x1630c5b	1043		1003		1003		0		in use	 
+  4		0x1631046	0x163145a	0x1630c33	0x163106e	1044		1004		1004		0		in use	 
+  5		0x163145a	0x163186f	0x1631046	0x1631482	1045		1005		1005		0		in use	 
+  6		0x163186f	0x1631c85	0x163145a	0x1631897	1046		1006		1006		0		in use	 
+  7		0x1631c85	0x163209c	0x163186f	0x1631cad	1047		1007		1007		0		in use	 
+  8		0x163209c	0x16324b4	0x1631c85	0x16320c4	1048		1008		1008		0		in use	 
+  9		0x16324b4	0x1632c00	0x163209c	0x16324dc	1868		1828		1009		819		in use	 
+  10		0x1632c00	0x1633400	0x16324b4	0x1632c28	2048		2008		1010		998		in use	 
+  11		0x1633400	0x1633c00	0x1632c00	0x1633428	2048		2008		1011		997		in use	 
+  12		0x1633c00	0x1634400	0x1633400	0x1633c28	2048		2008		1012		996		in use	 
+  13		0x1634400	0x1634c00	0x1633c00	0x1634428	2048		2008		1013		995		in use	 
+  14		0x1634c00	0x1635400	0x1634400	0x1634c28	2048		2008		1014		994		in use	 
+  15		0x1635400	0x1635c00	0x1634c00	0x1635428	2048		2008		1015		993		in use	 
+  16		0x1635c00	0x1636400	0x1635400	0x1635c28	2048		2008		1016		992		in use	 
+  17		0x1636400	0x1636c00	0x1635c00	0x1636428	2048		2008		1017		991		in use	 
+  18		0x1636c00	0x1637400	0x1636400	0x1636c28	2048		2008		1018		990		in use	 
+  19		0x1637400	0x1637c00	0x1636c00	0x1637428	2048		2008		1019		989		in use	 
+  20		0x1637c00	0x1638400	0x1637400	0x1637c28	2048		2008		1020		988		in use	 
+  21		0x1638400	0x1638c00	0x1637c00	0x1638428	2048		2008		1021		987		in use	 
+  22		0x1638c00	0x1639400	0x1638400	0x1638c28	2048		2008		1022		986		in use	 
+  23		0x1639400	0x1639c00	0x1638c00	0x1639428	2048		2008		1023		985		in use	 
+  24		0x1639c00	0x163a400	0x1639400	0x1639c28	2048		2008		1024		984		in use	 
+  25		0x163a400	0x163ac00	0x1639c00	0x163a428	2048		2008		1025		983		in use	 
+  26		0x163ac00	0x163b400	0x163a400	0x163ac28	2048		2008		1026		982		in use	 
+  27		0x163b400	0x163bc00	0x163ac00	0x163b428	2048		2008		1027		981		in use	 
+  28		0x163bc00	0x163c400	0x163b400	0x163bc28	2048		2008		1028		980		in use	 
+  29		0x163c400	0x163cc00	0x163bc00	0x163c428	2048		2008		1029		979		in use	 
+  30		0x163cc00	0x163d400	0x163c400	0x163cc28	2048		2008		1030		978		in use	 
+  31		0x163d400	0x163dc00	0x163cc00	0x163d428	2048		2008		1031		977		in use	 
+  32		0x163dc00	0x163e400	0x163d400	0x163dc28	2048		2008		1032		976		in use	 
+  33		0x163e400	0x163ec00	0x163dc00	0x163e428	2048		2008		1033		975		in use	 
+  34		0x163ec00	0x163f400	0x163e400	0x163ec28	2048		2008		1034		974		in use	 
+  35		0x163f400	0x163fc00	0x163ec00	0x163f428	2048		2008		1035		973		in use	 
+  36		0x163fc00	0x1640400	0x163f400	0x163fc28	2048		2008		1036		972		in use	 
+  37		0x1640400	0x1640c00	0x163fc00	0x1640428	2048		2008		1037		971		in use	 
+  38		0x1640c00	0x1641400	0x1640400	0x1640c28	2048		2008		1038		970		in use	 
+  39		0x1641400	0x1641c00	0x1640c00	0x1641428	2048		2008		1039		969		in use	 
+  40		0x1641c00	0x1642400	0x1641400	0x1641c28	2048		2008		1040		968		in use	 
+  41		0x1642400	0x1642c00	0x1641c00	0x1642428	2048		2008		1041		967		in use	 
+  42		0x1642c00	0x1643400	0x1642400	0x1642c28	2048		2008		1042		966		in use	 
+  43		0x1643400	0x1643c00	0x1642c00	0x1643428	2048		2008		1043		965		in use	 
+  44		0x1643c00	0x1644400	0x1643400	0x1643c28	2048		2008		1044		964		in use	 
+  45		0x1644400	0x1644c00	0x1643c00	0x1644428	2048		2008		1045		963		in use	 
+  46		0x1644c00	0x1645400	0x1644400	0x1644c28	2048		2008		1046		962		in use	 
+  47		0x1645400	0x1645c00	0x1644c00	0x1645428	2048		2008		1047		961		in use	 
+  48		0x1645c00	0x1646400	0x1645400	0x1645c28	2048		2008		1048		960		in use	 
+  49		0x1646400	0x1646c00	0x1645c00	0x1646428	2048		2008		1049		959		in use	 
+  50		0x1646c00	0x1647400	0x1646400	0x1646c28	2048		2008		1050		958		in use	 
+  51		0x1647400	0x1647c00	0x1646c00	0x1647428	2048		2008		1051		957		in use	 
+  52		0x1647c00	0x1648400	0x1647400	0x1647c28	2048		2008		1052		956		in use	 
+  53		0x1648400	0x1648c00	0x1647c00	0x1648428	2048		2008		1053		955		in use	 
+  54		0x1648c00	0x1649400	0x1648400	0x1648c28	2048		2008		1054		954		in use	 
+  55		0x1649400	0x1649c00	0x1648c00	0x1649428	2048		2008		1055		953		in use	 
+  56		0x1649c00	0x164a400	0x1649400	0x1649c28	2048		2008		1056		952		in use	 
+  57		0x164a400	0x164ac00	0x1649c00	0x164a428	2048		2008		1057		951		in use	 
+  58		0x164ac00	0x164b400	0x164a400	0x164ac28	2048		2008		1058		950		in use	 
+  59		0x164b400	0x164bc00	0x164ac00	0x164b428	2048		2008		1059		949		in use	 
+  60		0x164bc00	0x164c400	0x164b400	0x164bc28	2048		2008		1060		948		in use	 
+  61		0x164c400	0x164cc00	0x164bc00	0x164c428	2048		2008		1061		947		in use	 
+  62		0x164cc00	0x164d400	0x164c400	0x164cc28	2048		2008		1062		946		in use	 
+  63		0x164d400	0x164dc00	0x164cc00	0x164d428	2048		2008		1063		945		in use	 
+  64		0x164dc00	0x164e400	0x164d400	0x164dc28	2048		2008		1064		944		in use	 
+  65		0x164e400	0x164ec00	0x164dc00	0x164e428	2048		2008		1065		943		in use	 
+  66		0x164ec00	0x164f400	0x164e400	0x164ec28	2048		2008		1066		942		in use	 
+  67		0x164f400	0x164fc00	0x164ec00	0x164f428	2048		2008		1067		941		in use	 
+  68		0x164fc00	0x1650400	0x164f400	0x164fc28	2048		2008		1068		940		in use	 
+  69		0x1650400	0x1650c00	0x164fc00	0x1650428	2048		2008		1069		939		in use	 
+  70		0x1650c00	0x1651400	0x1650400	0x1650c28	2048		2008		1070		938		in use	 
+  71		0x1651400	0x1651c00	0x1650c00	0x1651428	2048		2008		1071		937		in use	 
+  72		0x1651c00	0x1652400	0x1651400	0x1651c28	2048		2008		1072		936		in use	 
+  73		0x1652400	0x1652c00	0x1651c00	0x1652428	2048		2008		1073		935		in use	 
+  74		0x1652c00	0x1653400	0x1652400	0x1652c28	2048		2008		1074		934		in use	 
+  75		0x1653400	0x1653c00	0x1652c00	0x1653428	2048		2008		1075		933		in use	 
+  76		0x1653c00	0x1654400	0x1653400	0x1653c28	2048		2008		1076		932		in use	 
+  77		0x1654400	0x1654c00	0x1653c00	0x1654428	2048		2008		1077		931		in use	 
+  78		0x1654c00	0x1655400	0x1654400	0x1654c28	2048		2008		1078		930		in use	 
+  79		0x1655400	0x1655c00	0x1654c00	0x1655428	2048		2008		1079		929		in use	 
+  80		0x1655c00	0x1656400	0x1655400	0x1655c28	2048		2008		1080		928		in use	 
+  81		0x1656400	0x1656c00	0x1655c00	0x1656428	2048		2008		1081		927		in use	 
+  82		0x1656c00	0x1657400	0x1656400	0x1656c28	2048		2008		1082		926		in use	 
+  83		0x1657400	0x1657c00	0x1656c00	0x1657428	2048		2008		1083		925		in use	 
+  84		0x1657c00	0x1658400	0x1657400	0x1657c28	2048		2008		1084		924		in use	 
+  85		0x1658400	0x1658c00	0x1657c00	0x1658428	2048		2008		1085		923		in use	 
+  86		0x1658c00	0x1659400	0x1658400	0x1658c28	2048		2008		1086		922		in use	 
+  87		0x1659400	0x1659c00	0x1658c00	0x1659428	2048		2008		1087		921		in use	 
+  88		0x1659c00	0x165a400	0x1659400	0x1659c28	2048		2008		1088		920		in use	 
+  89		0x165a400	0x165ac00	0x1659c00	0x165a428	2048		2008		1089		919		in use	 
+  90		0x165ac00	0x165b400	0x165a400	0x165ac28	2048		2008		1090		918		in use	 
+  91		0x165b400	0x165bc00	0x165ac00	0x165b428	2048		2008		1091		917		in use	 
+  92		0x165bc00	0x165c400	0x165b400	0x165bc28	2048		2008		1092		916		in use	 
+  93		0x165c400	0x165cc00	0x165bc00	0x165c428	2048		2008		1093		915		in use	 
+  94		0x165cc00	0x165d400	0x165c400	0x165cc28	2048		2008		1094		914		in use	 
+  95		0x165d400	0x165dc00	0x165cc00	0x165d428	2048		2008		1095		913		in use	 
+  96		0x165dc00	0x165e400	0x165d400	0x165dc28	2048		2008		1096		912		in use	 
+  97		0x165e400	0x165ec00	0x165dc00	0x165e428	2048		2008		1097		911		in use	 
+  98		0x165ec00	0x165f400	0x165e400	0x165ec28	2048		2008		1098		910		in use	 
+  99		0x165f400	    (nil)	0x165ec00	0x165f428	2048		2008		1099		909		in use	 
+  Total bytes used								195584		191584		104950		86634
+  Used blocks:  100  Free blocks:    0  Min heap: 0x1630000    Max heap: 0x165fc00   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1630000	    (nil)	    (nil)	0x1630028	195584		195544		0		195544		free  	*
+  Total bytes used								195584		195544		0		195544
+  Used blocks:    0  Free blocks:    1  Min heap: 0x1630000    Max heap: 0x165fc00   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1630000	0x1630093	    (nil)	0x1630028	147		107		107		0		in use	 
+  1		0x1630093	0x1630127	0x1630000	0x16300bb	148		108		108		0		in use	 
+  2		0x1630127	0x16301bc	0x1630093	0x163014f	149		109		109		0		in use	 
+  3		0x16301bc	0x1630252	0x1630127	0x16301e4	150		110		110		0		in use	 
+  4		0x1630252	0x16302e9	0x16301bc	0x163027a	151		111		111		0		in use	 
+  5		0x16302e9	0x1630381	0x1630252	0x1630311	152		112		112		0		in use	 
+  6		0x1630381	0x163041a	0x16302e9	0x16303a9	153		113		113		0		in use	 
+  7		0x163041a	0x16304b4	0x1630381	0x1630442	154		114		114		0		in use	 
+  8		0x16304b4	0x163054f	0x163041a	0x16304dc	155		115		115		0		in use	 
+  9		0x163054f	0x16305eb	0x16304b4	0x1630577	156		116		116		0		in use	 
+  10		0x16305eb	0x1630688	0x163054f	0x1630613	157		117		117		0		in use	 
+  11		0x1630688	0x1630726	0x16305eb	0x16306b0	158		118		118		0		in use	 
+  12		0x1630726	0x16307c5	0x1630688	0x163074e	159		119		119		0		in use	 
+  13		0x16307c5	0x1630865	0x1630726	0x16307ed	160		120		120		0		in use	 
+  14		0x1630865	0x1630906	0x16307c5	0x163088d	161		121		121		0		in use	 
+  15		0x1630906	0x16309a8	0x1630865	0x163092e	162		122		122		0		in use	 
+  16		0x16309a8	0x1630a4b	0x1630906	0x16309d0	163		123		123		0		in use	 
+  17		0x1630a4b	0x1630aef	0x16309a8	0x1630a73	164		124		124		0		in use	 
+  18		0x1630aef	0x1630b94	0x1630a4b	0x1630b17	165		125		125		0		in use	 
+  19		0x1630b94	0x1630c3a	0x1630aef	0x1630bbc	166		126		126		0		in use	 
+  20		0x1630c3a	0x1630ce1	0x1630b94	0x1630c62	167		127		127		0		in use	 
+  21		0x1630ce1	0x1630d89	0x1630c3a	0x1630d09	168		128		128		0		in use	 
+  22		0x1630d89	0x1630e32	0x1630ce1	0x1630db1	169		129		129		0		in use	 
+  23		0x1630e32	0x1630edc	0x1630d89	0x1630e5a	170		130		130		0		in use	 
+  24		0x1630edc	0x1630f87	0x1630e32	0x1630f04	171		131		131		0		in use	 
+  25		0x1630f87	0x1631033	0x1630edc	0x1630faf	172		132		132		0		in use	 
+  26		0x1631033	0x16310e0	0x1630f87	0x163105b	173		133		133		0		in use	 
+  27		0x16310e0	0x163118e	0x1631033	0x1631108	174		134		134		0		in use	 
+  28		0x163118e	0x163123d	0x16310e0	0x16311b6	175		135		135		0		in use	 
+  29		0x163123d	0x16312ed	0x163118e	0x1631265	176		136		136		0		in use	 
+  30		0x16312ed	0x163139e	0x163123d	0x1631315	177		137		137		0		in use	 
+  31		0x163139e	0x1631450	0x16312ed	0x16313c6	178		138		138		0		in use	 
+  32		0x1631450	0x1631503	0x163139e	0x1631478	179		139		139		0		in use	 
+  33		0x1631503	0x16315b7	0x1631450	0x163152b	180		140		140		0		in use	 
+  34		0x16315b7	0x163166c	0x1631503	0x16315df	181		141		141		0		in use	 
+  35		0x163166c	0x1631722	0x16315b7	0x1631694	182		142		142		0		in use	 
+  36		0x1631722	0x16317d9	0x163166c	0x163174a	183		143		143		0		in use	 
+  37		0x16317d9	0x1631891	0x1631722	0x1631801	184		144		144		0		in use	 
+  38		0x1631891	0x163194a	0x16317d9	0x16318b9	185		145		145		0		in use	 
+  39		0x163194a	0x1631a04	0x1631891	0x1631972	186		146		146		0		in use	 
+  40		0x1631a04	0x1631abf	0x163194a	0x1631a2c	187		147		147		0		in use	 
+  41		0x1631abf	0x1631b7b	0x1631a04	0x1631ae7	188		148		148		0		in use	 
+  42		0x1631b7b	0x1631c38	0x1631abf	0x1631ba3	189		149		149		0		in use	 
+  43		0x1631c38	0x1631cf6	0x1631b7b	0x1631c60	190		150		150		0		in use	 
+  44		0x1631cf6	0x1631db5	0x1631c38	0x1631d1e	191		151		151		0		in use	 
+  45		0x1631db5	0x1631e75	0x1631cf6	0x1631ddd	192		152		152		0		in use	 
+  46		0x1631e75	0x1631f36	0x1631db5	0x1631e9d	193		153		153		0		in use	 
+  47		0x1631f36	0x1631ff8	0x1631e75	0x1631f5e	194		154		154		0		in use	 
+  48		0x1631ff8	0x16320bb	0x1631f36	0x1632020	195		155		155		0		in use	 
+  49		0x16320bb	0x163217f	0x1631ff8	0x16320e3	196		156		156		0		in use	 
+  50		0x163217f	0x1632244	0x16320bb	0x16321a7	197		157		157		0		in use	 
+  51		0x1632244	0x163230a	0x163217f	0x163226c	198		158		158		0		in use	 
+  52		0x163230a	0x16323d1	0x1632244	0x1632332	199		159		159		0		in use	 
+  53		0x16323d1	0x1632499	0x163230a	0x16323f9	200		160		160		0		in use	 
+  54		0x1632499	0x1632562	0x16323d1	0x16324c1	201		161		161		0		in use	 
+  55		0x1632562	0x163262c	0x1632499	0x163258a	202		162		162		0		in use	 
+  56		0x163262c	0x16326f7	0x1632562	0x1632654	203		163		163		0		in use	 
+  57		0x16326f7	0x16327c3	0x163262c	0x163271f	204		164		164		0		in use	 
+  58		0x16327c3	0x1632890	0x16326f7	0x16327eb	205		165		165		0		in use	 
+  59		0x1632890	0x163295e	0x16327c3	0x16328b8	206		166		166		0		in use	 
+  60		0x163295e	0x1632a2d	0x1632890	0x1632986	207		167		167		0		in use	 
+  61		0x1632a2d	0x1632afd	0x163295e	0x1632a55	208		168		168		0		in use	 
+  62		0x1632afd	0x1632bce	0x1632a2d	0x1632b25	209		169		169		0		in use	 
+  63		0x1632bce	0x1632ca0	0x1632afd	0x1632bf6	210		170		170		0		in use	 
+  64		0x1632ca0	0x1632d73	0x1632bce	0x1632cc8	211		171		171		0		in use	 
+  65		0x1632d73	0x1632e47	0x1632ca0	0x1632d9b	212		172		172		0		in use	 
+  66		0x1632e47	0x1632f1c	0x1632d73	0x1632e6f	213		173		173		0		in use	 
+  67		0x1632f1c	0x1632ff2	0x1632e47	0x1632f44	214		174		174		0		in use	 
+  68		0x1632ff2	0x16330c9	0x1632f1c	0x163301a	215		175		175		0		in use	 
+  69		0x16330c9	0x16331a1	0x1632ff2	0x16330f1	216		176		176		0		in use	 
+  70		0x16331a1	0x163327a	0x16330c9	0x16331c9	217		177		177		0		in use	 
+  71		0x163327a	0x1633354	0x16331a1	0x16332a2	218		178		178		0		in use	 
+  72		0x1633354	0x163342f	0x163327a	0x163337c	219		179		179		0		in use	 
+  73		0x163342f	0x163350b	0x1633354	0x1633457	220		180		180		0		in use	 
+  74		0x163350b	0x16335e8	0x163342f	0x1633533	221		181		181		0		in use	 
+  75		0x16335e8	0x16336c6	0x163350b	0x1633610	222		182		182		0		in use	 
+  76		0x16336c6	0x16337a5	0x16335e8	0x16336ee	223		183		183		0		in use	 
+  77		0x16337a5	0x1633885	0x16336c6	0x16337cd	224		184		184		0		in use	 
+  78		0x1633885	0x1633966	0x16337a5	0x16338ad	225		185		185		0		in use	 
+  79		0x1633966	0x1633a48	0x1633885	0x163398e	226		186		186		0		in use	 
+  80		0x1633a48	0x1633b2b	0x1633966	0x1633a70	227		187		187		0		in use	 
+  81		0x1633b2b	0x1633c0f	0x1633a48	0x1633b53	228		188		188		0		in use	 
+  82		0x1633c0f	0x1633cf4	0x1633b2b	0x1633c37	229		189		189		0		in use	 
+  83		0x1633cf4	0x1633dda	0x1633c0f	0x1633d1c	230		190		190		0		in use	 
+  84		0x1633dda	0x1633ec1	0x1633cf4	0x1633e02	231		191		191		0		in use	 
+  85		0x1633ec1	0x1633fa9	0x1633dda	0x1633ee9	232		192		192		0		in use	 
+  86		0x1633fa9	0x1634092	0x1633ec1	0x1633fd1	233		193		193		0		in use	 
+  87		0x1634092	0x163417c	0x1633fa9	0x16340ba	234		194		194		0		in use	 
+  88		0x163417c	0x1634267	0x1634092	0x16341a4	235		195		195		0		in use	 
+  89		0x1634267	0x1634353	0x163417c	0x163428f	236		196		196		0		in use	 
+  90		0x1634353	0x1634440	0x1634267	0x163437b	237		197		197		0		in use	 
+  91		0x1634440	0x163452e	0x1634353	0x1634468	238		198		198		0		in use	 
+  92		0x163452e	0x163461d	0x1634440	0x1634556	239		199		199		0		in use	 
+  93		0x163461d	0x163470d	0x163452e	0x1634645	240		200		200		0		in use	 
+  94		0x163470d	0x16347fe	0x163461d	0x1634735	241		201		201		0		in use	 
+  95		0x16347fe	0x16348f0	0x163470d	0x1634826	242		202		202		0		in use	 
+  96		0x16348f0	0x16349e3	0x16347fe	0x1634918	243		203		203		0		in use	 
+  97		0x16349e3	0x1634ad7	0x16348f0	0x1634a0b	244		204		204		0		in use	 
+  98		0x1634ad7	0x1634bcc	0x16349e3	0x1634aff	245		205		205		0		in use	 
+  99		0x1634bcc	    (nil)	0x1634ad7	0x1634bf4	176180		176140		206		175934		in use	 
+  Total bytes used								195584		191584		15650		175934
+  Used blocks:  100  Free blocks:    0  Min heap: 0x1630000    Max heap: 0x165fc00   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1630000	    (nil)	    (nil)	0x1630028	195584		195544		0		195544		free  	*
+  Total bytes used								195584		195544		0		195544
+  Used blocks:    0  Free blocks:    1  Min heap: 0x1630000    Max heap: 0x165fc00   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1630000	0x16307f8	    (nil)	0x1630028	2040		2000		2000		0		in use	 
+  1		0x16307f8	0x1630ff1	0x1630000	0x1630820	2041		2001		2001		0		in use	 
+  2		0x1630ff1	0x16317eb	0x16307f8	0x1631019	2042		2002		2002		0		in use	 
+  3		0x16317eb	0x1631fe6	0x1630ff1	0x1631813	2043		2003		2003		0		in use	 
+  4		0x1631fe6	0x16327e2	0x16317eb	0x163200e	2044		2004		2004		0		in use	 
+  5		0x16327e2	0x1632fdf	0x1631fe6	0x163280a	2045		2005		2005		0		in use	 
+  6		0x1632fdf	0x16337dd	0x16327e2	0x1633007	2046		2006		2006		0		in use	 
+  7		0x16337dd	0x1633fdc	0x1632fdf	0x1633805	2047		2007		2007		0		in use	 
+  8		0x1633fdc	0x16347dc	0x16337dd	0x1634004	2048		2008		2008		0		in use	 
+  9		0x16347dc	0x1634fdd	0x1633fdc	0x1634804	2049		2009		2009		0		in use	 
+  10		0x1634fdd	0x16357df	0x16347dc	0x1635005	2050		2010		2010		0		in use	 
+  11		0x16357df	0x1635fe2	0x1634fdd	0x1635807	2051		2011		2011		0		in use	 
+  12		0x1635fe2	0x16367e6	0x16357df	0x163600a	2052		2012		2012		0		in use	 
+  13		0x16367e6	0x1636feb	0x1635fe2	0x163680e	2053		2013		2013		0		in use	 
+  14		0x1636feb	0x16377f1	0x16367e6	0x1637013	2054		2014		2014		0		in use	 
+  15		0x16377f1	0x1637ff8	0x1636feb	0x1637819	2055		2015		2015		0		in use	 
+  16		0x1637ff8	0x1638800	0x16377f1	0x1638020	2056		2016		2016		0		in use	 
+  17		0x1638800	0x1639009	0x1637ff8	0x1638828	2057		2017		2017		0		in use	 
+  18		0x1639009	0x1639813	0x1638800	0x1639031	2058		2018		2018		0		in use	 
+  19		0x1639813	0x163a01e	0x1639009	0x163983b	2059		2019		2019		0		in use	 
+  20		0x163a01e	0x163a82a	0x1639813	0x163a046	2060		2020		2020		0		in use	 
+  21		0x163a82a	0x163b037	0x163a01e	0x163a852	2061		2021		2021		0		in use	 
+  22		0x163b037	0x163b845	0x163a82a	0x163b05f	2062		2022		2022		0		in use	 
+  23		0x163b845	0x163c054	0x163b037	0x163b86d	2063		2023		2023		0		in use	 
+  24		0x163c054	0x163c864	0x163b845	0x163c07c	2064		2024		2024		0		in use	 
+  25		0x163c864	0x163d075	0x163c054	0x163c88c	2065		2025		2025		0		in use	 
+  26		0x163d075	0x163d887	0x163c864	0x163d09d	2066		2026		2026		0		in use	 
+  27		0x163d887	0x163e09a	0x163d075	0x163d8af	2067		2027		2027		0		in use	 
+  28		0x163e09a	0x163e8ae	0x163d887	0x163e0c2	2068		2028		2028		0		in use	 
+  29		0x163e8ae	0x163f0c3	0x163e09a	0x163e8d6	2069		2029		2029		0		in use	 
+  30		0x163f0c3	0x163f8d9	0x163e8ae	0x163f0eb	2070		2030		2030		0		in use	 
+  31		0x163f8d9	0x16400f0	0x163f0c3	0x163f901	2071		2031		2031		0		in use	 
+  32		0x16400f0	0x1640908	0x163f8d9	0x1640118	2072		2032		2032		0		in use	 
+  33		0x1640908	0x1641121	0x16400f0	0x1640930	2073		2033		2033		0		in use	 
+  34		0x1641121	0x164193b	0x1640908	0x1641149	2074		2034		2034		0		in use	 
+  35		0x164193b	0x1642156	0x1641121	0x1641963	2075		2035		2035		0		in use	 
+  36		0x1642156	0x1642972	0x164193b	0x164217e	2076		2036		2036		0		in use	 
+  37		0x1642972	0x164318f	0x1642156	0x164299a	2077		2037		2037		0		in use	 
+  38		0x164318f	0x16439ad	0x1642972	0x16431b7	2078		2038		2038		0		in use	 
+  39		0x16439ad	0x16441cc	0x164318f	0x16439d5	2079		2039		2039		0		in use	 
+  40		0x16441cc	0x16449ec	0x16439ad	0x16441f4	2080		2040		2040		0		in use	 
+  41		0x16449ec	0x164520d	0x16441cc	0x1644a14	2081		2041		2041		0		in use	 
+  42		0x164520d	0x1645a2f	0x16449ec	0x1645235	2082		2042		2042		0		in use	 
+  43		0x1645a2f	0x1646252	0x164520d	0x1645a57	2083		2043		2043		0		in use	 
+  44		0x1646252	0x1646a76	0x1645a2f	0x164627a	2084		2044		2044		0		in use	 
+  45		0x1646a76	0x164729b	0x1646252	0x1646a9e	2085		2045		2045		0		in use	 
+  46		0x164729b	0x1647ac1	0x1646a76	0x16472c3	2086		2046		2046		0		in use	 
+  47		0x1647ac1	0x16482e8	0x164729b	0x1647ae9	2087		2047		2047		0		in use	 
+  48		0x16482e8	0x1648b10	0x1647ac1	0x1648310	2088		2048		2048		0		in use	 
+  49		0x1648b10	0x1649339	0x16482e8	0x1648b38	2089		2049		2049		0		in use	 
+  50		0x1649339	0x1649b63	0x1648b10	0x1649361	2090		2050		2050		0		in use	 
+  51		0x1649b63	0x164a38e	0x1649339	0x1649b8b	2091		2051		2051		0		in use	 
+  52		0x164a38e	0x164abba	0x1649b63	0x164a3b6	2092		2052		2052		0		in use	 
+  53		0x164abba	0x164b3e7	0x164a38e	0x164abe2	2093		2053		2053		0		in use	 
+  54		0x164b3e7	0x164bc15	0x164abba	0x164b40f	2094		2054		2054		0		in use	 
+  55		0x164bc15	0x164c444	0x164b3e7	0x164bc3d	2095		2055		2055		0		in use	 
+  56		0x164c444	0x164cc74	0x164bc15	0x164c46c	2096		2056		2056		0		in use	 
+  57		0x164cc74	0x164d4a5	0x164c444	0x164cc9c	2097		2057		2057		0		in use	 
+  58		0x164d4a5	0x164dcd7	0x164cc74	0x164d4cd	2098		2058		2058		0		in use	 
+  59		0x164dcd7	0x164e50a	0x164d4a5	0x164dcff	2099		2059		2059		0		in use	 
+  60		0x164e50a	0x164ed3e	0x164dcd7	0x164e532	2100		2060		2060		0		in use	 
+  61		0x164ed3e	0x164f573	0x164e50a	0x164ed66	2101		2061		2061		0		in use	 
+  62		0x164f573	0x164fda9	0x164ed3e	0x164f59b	2102		2062		2062		0		in use	 
+  63		0x164fda9	0x16505e0	0x164f573	0x164fdd1	2103		2063		2063		0		in use	 
+  64		0x16505e0	0x1650e18	0x164fda9	0x1650608	2104		2064		2064		0		in use	 
+  65		0x1650e18	0x1651651	0x16505e0	0x1650e40	2105		2065		2065		0		in use	 
+  66		0x1651651	0x1651e8b	0x1650e18	0x1651679	2106		2066		2066		0		in use	 
+  67		0x1651e8b	0x16526c6	0x1651651	0x1651eb3	2107		2067		2067		0		in use	 
+  68		0x16526c6	0x1652f02	0x1651e8b	0x16526ee	2108		2068		2068		0		in use	 
+  69		0x1652f02	0x165373f	0x16526c6	0x1652f2a	2109		2069		2069		0		in use	 
+  70		0x165373f	0x1653f7d	0x1652f02	0x1653767	2110		2070		2070		0		in use	 
+  71		0x1653f7d	0x16547bc	0x165373f	0x1653fa5	2111		2071		2071		0		in use	 
+  72		0x16547bc	0x1654ffc	0x1653f7d	0x16547e4	2112		2072		2072		0		in use	 
+  73		0x1654ffc	0x165583d	0x16547bc	0x1655024	2113		2073		2073		0		in use	 
+  74		0x165583d	0x165607f	0x1654ffc	0x1655865	2114		2074		2074		0		in use	 
+  75		0x165607f	0x16568c2	0x165583d	0x16560a7	2115		2075		2075		0		in use	 
+  76		0x16568c2	0x1657106	0x165607f	0x16568ea	2116		2076		2076		0		in use	 
+  77		0x1657106	0x165794b	0x16568c2	0x165712e	2117		2077		2077		0		in use	 
+  78		0x165794b	0x1658191	0x1657106	0x1657973	2118		2078		2078		0		in use	 
+  79		0x1658191	0x16589d8	0x165794b	0x16581b9	2119		2079		2079		0		in use	 
+  80		0x16589d8	0x1659220	0x1658191	0x1658a00	2120		2080		2080		0		in use	 
+  81		0x1659220	0x1659a69	0x16589d8	0x1659248	2121		2081		2081		0		in use	 
+  82		0x1659a69	0x165a2b3	0x1659220	0x1659a91	2122		2082		2082		0		in use	 
+  83		0x165a2b3	0x165aafe	0x1659a69	0x165a2db	2123		2083		2083		0		in use	 
+  84		0x165aafe	0x165b34a	0x165a2b3	0x165ab26	2124		2084		2084		0		in use	 
+  85		0x165b34a	0x165bb97	0x165aafe	0x165b372	2125		2085		2085		0		in use	 
+  86		0x165bb97	0x165c3e5	0x165b34a	0x165bbbf	2126		2086		2086		0		in use	 
+  87		0x165c3e5	0x165cc34	0x165bb97	0x165c40d	2127		2087		2087		0		in use	 
+  88		0x165cc34	0x165d484	0x165c3e5	0x165cc5c	2128		2088		2088		0		in use	 
+  89		0x165d484	0x165dcd5	0x165cc34	0x165d4ac	2129		2089		2089		0		in use	 
+  90		0x165dcd5	0x165e527	0x165d484	0x165dcfd	2130		2090		2090		0		in use	 
+  91		0x165e527	0x165ed7a	0x165dcd5	0x165e54f	2131		2091		2091		0		in use	 
+  92		0x165ed7a	0x165fc00	0x165e527	0x165eda2	3718		3678		2092		1586		in use	 
+  93		0x165fc00	0x1660800	0x165ed7a	0x165fc28	3072		3032		2093		939		in use	 
+  94		0x1660800	0x1661400	0x165fc00	0x1660828	3072		3032		2094		938		in use	 
+  95		0x1661400	0x1662000	0x1660800	0x1661428	3072		3032		2095		937		in use	 
+  96		0x1662000	0x1662c00	0x1661400	0x1662028	3072		3032		2096		936		in use	 
+  97		0x1662c00	0x1663800	0x1662000	0x1662c28	3072		3032		2097		935		in use	 
+  98		0x1663800	0x1664400	0x1662c00	0x1663828	3072		3032		2098		934		in use	 
+  99		0x1664400	    (nil)	0x1663800	0x1664428	3072		3032		2099		933		in use	 
+  Total bytes used								217088		213088		204950		8138
+  Used blocks:  100  Free blocks:    0  Min heap: 0x1630000    Max heap: 0x1665000   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x1630000	    (nil)	    (nil)	0x1630028	217088		217048		0		217048		free  	*
+  Total bytes used								217088		217048		0		217048
+  Used blocks:    0  Free blocks:    1  Min heap: 0x1630000    Max heap: 0x1665000   Block size: 40 bytes
+*** End 27
+
+
+WoooooooHooooooo!!! You survived test 27. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
+beavalloc first fit tests starting
+  running only test 28
+Initial base address of heap: 0x25a0000
+*** Begin 28
+      stress 5  100
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x25a0000	    (nil)	    (nil)	0x25a0028	100352		100312		100000		312		in use	 
+  Total bytes used								100352		100312		100000		312
+  Used blocks:    1  Free blocks:    0  Min heap: 0x25a0000    Max heap: 0x25b8800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x25a0000	    (nil)	    (nil)	0x25a0028	100352		100312		0		100312		free  	*
+  Total bytes used								100352		100312		0		100312
+  Used blocks:    0  Free blocks:    1  Min heap: 0x25a0000    Max heap: 0x25b8800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x25a0000	0x25a0029	    (nil)	0x25a0028	41		1		1		0		in use	 
+  1		0x25a0029	0x25a0053	0x25a0000	0x25a0051	42		2		2		0		in use	 
+  2		0x25a0053	0x25a007e	0x25a0029	0x25a007b	43		3		3		0		in use	 
+  3		0x25a007e	0x25a00aa	0x25a0053	0x25a00a6	44		4		4		0		in use	 
+  4		0x25a00aa	0x25a00d7	0x25a007e	0x25a00d2	45		5		5		0		in use	 
+  5		0x25a00d7	0x25a0105	0x25a00aa	0x25a00ff	46		6		6		0		in use	 
+  6		0x25a0105	0x25a0134	0x25a00d7	0x25a012d	47		7		7		0		in use	 
+  7		0x25a0134	0x25a0164	0x25a0105	0x25a015c	48		8		8		0		in use	 
+  8		0x25a0164	0x25a0195	0x25a0134	0x25a018c	49		9		9		0		in use	 
+  9		0x25a0195	0x25a01c7	0x25a0164	0x25a01bd	50		10		10		0		in use	 
+  10		0x25a01c7	0x25a01fa	0x25a0195	0x25a01ef	51		11		11		0		in use	 
+  11		0x25a01fa	0x25a022e	0x25a01c7	0x25a0222	52		12		12		0		in use	 
+  12		0x25a022e	0x25a0263	0x25a01fa	0x25a0256	53		13		13		0		in use	 
+  13		0x25a0263	0x25a0299	0x25a022e	0x25a028b	54		14		14		0		in use	 
+  14		0x25a0299	0x25a02d0	0x25a0263	0x25a02c1	55		15		15		0		in use	 
+  15		0x25a02d0	0x25a0308	0x25a0299	0x25a02f8	56		16		16		0		in use	 
+  16		0x25a0308	0x25a0341	0x25a02d0	0x25a0330	57		17		17		0		in use	 
+  17		0x25a0341	0x25a037b	0x25a0308	0x25a0369	58		18		18		0		in use	 
+  18		0x25a037b	0x25a03b6	0x25a0341	0x25a03a3	59		19		19		0		in use	 
+  19		0x25a03b6	0x25a03f2	0x25a037b	0x25a03de	60		20		20		0		in use	 
+  20		0x25a03f2	0x25a042f	0x25a03b6	0x25a041a	61		21		21		0		in use	 
+  21		0x25a042f	0x25a046d	0x25a03f2	0x25a0457	62		22		22		0		in use	 
+  22		0x25a046d	0x25a04ac	0x25a042f	0x25a0495	63		23		23		0		in use	 
+  23		0x25a04ac	0x25a04ec	0x25a046d	0x25a04d4	64		24		24		0		in use	 
+  24		0x25a04ec	0x25a052d	0x25a04ac	0x25a0514	65		25		25		0		in use	 
+  25		0x25a052d	0x25a056f	0x25a04ec	0x25a0555	66		26		26		0		in use	 
+  26		0x25a056f	0x25a05b2	0x25a052d	0x25a0597	67		27		27		0		in use	 
+  27		0x25a05b2	0x25a05f6	0x25a056f	0x25a05da	68		28		28		0		in use	 
+  28		0x25a05f6	0x25a063b	0x25a05b2	0x25a061e	69		29		29		0		in use	 
+  29		0x25a063b	0x25a0681	0x25a05f6	0x25a0663	70		30		30		0		in use	 
+  30		0x25a0681	0x25a06c8	0x25a063b	0x25a06a9	71		31		31		0		in use	 
+  31		0x25a06c8	0x25a0710	0x25a0681	0x25a06f0	72		32		32		0		in use	 
+  32		0x25a0710	0x25a0759	0x25a06c8	0x25a0738	73		33		33		0		in use	 
+  33		0x25a0759	0x25a07a3	0x25a0710	0x25a0781	74		34		34		0		in use	 
+  34		0x25a07a3	0x25a07ee	0x25a0759	0x25a07cb	75		35		35		0		in use	 
+  35		0x25a07ee	0x25a083a	0x25a07a3	0x25a0816	76		36		36		0		in use	 
+  36		0x25a083a	0x25a0887	0x25a07ee	0x25a0862	77		37		37		0		in use	 
+  37		0x25a0887	0x25a08d5	0x25a083a	0x25a08af	78		38		38		0		in use	 
+  38		0x25a08d5	0x25a0924	0x25a0887	0x25a08fd	79		39		39		0		in use	 
+  39		0x25a0924	0x25a0974	0x25a08d5	0x25a094c	80		40		40		0		in use	 
+  40		0x25a0974	0x25a09c5	0x25a0924	0x25a099c	81		41		41		0		in use	 
+  41		0x25a09c5	0x25a0a17	0x25a0974	0x25a09ed	82		42		42		0		in use	 
+  42		0x25a0a17	0x25a0a6a	0x25a09c5	0x25a0a3f	83		43		43		0		in use	 
+  43		0x25a0a6a	0x25a0abe	0x25a0a17	0x25a0a92	84		44		44		0		in use	 
+  44		0x25a0abe	0x25a0b13	0x25a0a6a	0x25a0ae6	85		45		45		0		in use	 
+  45		0x25a0b13	0x25a0b69	0x25a0abe	0x25a0b3b	86		46		46		0		in use	 
+  46		0x25a0b69	0x25a0bc0	0x25a0b13	0x25a0b91	87		47		47		0		in use	 
+  47		0x25a0bc0	0x25a0c18	0x25a0b69	0x25a0be8	88		48		48		0		in use	 
+  48		0x25a0c18	0x25a0c71	0x25a0bc0	0x25a0c40	89		49		49		0		in use	 
+  49		0x25a0c71	0x25a0ccb	0x25a0c18	0x25a0c99	90		50		50		0		in use	 
+  50		0x25a0ccb	0x25a0d26	0x25a0c71	0x25a0cf3	91		51		51		0		in use	 
+  51		0x25a0d26	0x25a0d82	0x25a0ccb	0x25a0d4e	92		52		52		0		in use	 
+  52		0x25a0d82	0x25a0ddf	0x25a0d26	0x25a0daa	93		53		53		0		in use	 
+  53		0x25a0ddf	0x25a0e3d	0x25a0d82	0x25a0e07	94		54		54		0		in use	 
+  54		0x25a0e3d	0x25a0e9c	0x25a0ddf	0x25a0e65	95		55		55		0		in use	 
+  55		0x25a0e9c	0x25a0efc	0x25a0e3d	0x25a0ec4	96		56		56		0		in use	 
+  56		0x25a0efc	0x25a0f5d	0x25a0e9c	0x25a0f24	97		57		57		0		in use	 
+  57		0x25a0f5d	0x25a0fbf	0x25a0efc	0x25a0f85	98		58		58		0		in use	 
+  58		0x25a0fbf	0x25a1022	0x25a0f5d	0x25a0fe7	99		59		59		0		in use	 
+  59		0x25a1022	0x25a1086	0x25a0fbf	0x25a104a	100		60		60		0		in use	 
+  60		0x25a1086	0x25a10eb	0x25a1022	0x25a10ae	101		61		61		0		in use	 
+  61		0x25a10eb	0x25a1151	0x25a1086	0x25a1113	102		62		62		0		in use	 
+  62		0x25a1151	0x25a11b8	0x25a10eb	0x25a1179	103		63		63		0		in use	 
+  63		0x25a11b8	0x25a1220	0x25a1151	0x25a11e0	104		64		64		0		in use	 
+  64		0x25a1220	0x25a1289	0x25a11b8	0x25a1248	105		65		65		0		in use	 
+  65		0x25a1289	0x25a12f3	0x25a1220	0x25a12b1	106		66		66		0		in use	 
+  66		0x25a12f3	0x25a135e	0x25a1289	0x25a131b	107		67		67		0		in use	 
+  67		0x25a135e	0x25a13ca	0x25a12f3	0x25a1386	108		68		68		0		in use	 
+  68		0x25a13ca	0x25a1437	0x25a135e	0x25a13f2	109		69		69		0		in use	 
+  69		0x25a1437	0x25a14a5	0x25a13ca	0x25a145f	110		70		70		0		in use	 
+  70		0x25a14a5	0x25a1514	0x25a1437	0x25a14cd	111		71		71		0		in use	 
+  71		0x25a1514	0x25a1584	0x25a14a5	0x25a153c	112		72		72		0		in use	 
+  72		0x25a1584	0x25a15f5	0x25a1514	0x25a15ac	113		73		73		0		in use	 
+  73		0x25a15f5	0x25a1667	0x25a1584	0x25a161d	114		74		74		0		in use	 
+  74		0x25a1667	0x25a16da	0x25a15f5	0x25a168f	115		75		75		0		in use	 
+  75		0x25a16da	0x25a174e	0x25a1667	0x25a1702	116		76		76		0		in use	 
+  76		0x25a174e	0x25a17c3	0x25a16da	0x25a1776	117		77		77		0		in use	 
+  77		0x25a17c3	0x25a1839	0x25a174e	0x25a17eb	118		78		78		0		in use	 
+  78		0x25a1839	0x25a18b0	0x25a17c3	0x25a1861	119		79		79		0		in use	 
+  79		0x25a18b0	0x25a1928	0x25a1839	0x25a18d8	120		80		80		0		in use	 
+  80		0x25a1928	0x25a19a1	0x25a18b0	0x25a1950	121		81		81		0		in use	 
+  81		0x25a19a1	0x25a1a1b	0x25a1928	0x25a19c9	122		82		82		0		in use	 
+  82		0x25a1a1b	0x25a1a96	0x25a19a1	0x25a1a43	123		83		83		0		in use	 
+  83		0x25a1a96	0x25a1b12	0x25a1a1b	0x25a1abe	124		84		84		0		in use	 
+  84		0x25a1b12	0x25a1b8f	0x25a1a96	0x25a1b3a	125		85		85		0		in use	 
+  85		0x25a1b8f	0x25a1c0d	0x25a1b12	0x25a1bb7	126		86		86		0		in use	 
+  86		0x25a1c0d	0x25a1c8c	0x25a1b8f	0x25a1c35	127		87		87		0		in use	 
+  87		0x25a1c8c	0x25a1d0c	0x25a1c0d	0x25a1cb4	128		88		88		0		in use	 
+  88		0x25a1d0c	0x25a1d8d	0x25a1c8c	0x25a1d34	129		89		89		0		in use	 
+  89		0x25a1d8d	0x25a1e0f	0x25a1d0c	0x25a1db5	130		90		90		0		in use	 
+  90		0x25a1e0f	0x25a1e92	0x25a1d8d	0x25a1e37	131		91		91		0		in use	 
+  91		0x25a1e92	0x25a1f16	0x25a1e0f	0x25a1eba	132		92		92		0		in use	 
+  92		0x25a1f16	0x25a1f9b	0x25a1e92	0x25a1f3e	133		93		93		0		in use	 
+  93		0x25a1f9b	0x25a2021	0x25a1f16	0x25a1fc3	134		94		94		0		in use	 
+  94		0x25a2021	0x25a20a8	0x25a1f9b	0x25a2049	135		95		95		0		in use	 
+  95		0x25a20a8	0x25a2130	0x25a2021	0x25a20d0	136		96		96		0		in use	 
+  96		0x25a2130	0x25a21b9	0x25a20a8	0x25a2158	137		97		97		0		in use	 
+  97		0x25a21b9	0x25a2243	0x25a2130	0x25a21e1	138		98		98		0		in use	 
+  98		0x25a2243	0x25a22ce	0x25a21b9	0x25a226b	139		99		99		0		in use	 
+  99		0x25a22ce	    (nil)	0x25a2243	0x25a22f6	91442		91402		100		91302		in use	 
+  Total bytes used								100352		96352		5050		91302
+  Used blocks:  100  Free blocks:    0  Min heap: 0x25a0000    Max heap: 0x25b8800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x25a0000	    (nil)	    (nil)	0x25a0028	100352		100312		0		100312		free  	*
+  Total bytes used								100352		100312		0		100312
+  Used blocks:    0  Free blocks:    1  Min heap: 0x25a0000    Max heap: 0x25b8800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x25a0000	0x25a0029	    (nil)	0x25a0028	41		1		1		0		in use	 
+  1		0x25a0029	0x25a0053	0x25a0000	0x25a0051	42		2		2		0		in use	 
+  2		0x25a0053	0x25a007e	0x25a0029	0x25a007b	43		3		3		0		in use	 
+  3		0x25a007e	0x25a00aa	0x25a0053	0x25a00a6	44		4		4		0		in use	 
+  4		0x25a00aa	0x25a00d7	0x25a007e	0x25a00d2	45		5		5		0		in use	 
+  5		0x25a00d7	0x25a0105	0x25a00aa	0x25a00ff	46		6		6		0		in use	 
+  6		0x25a0105	0x25a0134	0x25a00d7	0x25a012d	47		7		7		0		in use	 
+  7		0x25a0134	0x25a0164	0x25a0105	0x25a015c	48		8		8		0		in use	 
+  8		0x25a0164	0x25a0195	0x25a0134	0x25a018c	49		9		9		0		in use	 
+  9		0x25a0195	0x25a01c7	0x25a0164	0x25a01bd	50		10		10		0		in use	 
+  10		0x25a01c7	0x25a01fa	0x25a0195	0x25a01ef	51		11		11		0		in use	 
+  11		0x25a01fa	0x25a022e	0x25a01c7	0x25a0222	52		12		12		0		in use	 
+  12		0x25a022e	0x25a0263	0x25a01fa	0x25a0256	53		13		13		0		in use	 
+  13		0x25a0263	0x25a0299	0x25a022e	0x25a028b	54		14		14		0		in use	 
+  14		0x25a0299	0x25a02d0	0x25a0263	0x25a02c1	55		15		15		0		in use	 
+  15		0x25a02d0	0x25a0308	0x25a0299	0x25a02f8	56		16		16		0		in use	 
+  16		0x25a0308	0x25a0341	0x25a02d0	0x25a0330	57		17		17		0		in use	 
+  17		0x25a0341	0x25a037b	0x25a0308	0x25a0369	58		18		18		0		in use	 
+  18		0x25a037b	0x25a03b6	0x25a0341	0x25a03a3	59		19		19		0		in use	 
+  19		0x25a03b6	0x25a03f2	0x25a037b	0x25a03de	60		20		20		0		in use	 
+  20		0x25a03f2	0x25a042f	0x25a03b6	0x25a041a	61		21		21		0		in use	 
+  21		0x25a042f	0x25a046d	0x25a03f2	0x25a0457	62		22		22		0		in use	 
+  22		0x25a046d	0x25a04ac	0x25a042f	0x25a0495	63		23		23		0		in use	 
+  23		0x25a04ac	0x25a04ec	0x25a046d	0x25a04d4	64		24		24		0		in use	 
+  24		0x25a04ec	0x25a052d	0x25a04ac	0x25a0514	65		25		25		0		in use	 
+  25		0x25a052d	0x25a056f	0x25a04ec	0x25a0555	66		26		26		0		in use	 
+  26		0x25a056f	0x25a05b2	0x25a052d	0x25a0597	67		27		27		0		in use	 
+  27		0x25a05b2	0x25a05f6	0x25a056f	0x25a05da	68		28		28		0		in use	 
+  28		0x25a05f6	0x25a063b	0x25a05b2	0x25a061e	69		29		29		0		in use	 
+  29		0x25a063b	0x25a0681	0x25a05f6	0x25a0663	70		30		30		0		in use	 
+  30		0x25a0681	0x25a06c8	0x25a063b	0x25a06a9	71		31		31		0		in use	 
+  31		0x25a06c8	0x25a0710	0x25a0681	0x25a06f0	72		32		32		0		in use	 
+  32		0x25a0710	0x25a0759	0x25a06c8	0x25a0738	73		33		33		0		in use	 
+  33		0x25a0759	0x25a07a3	0x25a0710	0x25a0781	74		34		34		0		in use	 
+  34		0x25a07a3	0x25a07ee	0x25a0759	0x25a07cb	75		35		35		0		in use	 
+  35		0x25a07ee	0x25a083a	0x25a07a3	0x25a0816	76		36		36		0		in use	 
+  36		0x25a083a	0x25a0887	0x25a07ee	0x25a0862	77		37		37		0		in use	 
+  37		0x25a0887	0x25a08d5	0x25a083a	0x25a08af	78		38		38		0		in use	 
+  38		0x25a08d5	0x25a0924	0x25a0887	0x25a08fd	79		39		39		0		in use	 
+  39		0x25a0924	0x25a0974	0x25a08d5	0x25a094c	80		40		40		0		in use	 
+  40		0x25a0974	0x25a09c5	0x25a0924	0x25a099c	81		41		41		0		in use	 
+  41		0x25a09c5	0x25a0a17	0x25a0974	0x25a09ed	82		42		42		0		in use	 
+  42		0x25a0a17	0x25a0a6a	0x25a09c5	0x25a0a3f	83		43		43		0		in use	 
+  43		0x25a0a6a	0x25a0abe	0x25a0a17	0x25a0a92	84		44		44		0		in use	 
+  44		0x25a0abe	0x25a0b13	0x25a0a6a	0x25a0ae6	85		45		45		0		in use	 
+  45		0x25a0b13	0x25a0b69	0x25a0abe	0x25a0b3b	86		46		46		0		in use	 
+  46		0x25a0b69	0x25a0bc0	0x25a0b13	0x25a0b91	87		47		47		0		in use	 
+  47		0x25a0bc0	0x25a0c18	0x25a0b69	0x25a0be8	88		48		48		0		in use	 
+  48		0x25a0c18	0x25a0c71	0x25a0bc0	0x25a0c40	89		49		49		0		in use	 
+  49		0x25a0c71	0x25a0ccb	0x25a0c18	0x25a0c99	90		50		50		0		in use	 
+  50		0x25a0ccb	0x25a0d26	0x25a0c71	0x25a0cf3	91		51		51		0		in use	 
+  51		0x25a0d26	0x25a0d82	0x25a0ccb	0x25a0d4e	92		52		52		0		in use	 
+  52		0x25a0d82	0x25a0ddf	0x25a0d26	0x25a0daa	93		53		53		0		in use	 
+  53		0x25a0ddf	0x25a0e3d	0x25a0d82	0x25a0e07	94		54		54		0		in use	 
+  54		0x25a0e3d	0x25a0e9c	0x25a0ddf	0x25a0e65	95		55		55		0		in use	 
+  55		0x25a0e9c	0x25a0efc	0x25a0e3d	0x25a0ec4	96		56		56		0		in use	 
+  56		0x25a0efc	0x25a0f5d	0x25a0e9c	0x25a0f24	97		57		57		0		in use	 
+  57		0x25a0f5d	0x25a0fbf	0x25a0efc	0x25a0f85	98		58		58		0		in use	 
+  58		0x25a0fbf	0x25a1022	0x25a0f5d	0x25a0fe7	99		59		59		0		in use	 
+  59		0x25a1022	0x25a1086	0x25a0fbf	0x25a104a	100		60		60		0		in use	 
+  60		0x25a1086	0x25a10eb	0x25a1022	0x25a10ae	101		61		61		0		in use	 
+  61		0x25a10eb	0x25a1151	0x25a1086	0x25a1113	102		62		62		0		in use	 
+  62		0x25a1151	0x25a11b8	0x25a10eb	0x25a1179	103		63		63		0		in use	 
+  63		0x25a11b8	0x25a1220	0x25a1151	0x25a11e0	104		64		64		0		in use	 
+  64		0x25a1220	0x25a1289	0x25a11b8	0x25a1248	105		65		65		0		in use	 
+  65		0x25a1289	0x25a12f3	0x25a1220	0x25a12b1	106		66		66		0		in use	 
+  66		0x25a12f3	0x25a135e	0x25a1289	0x25a131b	107		67		67		0		in use	 
+  67		0x25a135e	0x25a13ca	0x25a12f3	0x25a1386	108		68		68		0		in use	 
+  68		0x25a13ca	0x25a1437	0x25a135e	0x25a13f2	109		69		69		0		in use	 
+  69		0x25a1437	0x25a14a5	0x25a13ca	0x25a145f	110		70		70		0		in use	 
+  70		0x25a14a5	0x25a1514	0x25a1437	0x25a14cd	111		71		71		0		in use	 
+  71		0x25a1514	0x25a1584	0x25a14a5	0x25a153c	112		72		72		0		in use	 
+  72		0x25a1584	0x25a15f5	0x25a1514	0x25a15ac	113		73		73		0		in use	 
+  73		0x25a15f5	0x25a1667	0x25a1584	0x25a161d	114		74		74		0		in use	 
+  74		0x25a1667	0x25a16da	0x25a15f5	0x25a168f	115		75		75		0		in use	 
+  75		0x25a16da	0x25a174e	0x25a1667	0x25a1702	116		76		76		0		in use	 
+  76		0x25a174e	0x25a17c3	0x25a16da	0x25a1776	117		77		77		0		in use	 
+  77		0x25a17c3	0x25a1839	0x25a174e	0x25a17eb	118		78		78		0		in use	 
+  78		0x25a1839	0x25a18b0	0x25a17c3	0x25a1861	119		79		79		0		in use	 
+  79		0x25a18b0	0x25a1928	0x25a1839	0x25a18d8	120		80		80		0		in use	 
+  80		0x25a1928	0x25a19a1	0x25a18b0	0x25a1950	121		81		81		0		in use	 
+  81		0x25a19a1	0x25a1a1b	0x25a1928	0x25a19c9	122		82		82		0		in use	 
+  82		0x25a1a1b	0x25a1a96	0x25a19a1	0x25a1a43	123		83		83		0		in use	 
+  83		0x25a1a96	0x25a1b12	0x25a1a1b	0x25a1abe	124		84		84		0		in use	 
+  84		0x25a1b12	0x25a1b8f	0x25a1a96	0x25a1b3a	125		85		85		0		in use	 
+  85		0x25a1b8f	0x25a1c0d	0x25a1b12	0x25a1bb7	126		86		86		0		in use	 
+  86		0x25a1c0d	0x25a1c8c	0x25a1b8f	0x25a1c35	127		87		87		0		in use	 
+  87		0x25a1c8c	0x25a1d0c	0x25a1c0d	0x25a1cb4	128		88		88		0		in use	 
+  88		0x25a1d0c	0x25a1d8d	0x25a1c8c	0x25a1d34	129		89		89		0		in use	 
+  89		0x25a1d8d	0x25a1e0f	0x25a1d0c	0x25a1db5	130		90		90		0		in use	 
+  90		0x25a1e0f	0x25a1e92	0x25a1d8d	0x25a1e37	131		91		91		0		in use	 
+  91		0x25a1e92	0x25a1f16	0x25a1e0f	0x25a1eba	132		92		92		0		in use	 
+  92		0x25a1f16	0x25a1f9b	0x25a1e92	0x25a1f3e	133		93		93		0		in use	 
+  93		0x25a1f9b	0x25a2021	0x25a1f16	0x25a1fc3	134		94		94		0		in use	 
+  94		0x25a2021	0x25a20a8	0x25a1f9b	0x25a2049	135		95		95		0		in use	 
+  95		0x25a20a8	0x25a2130	0x25a2021	0x25a20d0	136		96		96		0		in use	 
+  96		0x25a2130	0x25a21b9	0x25a20a8	0x25a2158	137		97		97		0		in use	 
+  97		0x25a21b9	0x25a2243	0x25a2130	0x25a21e1	138		98		98		0		in use	 
+  98		0x25a2243	0x25a22ce	0x25a21b9	0x25a226b	139		99		99		0		in use	 
+  99		0x25a22ce	    (nil)	0x25a2243	0x25a22f6	91442		91402		100		91302		in use	 
+  Total bytes used								100352		96352		5050		91302
+  Used blocks:  100  Free blocks:    0  Min heap: 0x25a0000    Max heap: 0x25b8800   Block size: 40 bytes
+Heap map
+  blk no  	block add 	next add  	prev add  	data add  	blk size 	capacity 	size     	excess   	status   
+  0		0x25a0000	    (nil)	    (nil)	0x25a0028	100352		100312		0		100312		free  	*
+  Total bytes used								100352		100312		0		100312
+  Used blocks:    0  Free blocks:    1  Min heap: 0x25a0000    Max heap: 0x25b8800   Block size: 40 bytes
+*** End 28
+
+
+WoooooooHooooooo!!! You survived test 28. This only means it did not seg-fault.
+
+	Now, make sure it is correct.
+
+
